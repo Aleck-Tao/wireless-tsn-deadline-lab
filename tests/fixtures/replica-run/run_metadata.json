@@ -1,0 +1,18 @@
+{
+  "delivered_packets": 0,
+  "dropped_packets": 1,
+  "duration_ns": 10000,
+  "extra_replicas": 1,
+  "flows": [
+    {"copies_total": 2, "id": "safety", "priority": 10}
+  ],
+  "generated_packets": 1,
+  "max_retries": 1,
+  "model_scope": "bounded retry and replica fixture",
+  "replication_priority_min": 8,
+  "scenario_id": "replica-fixture",
+  "scheduler": "FIFO",
+  "schema_version": "1.0",
+  "seed": 5
+}
+

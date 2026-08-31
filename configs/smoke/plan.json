@@ -1,0 +1,10 @@
+{
+  "scenarios": [
+    {"config": "configs/smoke/deadline-contention.cfg", "id": "smoke-deadline-contention"},
+    {"config": "configs/smoke/sync-outage.cfg", "id": "smoke-sync-outage"}
+  ],
+  "schema_version": "1.0",
+  "schedulers": ["FIFO", "STRICT_PRIORITY", "EDF", "CLOCK_AWARE_EDF"],
+  "seeds": [11, 29]
+}
+

@@ -1,0 +1,5 @@
+sequence,time_ns,event,packet_id,flow_id,copy_id,attempt,link,start_ns,end_ns,payload_bytes,queue_depth,channel_state,outcome,deadline_ns,local_deadline_ns,true_clock_error_ns,estimated_clock_error_ns,uncertainty_ns,detail
+0,0,SYNC_OBSERVE,0,clock,0,0,,0,0,0,0,,UPDATED,0,0,100,90,5,observed
+1,50,SYNC_OUTAGE,0,clock,0,0,,0,0,0,0,,SKIPPED,0,0,130,90,25,holdover
+2,100,SYNC_OBSERVE,0,clock,0,0,,0,0,0,0,,UPDATED,0,0,150,145,5,observed
+

@@ -1,0 +1,18 @@
+{
+  "delivered_packets": 0,
+  "dropped_packets": 0,
+  "duration_ns": 100,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "clock", "priority": 1}
+  ],
+  "generated_packets": 0,
+  "max_retries": 1,
+  "model_scope": "synchronization metric fixture",
+  "replication_priority_min": 8,
+  "scenario_id": "sync-fixture",
+  "scheduler": "FIFO",
+  "schema_version": "1.0",
+  "seed": 9
+}
+

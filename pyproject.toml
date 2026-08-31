@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wtsn-eval"
+version = "0.1.0"
+description = "Dependency-free evaluation and provenance tools for wireless-tsn-deadline-lab"
+requires-python = ">=3.10"
+
+[project.scripts]
+wtsn-eval = "wtsn_eval.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wtsn_eval*"]
+

@@ -1,0 +1,18 @@
+{
+  "delivered_packets": 1,
+  "dropped_packets": 1,
+  "duration_ns": 1000000,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "control", "priority": 10},
+    {"copies_total": 1, "id": "telemetry", "priority": 2}
+  ],
+  "generated_packets": 2,
+  "max_retries": 1,
+  "model_scope": "analytic parser fixture",
+  "replication_priority_min": 8,
+  "scenario_id": "python-analytic",
+  "scheduler": "FIFO",
+  "schema_version": "1.0",
+  "seed": 7
+}

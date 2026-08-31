@@ -1,0 +1,14 @@
+{
+  "scenarios": [
+    {"config": "configs/release/low-load.cfg", "id": "low-load"},
+    {"config": "configs/release/deadline-contention.cfg", "id": "deadline-contention"},
+    {"config": "configs/release/bursty-channel.cfg", "id": "bursty-channel"},
+    {"config": "configs/release/sync-holdover.cfg", "id": "sync-holdover"},
+    {"config": "configs/release/retry-replication.cfg", "id": "retry-replication"},
+    {"config": "configs/release/overload-negative.cfg", "id": "overload-negative"}
+  ],
+  "schema_version": "1.0",
+  "schedulers": ["FIFO", "STRICT_PRIORITY", "EDF", "CLOCK_AWARE_EDF"],
+  "seeds": [11, 23, 37, 53, 71, 89, 107, 131, 163, 197]
+}
+

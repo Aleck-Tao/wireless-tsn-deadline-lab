@@ -1,0 +1,16 @@
+sequence,time_ns,event,packet_id,flow_id,copy_id,attempt,link,start_ns,end_ns,payload_bytes,queue_depth,channel_state,outcome,deadline_ns,local_deadline_ns,true_clock_error_ns,estimated_clock_error_ns,uncertainty_ns,detail
+0,0,ARRIVAL,1,control,0,0,,0,0,100,1,,,100000,100000,0,0,0,periodic
+1,0,ARRIVAL,2,telemetry,0,0,,0,0,200,2,,,8000,8000,0,0,0,burst
+2,0,WIRED_TX,1,control,0,0,wired,0,1000,100,1,,,100000,100000,0,0,0,Qbv-inspired gate
+3,1000,WIRED_RX,1,control,0,0,wired,0,0,100,0,,SUCCESS,100000,100000,0,0,0,
+4,1000,WIRED_TX,2,telemetry,0,0,wired,1000,2000,200,0,,,8000,8000,0,0,0,Qbv-inspired gate
+5,1000,WIRELESS_TX,1,control,0,1,wireless,1000,5000,100,0,GOOD,,100000,100000,0,0,0,packet model
+6,2000,WIRED_RX,2,telemetry,0,0,wired,0,0,200,0,,SUCCESS,8000,8000,0,0,0,
+7,5000,WIRELESS_RX,1,control,0,1,wireless,0,0,100,0,GOOD,SUCCESS,100000,100000,0,0,0,
+8,5000,DELIVER,1,control,0,1,,0,0,100,0,,LATE,100000,100000,0,0,0,intentionally wrong label
+9,5000,WIRELESS_TX,2,telemetry,0,1,wireless,5000,9000,200,0,BAD,,8000,8000,0,0,0,packet model
+10,9000,WIRELESS_RX,2,telemetry,0,1,wireless,0,0,200,0,BAD,LOSS,8000,8000,0,0,0,
+11,9000,WIRELESS_TX,2,telemetry,0,2,wireless,9000,13000,200,0,BAD,,8000,8000,0,0,0,packet model
+12,13000,WIRELESS_RX,2,telemetry,0,2,wireless,0,0,200,0,BAD,LOSS,8000,8000,0,0,0,
+13,13000,DROP,2,telemetry,0,0,,0,0,200,0,,RETRY_AND_REPLICA_BUDGET_EXHAUSTED,8000,8000,0,0,0,
+

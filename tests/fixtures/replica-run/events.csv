@@ -1,0 +1,14 @@
+sequence,time_ns,event,packet_id,flow_id,copy_id,attempt,link,start_ns,end_ns,payload_bytes,queue_depth,channel_state,outcome,deadline_ns,local_deadline_ns,true_clock_error_ns,estimated_clock_error_ns,uncertainty_ns,detail
+0,0,ARRIVAL,1,safety,0,0,,0,0,100,1,,,8000,8000,0,0,0,periodic
+1,0,WIRED_TX,1,safety,0,0,wired,0,1000,100,0,,,8000,8000,0,0,0,gate
+2,1000,WIRED_RX,1,safety,0,0,wired,0,0,100,0,,SUCCESS,8000,8000,0,0,0,
+3,1000,WIRELESS_TX,1,safety,0,1,wireless,1000,2000,100,1,BAD,,8000,8000,0,0,0,copy zero
+4,2000,WIRELESS_RX,1,safety,0,1,wireless,0,0,100,0,BAD,LOSS,8000,8000,0,0,0,
+5,2000,WIRELESS_TX,1,safety,1,1,wireless,2000,3000,100,1,BAD,,8000,8000,0,0,0,copy one
+6,3000,WIRELESS_RX,1,safety,1,1,wireless,0,0,100,0,BAD,LOSS,8000,8000,0,0,0,
+7,3000,WIRELESS_TX,1,safety,0,2,wireless,3000,4000,100,1,BAD,,8000,8000,0,0,0,retry zero
+8,4000,WIRELESS_RX,1,safety,0,2,wireless,0,0,100,0,BAD,LOSS,8000,8000,0,0,0,
+9,4000,WIRELESS_TX,1,safety,1,2,wireless,4000,5000,100,0,BAD,,8000,8000,0,0,0,retry one
+10,5000,WIRELESS_RX,1,safety,1,2,wireless,0,0,100,0,BAD,LOSS,8000,8000,0,0,0,
+11,5000,DROP,1,safety,0,0,,0,0,100,0,,RETRY_AND_REPLICA_BUDGET_EXHAUSTED,8000,8000,0,0,0,
+

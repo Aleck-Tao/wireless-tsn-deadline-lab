@@ -1,0 +1,93 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: ${{ matrix.compiler }} release
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - compiler: gcc
+            cxx: g++
+          - compiler: clang
+            cxx: clang++
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=${{ matrix.cxx }}
+      - name: Build
+        run: cmake --build build --parallel 2
+      - name: C++ invariants
+        run: ctest --test-dir build --output-on-failure
+      - name: Python evaluation tests
+        run: python -m unittest discover -s tests/python -v
+
+  sanitizer:
+    name: address and undefined behavior sanitizers
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Configure
+        run: cmake -S . -B build-sanitize -DCMAKE_BUILD_TYPE=Debug -DWTSN_ENABLE_SANITIZERS=ON -DCMAKE_CXX_COMPILER=g++
+      - name: Build
+        run: cmake --build build-sanitize --parallel 2
+      - name: Run CTest under sanitizers
+        env:
+          ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+        run: ctest --test-dir build-sanitize --output-on-failure
+
+  smoke:
+    name: deterministic smoke matrix
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build simulator
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++
+      - name: Compile simulator
+        run: cmake --build build --parallel 2
+      - name: Run and independently validate 16 cases
+        run: python -m wtsn_eval run-plan --plan configs/smoke/plan.json --binary build/wtsn-sim --output artifacts/smoke --source-root .
+      - name: Verify exact artifact and source hashes
+        run: python -m wtsn_eval verify artifacts/smoke --source-root . --binary build/wtsn-sim
+
+  full-benchmark:
+    name: normalized 240-run release artifact
+    needs: [build-and-test, sanitizer, smoke]
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Build release simulator
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=g++
+      - name: Compile release simulator
+        run: cmake --build build --parallel 2
+      - name: Run release experiment matrix
+        run: python -m wtsn_eval run-plan --plan configs/release/plan.json --binary build/wtsn-sim --output artifacts/release --source-root .
+      - name: Verify exact artifact and source hashes
+        run: python -m wtsn_eval verify artifacts/release --source-root . --binary build/wtsn-sim
+      - name: Upload normalized benchmark artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: wireless-tsn-release-${{ github.sha }}
+          path: artifacts/release
+          if-no-files-found: error
+          retention-days: 30

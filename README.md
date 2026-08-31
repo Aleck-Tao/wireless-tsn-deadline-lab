@@ -1,5 +1,7 @@
 # Wireless TSN Deadline Lab
 
+[![CI](https://github.com/Aleck-Tao/wireless-tsn-deadline-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Aleck-Tao/wireless-tsn-deadline-lab/actions/workflows/ci.yml)
+
 A small, inspectable C++20 discrete-event simulator for one research question: how do wireless loss bursts and imperfect clock synchronization change deadline-aware scheduling decisions at a wired-to-wireless boundary?
 
 The repository is deliberately narrower than a network stack. It models packet/slot-level timing on ordinary CPUs and compares FIFO, strict priority, EDF, and clock-aware EDF under paired random seeds. The wired gate is **inspired by** IEEE 802.1Qbv terminology but is not an implementation, conformance test, or standards claim.
@@ -49,6 +51,21 @@ config + seed + scheduler
 The evaluator does not trust the simulator's `DELIVER` outcome label. It recomputes deadline status from arrival, terminal, and ground-truth deadline timestamps. Its denominator contains only packets whose full relative-deadline window fits inside the configured run; this avoids treating unobservable post-horizon outcomes as failures. It also checks the exact CSV schema, run identity, complete experiment matrix, sequence monotonicity, transmission/reception matching, link non-overlap, retry/replica bounds, packet conservation, terminal uniqueness, and causal delivery after the same successful copy and attempt.
 
 The release plan contains six scenarios, four schedulers, and ten shared seeds (240 runs). CI uploads the resulting normalized artifact; checked-in findings should only be added after that artifact passes provenance verification. See [the experiment protocol](docs/EXPERIMENTS.md), [model definition](docs/MODEL.md), and [reproduction guide](docs/REPRODUCIBILITY.md).
+
+## CI-verified release findings
+
+The first 240-run matrix passed GCC and Clang release builds, CTest, 18 Python evaluator tests, ASan/UBSan, the 16-run smoke matrix, exact source/result hashing, and simulator-binary hash verification in [GitHub Actions run 33414022492](https://github.com/Aleck-Tao/wireless-tsn-deadline-lab/actions/runs/33414022492). The complete per-run evidence is retained in the [committed release report](results/release/REPORT.md).
+
+| Scenario | FIFO | EDF | Clock-aware EDF | Strict priority |
+|---|---:|---:|---:|---:|
+| Low load | 1.000 | 1.000 | 1.000 | 1.000 |
+| Bursty channel | 0.435 | 0.635 | 0.669 | 0.801 |
+| Deadline contention | 0.0068 | 0.0051 | 0.0051 | 0.0866 |
+| Retry + replication | 0.618 | 0.866 | 0.908 | 0.920 |
+| Sync holdover | 0.060 | 0.039 | 0.033 | 0.181 |
+| Overload negative | 0.000 | 0.000 | 0.000 | 0.000 |
+
+Values are mean on-time delivery ratios over ten paired seeds. In this configured model, clock-aware EDF improved on FIFO under bursty loss and retry/replication, but it was worse under the synchronization-outage holdover case. Strict priority was strongest in several stress cases. These retained negative results show that the implemented uncertainty adjustment is a heuristic to investigate, not a generally superior or certified scheduler. Bootstrap intervals and all per-seed values remain in the release artifact; the findings do not generalize beyond the declared simulator, configurations, and seed set.
 
 ## Boundaries
 

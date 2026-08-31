@@ -1,0 +1,19 @@
+{
+  "duration_ns": 150000000,
+  "dropped_packets": 13,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "fast-clock", "priority": 9},
+    {"copies_total": 1, "id": "slow-clock", "priority": 9},
+    {"copies_total": 1, "id": "background", "priority": 2}
+  ],
+  "generated_packets": 511,
+  "delivered_packets": 498,
+  "max_retries": 1,
+  "model_scope": "packet/slot-level software simulation; no PHY, hardware, openwifi, or standards-conformance claim",
+  "replication_priority_min": 8,
+  "scenario_id": "sync-holdover",
+  "scheduler": "STRICT_PRIORITY",
+  "seed": 37,
+  "schema_version": "1.0"
+}

@@ -1,0 +1,19 @@
+{
+  "duration_ns": 150000000,
+  "dropped_packets": 837,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "critical-a", "priority": 10},
+    {"copies_total": 1, "id": "critical-b", "priority": 8},
+    {"copies_total": 1, "id": "bulk", "priority": 2}
+  ],
+  "generated_packets": 974,
+  "delivered_packets": 137,
+  "max_retries": 0,
+  "model_scope": "packet/slot-level software simulation; no PHY, hardware, openwifi, or standards-conformance claim",
+  "replication_priority_min": 8,
+  "scenario_id": "overload-negative",
+  "scheduler": "EDF",
+  "seed": 163,
+  "schema_version": "1.0"
+}

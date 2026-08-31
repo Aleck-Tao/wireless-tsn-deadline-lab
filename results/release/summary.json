@@ -1,0 +1,221 @@
+{
+  "groups": [
+    {
+      "deadline_misses_total": 1291,
+      "latency_p99_ns_mean": 5495000.0,
+      "on_time_ratio_mean": 0.668974358974,
+      "on_time_ratio_min": 0.541025641026,
+      "runs": 10,
+      "scenario_id": "bursty-channel",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 1422,
+      "latency_p99_ns_mean": 5370000.0,
+      "on_time_ratio_mean": 0.635384615384,
+      "on_time_ratio_min": 0.474358974359,
+      "runs": 10,
+      "scenario_id": "bursty-channel",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 2203,
+      "latency_p99_ns_mean": 6082500.0,
+      "on_time_ratio_mean": 0.435128205128,
+      "on_time_ratio_min": 0.212820512821,
+      "runs": 10,
+      "scenario_id": "bursty-channel",
+      "scheduler": "FIFO"
+    },
+    {
+      "deadline_misses_total": 776,
+      "latency_p99_ns_mean": 7960000.0,
+      "on_time_ratio_mean": 0.801025641026,
+      "on_time_ratio_min": 0.720512820513,
+      "runs": 10,
+      "scenario_id": "bursty-channel",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "deadline_misses_total": 5870,
+      "latency_p99_ns_mean": 81390000.0,
+      "on_time_ratio_mean": 0.005084745763,
+      "on_time_ratio_min": 0.005084745763,
+      "runs": 10,
+      "scenario_id": "deadline-contention",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 5870,
+      "latency_p99_ns_mean": 81350000.0,
+      "on_time_ratio_mean": 0.005084745763,
+      "on_time_ratio_min": 0.005084745763,
+      "runs": 10,
+      "scenario_id": "deadline-contention",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 5860,
+      "latency_p99_ns_mean": 81840000.0,
+      "on_time_ratio_mean": 0.006779661017,
+      "on_time_ratio_min": 0.006779661017,
+      "runs": 10,
+      "scenario_id": "deadline-contention",
+      "scheduler": "FIFO"
+    },
+    {
+      "deadline_misses_total": 5389,
+      "latency_p99_ns_mean": 99585000.0,
+      "on_time_ratio_mean": 0.086610169491,
+      "on_time_ratio_min": 0.079661016949,
+      "runs": 10,
+      "scenario_id": "deadline-contention",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "deadline_misses_total": 0,
+      "latency_p99_ns_mean": 525000.0,
+      "on_time_ratio_mean": 1.0,
+      "on_time_ratio_min": 1.0,
+      "runs": 10,
+      "scenario_id": "low-load",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 0,
+      "latency_p99_ns_mean": 525000.0,
+      "on_time_ratio_mean": 1.0,
+      "on_time_ratio_min": 1.0,
+      "runs": 10,
+      "scenario_id": "low-load",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 0,
+      "latency_p99_ns_mean": 525000.0,
+      "on_time_ratio_mean": 1.0,
+      "on_time_ratio_min": 1.0,
+      "runs": 10,
+      "scenario_id": "low-load",
+      "scheduler": "FIFO"
+    },
+    {
+      "deadline_misses_total": 0,
+      "latency_p99_ns_mean": 525000.0,
+      "on_time_ratio_mean": 1.0,
+      "on_time_ratio_min": 1.0,
+      "runs": 10,
+      "scenario_id": "low-load",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "deadline_misses_total": 9740,
+      "latency_p99_ns_mean": 127950000.0,
+      "on_time_ratio_mean": 0.0,
+      "on_time_ratio_min": 0.0,
+      "runs": 10,
+      "scenario_id": "overload-negative",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 9740,
+      "latency_p99_ns_mean": 127950000.0,
+      "on_time_ratio_mean": 0.0,
+      "on_time_ratio_min": 0.0,
+      "runs": 10,
+      "scenario_id": "overload-negative",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 9740,
+      "latency_p99_ns_mean": 127200000.0,
+      "on_time_ratio_mean": 0.0,
+      "on_time_ratio_min": 0.0,
+      "runs": 10,
+      "scenario_id": "overload-negative",
+      "scheduler": "FIFO"
+    },
+    {
+      "deadline_misses_total": 9740,
+      "latency_p99_ns_mean": 50050000.0,
+      "on_time_ratio_mean": 0.0,
+      "on_time_ratio_min": 0.0,
+      "runs": 10,
+      "scenario_id": "overload-negative",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "deadline_misses_total": 337,
+      "latency_p99_ns_mean": 4315000.0,
+      "on_time_ratio_mean": 0.907671232877,
+      "on_time_ratio_min": 0.860273972603,
+      "runs": 10,
+      "scenario_id": "retry-replication",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 490,
+      "latency_p99_ns_mean": 4245000.0,
+      "on_time_ratio_mean": 0.865753424658,
+      "on_time_ratio_min": 0.816438356164,
+      "runs": 10,
+      "scenario_id": "retry-replication",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 1394,
+      "latency_p99_ns_mean": 3395000.0,
+      "on_time_ratio_mean": 0.618082191781,
+      "on_time_ratio_min": 0.569863013699,
+      "runs": 10,
+      "scenario_id": "retry-replication",
+      "scheduler": "FIFO"
+    },
+    {
+      "deadline_misses_total": 291,
+      "latency_p99_ns_mean": 4500000.0,
+      "on_time_ratio_mean": 0.920273972603,
+      "on_time_ratio_min": 0.884931506849,
+      "runs": 10,
+      "scenario_id": "retry-replication",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "sync-holdover",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "sync-holdover",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4802,
+      "latency_p99_ns_mean": 7825000.0,
+      "on_time_ratio_mean": 0.060273972603,
+      "on_time_ratio_min": 0.050880626223,
+      "runs": 10,
+      "scenario_id": "sync-holdover",
+      "scheduler": "FIFO"
+    },
+    {
+      "deadline_misses_total": 4186,
+      "latency_p99_ns_mean": 19250000.0,
+      "on_time_ratio_mean": 0.180821917808,
+      "on_time_ratio_min": 0.131115459883,
+      "runs": 10,
+      "scenario_id": "sync-holdover",
+      "scheduler": "STRICT_PRIORITY"
+    }
+  ],
+  "schema_version": "1.0"
+}

@@ -1,0 +1,19 @@
+{
+  "duration_ns": 150000000,
+  "dropped_packets": 5,
+  "extra_replicas": 1,
+  "flows": [
+    {"copies_total": 2, "id": "safety", "priority": 10},
+    {"copies_total": 1, "id": "sensor", "priority": 8},
+    {"copies_total": 1, "id": "background", "priority": 2}
+  ],
+  "generated_packets": 365,
+  "delivered_packets": 360,
+  "max_retries": 1,
+  "model_scope": "packet/slot-level software simulation; no PHY, hardware, openwifi, or standards-conformance claim",
+  "replication_priority_min": 9,
+  "scenario_id": "retry-replication",
+  "scheduler": "CLOCK_AWARE_EDF",
+  "seed": 163,
+  "schema_version": "1.0"
+}

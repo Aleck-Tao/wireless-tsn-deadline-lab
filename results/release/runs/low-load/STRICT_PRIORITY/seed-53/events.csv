@@ -1,0 +1,1386 @@
+sequence,time_ns,event,packet_id,flow_id,copy_id,attempt,link,start_ns,end_ns,payload_bytes,queue_depth,channel_state,outcome,deadline_ns,local_deadline_ns,true_clock_error_ns,estimated_clock_error_ns,uncertainty_ns,detail
+0,0,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150000,149108,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1,0,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120000,-124361,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+2,0,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,220,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+3,0,ARRIVAL,1,control,0,0,,0,0,256,1,,,800000,950010,0,0,0,periodic
+4,0,ARRIVAL,76,sensor,0,0,,0,0,512,2,,,1500000,1379988,0,0,0,periodic
+5,0,WIRED_TX,1,control,0,0,wired,0,2548,256,1,,,800000,950010,0,0,0,Qbv-inspired gate; not standards-compatible
+6,2548,WIRED_RX,1,control,0,0,wired,0,0,256,0,,SUCCESS,800000,950010,0,0,0,
+7,50000,WIRED_TX,76,sensor,0,0,wired,50000,54596,512,0,,,1500000,1379988,0,0,0,Qbv-inspired gate; not standards-compatible
+8,50000,WIRELESS_TX,1,control,0,1,wireless,50000,175000,256,0,GOOD,,800000,950010,0,0,0,packet/slot-level airtime model
+9,54596,WIRED_RX,76,sensor,0,0,wired,0,0,512,0,,SUCCESS,1500000,1379988,0,0,0,
+10,175000,WIRELESS_RX,1,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,800000,950010,0,0,0,
+11,175000,DELIVER,1,control,0,1,,0,0,256,0,,ON_TIME,800000,950010,0,0,0,
+12,200000,WIRELESS_TX,76,sensor,0,1,wireless,200000,400000,512,0,GOOD,,1500000,1379988,0,0,0,packet/slot-level airtime model
+13,400000,WIRELESS_RX,76,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,1500000,1379988,0,0,0,
+14,400000,DELIVER,76,sensor,0,1,,0,0,512,0,,ON_TIME,1500000,1379988,0,0,0,
+15,500000,ARRIVAL,126,background,0,0,,0,0,1000,1,,,4500000,4500000,0,0,0,periodic
+16,600000,WIRED_TX,126,background,0,0,wired,600000,608500,1000,0,,,4500000,4500000,0,0,0,Qbv-inspired gate; not standards-compatible
+17,608500,WIRED_RX,126,background,0,0,wired,0,0,1000,0,,SUCCESS,4500000,4500000,0,0,0,
+18,650000,WIRELESS_TX,126,background,0,1,wireless,650000,1025000,1000,0,GOOD,,4500000,4500000,0,0,0,packet/slot-level airtime model
+19,1000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150012,149027,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+20,1000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120008,-118947,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+21,1000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,4944,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+22,1025000,WIRELESS_RX,126,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,4500000,4500000,0,0,0,
+23,1025000,DELIVER,126,background,0,1,,0,0,1000,0,,ON_TIME,4500000,4500000,0,0,0,
+24,2000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150024,149651,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+25,2000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120016,-117844,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+26,2000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-57,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+27,2000000,ARRIVAL,2,control,0,0,,0,0,256,1,,,2800000,2950034,0,0,0,periodic
+28,2000000,WIRED_TX,2,control,0,0,wired,2000000,2002548,256,0,,,2800000,2950034,0,0,0,Qbv-inspired gate; not standards-compatible
+29,2002548,WIRED_RX,2,control,0,0,wired,0,0,256,0,,SUCCESS,2800000,2950034,0,0,0,
+30,2050000,WIRELESS_TX,2,control,0,1,wireless,2050000,2175000,256,0,GOOD,,2800000,2950034,0,0,0,packet/slot-level airtime model
+31,2175000,WIRELESS_RX,2,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,2800000,2950034,0,0,0,
+32,2175000,DELIVER,2,control,0,1,,0,0,256,0,,ON_TIME,2800000,2950034,0,0,0,
+33,3000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150036,150507,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+34,3000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120024,-118825,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+35,3000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1035,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+36,3000000,ARRIVAL,77,sensor,0,0,,0,0,512,1,,,4500000,4379964,0,0,0,periodic
+37,3000000,WIRED_TX,77,sensor,0,0,wired,3000000,3004596,512,0,,,4500000,4379964,0,0,0,Qbv-inspired gate; not standards-compatible
+38,3004596,WIRED_RX,77,sensor,0,0,wired,0,0,512,0,,SUCCESS,4500000,4379964,0,0,0,
+39,3050000,WIRELESS_TX,77,sensor,0,1,wireless,3050000,3250000,512,0,GOOD,,4500000,4379964,0,0,0,packet/slot-level airtime model
+40,3250000,WIRELESS_RX,77,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,4500000,4379964,0,0,0,
+41,3250000,DELIVER,77,sensor,0,1,,0,0,512,0,,ON_TIME,4500000,4379964,0,0,0,
+42,4000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150048,149749,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+43,4000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120032,-119324,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+44,4000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,154,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+45,4000000,ARRIVAL,3,control,0,0,,0,0,256,1,,,4800000,4950058,0,0,0,periodic
+46,4000000,WIRED_TX,3,control,0,0,wired,4000000,4002548,256,0,,,4800000,4950058,0,0,0,Qbv-inspired gate; not standards-compatible
+47,4002548,WIRED_RX,3,control,0,0,wired,0,0,256,0,,SUCCESS,4800000,4950058,0,0,0,
+48,4050000,WIRELESS_TX,3,control,0,1,wireless,4050000,4175000,256,0,GOOD,,4800000,4950058,0,0,0,packet/slot-level airtime model
+49,4175000,WIRELESS_RX,3,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,4800000,4950058,0,0,0,
+50,4175000,DELIVER,3,control,0,1,,0,0,256,0,,ON_TIME,4800000,4950058,0,0,0,
+51,5000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150060,150759,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+52,5000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120040,-120391,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+53,5000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2098,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+54,5500000,ARRIVAL,127,background,0,0,,0,0,1000,1,,,9500000,9500000,0,0,0,periodic
+55,5600000,WIRED_TX,127,background,0,0,wired,5600000,5608500,1000,0,,,9500000,9500000,0,0,0,Qbv-inspired gate; not standards-compatible
+56,5608500,WIRED_RX,127,background,0,0,wired,0,0,1000,0,,SUCCESS,9500000,9500000,0,0,0,
+57,5650000,WIRELESS_TX,127,background,0,1,wireless,5650000,6025000,1000,0,GOOD,,9500000,9500000,0,0,0,packet/slot-level airtime model
+58,6000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150072,152351,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+59,6000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120048,-120082,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+60,6000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,612,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+61,6000000,ARRIVAL,4,control,0,0,,0,0,256,1,,,6800000,6950082,0,0,0,periodic
+62,6000000,ARRIVAL,78,sensor,0,0,,0,0,512,2,,,7500000,7379940,0,0,0,periodic
+63,6000000,WIRED_TX,4,control,0,0,wired,6000000,6002548,256,1,,,6800000,6950082,0,0,0,Qbv-inspired gate; not standards-compatible
+64,6002548,WIRED_RX,4,control,0,0,wired,0,0,256,0,,SUCCESS,6800000,6950082,0,0,0,
+65,6025000,WIRELESS_RX,127,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,9500000,9500000,0,0,0,
+66,6025000,DELIVER,127,background,0,1,,0,0,1000,0,,ON_TIME,9500000,9500000,0,0,0,
+67,6050000,WIRED_TX,78,sensor,0,0,wired,6050000,6054596,512,0,,,7500000,7379940,0,0,0,Qbv-inspired gate; not standards-compatible
+68,6050000,WIRELESS_TX,4,control,0,1,wireless,6050000,6175000,256,0,GOOD,,6800000,6950082,0,0,0,packet/slot-level airtime model
+69,6054596,WIRED_RX,78,sensor,0,0,wired,0,0,512,0,,SUCCESS,7500000,7379940,0,0,0,
+70,6175000,WIRELESS_RX,4,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,6800000,6950082,0,0,0,
+71,6175000,DELIVER,4,control,0,1,,0,0,256,0,,ON_TIME,6800000,6950082,0,0,0,
+72,6200000,WIRELESS_TX,78,sensor,0,1,wireless,6200000,6400000,512,0,GOOD,,7500000,7379940,0,0,0,packet/slot-level airtime model
+73,6400000,WIRELESS_RX,78,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,7500000,7379940,0,0,0,
+74,6400000,DELIVER,78,sensor,0,1,,0,0,512,0,,ON_TIME,7500000,7379940,0,0,0,
+75,7000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150084,149514,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+76,7000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120056,-122075,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+77,7000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,3351,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+78,8000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150096,147744,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+79,8000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120064,-115741,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+80,8000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2123,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+81,8000000,ARRIVAL,5,control,0,0,,0,0,256,1,,,8800000,8950106,0,0,0,periodic
+82,8000000,WIRED_TX,5,control,0,0,wired,8000000,8002548,256,0,,,8800000,8950106,0,0,0,Qbv-inspired gate; not standards-compatible
+83,8002548,WIRED_RX,5,control,0,0,wired,0,0,256,0,,SUCCESS,8800000,8950106,0,0,0,
+84,8050000,WIRELESS_TX,5,control,0,1,wireless,8050000,8175000,256,0,GOOD,,8800000,8950106,0,0,0,packet/slot-level airtime model
+85,8175000,WIRELESS_RX,5,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,8800000,8950106,0,0,0,
+86,8175000,DELIVER,5,control,0,1,,0,0,256,0,,ON_TIME,8800000,8950106,0,0,0,
+87,9000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150108,148005,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+88,9000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120072,-117673,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+89,9000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1415,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+90,9000000,ARRIVAL,79,sensor,0,0,,0,0,512,1,,,10500000,10379916,0,0,0,periodic
+91,9000000,WIRED_TX,79,sensor,0,0,wired,9000000,9004596,512,0,,,10500000,10379916,0,0,0,Qbv-inspired gate; not standards-compatible
+92,9004596,WIRED_RX,79,sensor,0,0,wired,0,0,512,0,,SUCCESS,10500000,10379916,0,0,0,
+93,9050000,WIRELESS_TX,79,sensor,0,1,wireless,9050000,9250000,512,0,GOOD,,10500000,10379916,0,0,0,packet/slot-level airtime model
+94,9250000,WIRELESS_RX,79,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,10500000,10379916,0,0,0,
+95,9250000,DELIVER,79,sensor,0,1,,0,0,512,0,,ON_TIME,10500000,10379916,0,0,0,
+96,10000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150120,149583,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+97,10000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120080,-121378,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+98,10000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2044,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+99,10000000,ARRIVAL,6,control,0,0,,0,0,256,1,,,10800000,10950130,0,0,0,periodic
+100,10000000,WIRED_TX,6,control,0,0,wired,10000000,10002548,256,0,,,10800000,10950130,0,0,0,Qbv-inspired gate; not standards-compatible
+101,10002548,WIRED_RX,6,control,0,0,wired,0,0,256,0,,SUCCESS,10800000,10950130,0,0,0,
+102,10050000,WIRELESS_TX,6,control,0,1,wireless,10050000,10175000,256,0,GOOD,,10800000,10950130,0,0,0,packet/slot-level airtime model
+103,10175000,WIRELESS_RX,6,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,10800000,10950130,0,0,0,
+104,10175000,DELIVER,6,control,0,1,,0,0,256,0,,ON_TIME,10800000,10950130,0,0,0,
+105,10500000,ARRIVAL,128,background,0,0,,0,0,1000,1,,,14500000,14500000,0,0,0,periodic
+106,10600000,WIRED_TX,128,background,0,0,wired,10600000,10608500,1000,0,,,14500000,14500000,0,0,0,Qbv-inspired gate; not standards-compatible
+107,10608500,WIRED_RX,128,background,0,0,wired,0,0,1000,0,,SUCCESS,14500000,14500000,0,0,0,
+108,10650000,WIRELESS_TX,128,background,0,1,wireless,10650000,11025000,1000,0,GOOD,,14500000,14500000,0,0,0,packet/slot-level airtime model
+109,11000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150132,149631,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+110,11000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120088,-123031,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+111,11000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-441,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+112,11025000,WIRELESS_RX,128,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,14500000,14500000,0,0,0,
+113,11025000,DELIVER,128,background,0,1,,0,0,1000,0,,ON_TIME,14500000,14500000,0,0,0,
+114,12000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150144,147922,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+115,12000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120096,-120145,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+116,12000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,814,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+117,12000000,ARRIVAL,7,control,0,0,,0,0,256,1,,,12800000,12950154,0,0,0,periodic
+118,12000000,ARRIVAL,80,sensor,0,0,,0,0,512,2,,,13500000,13379892,0,0,0,periodic
+119,12000000,WIRED_TX,7,control,0,0,wired,12000000,12002548,256,1,,,12800000,12950154,0,0,0,Qbv-inspired gate; not standards-compatible
+120,12002548,WIRED_RX,7,control,0,0,wired,0,0,256,0,,SUCCESS,12800000,12950154,0,0,0,
+121,12050000,WIRED_TX,80,sensor,0,0,wired,12050000,12054596,512,0,,,13500000,13379892,0,0,0,Qbv-inspired gate; not standards-compatible
+122,12050000,WIRELESS_TX,7,control,0,1,wireless,12050000,12175000,256,0,GOOD,,12800000,12950154,0,0,0,packet/slot-level airtime model
+123,12054596,WIRED_RX,80,sensor,0,0,wired,0,0,512,0,,SUCCESS,13500000,13379892,0,0,0,
+124,12175000,WIRELESS_RX,7,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,12800000,12950154,0,0,0,
+125,12175000,DELIVER,7,control,0,1,,0,0,256,0,,ON_TIME,12800000,12950154,0,0,0,
+126,12200000,WIRELESS_TX,80,sensor,0,1,wireless,12200000,12400000,512,0,GOOD,,13500000,13379892,0,0,0,packet/slot-level airtime model
+127,12400000,WIRELESS_RX,80,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,13500000,13379892,0,0,0,
+128,12400000,DELIVER,80,sensor,0,1,,0,0,512,0,,ON_TIME,13500000,13379892,0,0,0,
+129,13000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150156,147176,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+130,13000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120104,-116724,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+131,13000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1850,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+132,14000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150168,150021,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+133,14000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120112,-118354,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+134,14000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1293,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+135,14000000,ARRIVAL,8,control,0,0,,0,0,256,1,,,14800000,14950178,0,0,0,periodic
+136,14000000,WIRED_TX,8,control,0,0,wired,14000000,14002548,256,0,,,14800000,14950178,0,0,0,Qbv-inspired gate; not standards-compatible
+137,14002548,WIRED_RX,8,control,0,0,wired,0,0,256,0,,SUCCESS,14800000,14950178,0,0,0,
+138,14050000,WIRELESS_TX,8,control,0,1,wireless,14050000,14175000,256,0,GOOD,,14800000,14950178,0,0,0,packet/slot-level airtime model
+139,14175000,WIRELESS_RX,8,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,14800000,14950178,0,0,0,
+140,14175000,DELIVER,8,control,0,1,,0,0,256,0,,ON_TIME,14800000,14950178,0,0,0,
+141,15000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150180,149509,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+142,15000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120120,-116207,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+143,15000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1259,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+144,15000000,ARRIVAL,81,sensor,0,0,,0,0,512,1,,,16500000,16379868,0,0,0,periodic
+145,15000000,WIRED_TX,81,sensor,0,0,wired,15000000,15004596,512,0,,,16500000,16379868,0,0,0,Qbv-inspired gate; not standards-compatible
+146,15004596,WIRED_RX,81,sensor,0,0,wired,0,0,512,0,,SUCCESS,16500000,16379868,0,0,0,
+147,15050000,WIRELESS_TX,81,sensor,0,1,wireless,15050000,15250000,512,0,GOOD,,16500000,16379868,0,0,0,packet/slot-level airtime model
+148,15250000,WIRELESS_RX,81,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,16500000,16379868,0,0,0,
+149,15250000,DELIVER,81,sensor,0,1,,0,0,512,0,,ON_TIME,16500000,16379868,0,0,0,
+150,15500000,ARRIVAL,129,background,0,0,,0,0,1000,1,,,19500000,19500000,0,0,0,periodic
+151,15600000,WIRED_TX,129,background,0,0,wired,15600000,15608500,1000,0,,,19500000,19500000,0,0,0,Qbv-inspired gate; not standards-compatible
+152,15608500,WIRED_RX,129,background,0,0,wired,0,0,1000,0,,SUCCESS,19500000,19500000,0,0,0,
+153,15650000,WIRELESS_TX,129,background,0,1,wireless,15650000,16025000,1000,0,GOOD,,19500000,19500000,0,0,0,packet/slot-level airtime model
+154,16000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150192,150979,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+155,16000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120128,-118944,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+156,16000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1215,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+157,16000000,ARRIVAL,9,control,0,0,,0,0,256,1,,,16800000,16950202,0,0,0,periodic
+158,16000000,WIRED_TX,9,control,0,0,wired,16000000,16002548,256,0,,,16800000,16950202,0,0,0,Qbv-inspired gate; not standards-compatible
+159,16002548,WIRED_RX,9,control,0,0,wired,0,0,256,0,,SUCCESS,16800000,16950202,0,0,0,
+160,16025000,WIRELESS_RX,129,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,19500000,19500000,0,0,0,
+161,16025000,DELIVER,129,background,0,1,,0,0,1000,0,,ON_TIME,19500000,19500000,0,0,0,
+162,16050000,WIRELESS_TX,9,control,0,1,wireless,16050000,16175000,256,0,GOOD,,16800000,16950202,0,0,0,packet/slot-level airtime model
+163,16175000,WIRELESS_RX,9,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,16800000,16950202,0,0,0,
+164,16175000,DELIVER,9,control,0,1,,0,0,256,0,,ON_TIME,16800000,16950202,0,0,0,
+165,17000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150204,149023,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+166,17000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120136,-119368,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+167,17000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1617,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+168,18000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150216,149658,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+169,18000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120144,-119886,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+170,18000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-76,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+171,18000000,ARRIVAL,10,control,0,0,,0,0,256,1,,,18800000,18950226,0,0,0,periodic
+172,18000000,ARRIVAL,82,sensor,0,0,,0,0,512,2,,,19500000,19379844,0,0,0,periodic
+173,18000000,WIRED_TX,10,control,0,0,wired,18000000,18002548,256,1,,,18800000,18950226,0,0,0,Qbv-inspired gate; not standards-compatible
+174,18002548,WIRED_RX,10,control,0,0,wired,0,0,256,0,,SUCCESS,18800000,18950226,0,0,0,
+175,18050000,WIRED_TX,82,sensor,0,0,wired,18050000,18054596,512,0,,,19500000,19379844,0,0,0,Qbv-inspired gate; not standards-compatible
+176,18050000,WIRELESS_TX,10,control,0,1,wireless,18050000,18175000,256,0,GOOD,,18800000,18950226,0,0,0,packet/slot-level airtime model
+177,18054596,WIRED_RX,82,sensor,0,0,wired,0,0,512,0,,SUCCESS,19500000,19379844,0,0,0,
+178,18175000,WIRELESS_RX,10,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,18800000,18950226,0,0,0,
+179,18175000,DELIVER,10,control,0,1,,0,0,256,0,,ON_TIME,18800000,18950226,0,0,0,
+180,18200000,WIRELESS_TX,82,sensor,0,1,wireless,18200000,18400000,512,0,GOOD,,19500000,19379844,0,0,0,packet/slot-level airtime model
+181,18400000,WIRELESS_RX,82,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,19500000,19379844,0,0,0,
+182,18400000,DELIVER,82,sensor,0,1,,0,0,512,0,,ON_TIME,19500000,19379844,0,0,0,
+183,19000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150228,151178,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+184,19000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120152,-116515,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+185,19000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1553,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+186,20000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150240,148440,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+187,20000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120160,-121550,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+188,20000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1149,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+189,20000000,ARRIVAL,11,control,0,0,,0,0,256,1,,,20800000,20950250,0,0,0,periodic
+190,20000000,WIRED_TX,11,control,0,0,wired,20000000,20002548,256,0,,,20800000,20950250,0,0,0,Qbv-inspired gate; not standards-compatible
+191,20002548,WIRED_RX,11,control,0,0,wired,0,0,256,0,,SUCCESS,20800000,20950250,0,0,0,
+192,20050000,WIRELESS_TX,11,control,0,1,wireless,20050000,20175000,256,0,GOOD,,20800000,20950250,0,0,0,packet/slot-level airtime model
+193,20175000,WIRELESS_RX,11,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,20800000,20950250,0,0,0,
+194,20175000,DELIVER,11,control,0,1,,0,0,256,0,,ON_TIME,20800000,20950250,0,0,0,
+195,20500000,ARRIVAL,130,background,0,0,,0,0,1000,1,,,24500000,24500000,0,0,0,periodic
+196,20600000,WIRED_TX,130,background,0,0,wired,20600000,20608500,1000,0,,,24500000,24500000,0,0,0,Qbv-inspired gate; not standards-compatible
+197,20608500,WIRED_RX,130,background,0,0,wired,0,0,1000,0,,SUCCESS,24500000,24500000,0,0,0,
+198,20650000,WIRELESS_TX,130,background,0,1,wireless,20650000,21025000,1000,0,GOOD,,24500000,24500000,0,0,0,packet/slot-level airtime model
+199,21000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150252,149436,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+200,21000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120168,-119882,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+201,21000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-624,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+202,21000000,ARRIVAL,83,sensor,0,0,,0,0,512,1,,,22500000,22379820,0,0,0,periodic
+203,21000000,WIRED_TX,83,sensor,0,0,wired,21000000,21004596,512,0,,,22500000,22379820,0,0,0,Qbv-inspired gate; not standards-compatible
+204,21004596,WIRED_RX,83,sensor,0,0,wired,0,0,512,0,,SUCCESS,22500000,22379820,0,0,0,
+205,21025000,WIRELESS_RX,130,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,24500000,24500000,0,0,0,
+206,21025000,DELIVER,130,background,0,1,,0,0,1000,0,,ON_TIME,24500000,24500000,0,0,0,
+207,21050000,WIRELESS_TX,83,sensor,0,1,wireless,21050000,21250000,512,0,GOOD,,22500000,22379820,0,0,0,packet/slot-level airtime model
+208,21250000,WIRELESS_RX,83,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,22500000,22379820,0,0,0,
+209,21250000,DELIVER,83,sensor,0,1,,0,0,512,0,,ON_TIME,22500000,22379820,0,0,0,
+210,22000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150264,147029,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+211,22000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120176,-120085,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+212,22000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1559,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+213,22000000,ARRIVAL,12,control,0,0,,0,0,256,1,,,22800000,22950274,0,0,0,periodic
+214,22000000,WIRED_TX,12,control,0,0,wired,22000000,22002548,256,0,,,22800000,22950274,0,0,0,Qbv-inspired gate; not standards-compatible
+215,22002548,WIRED_RX,12,control,0,0,wired,0,0,256,0,,SUCCESS,22800000,22950274,0,0,0,
+216,22050000,WIRELESS_TX,12,control,0,1,wireless,22050000,22175000,256,0,GOOD,,22800000,22950274,0,0,0,packet/slot-level airtime model
+217,22175000,WIRELESS_RX,12,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,22800000,22950274,0,0,0,
+218,22175000,DELIVER,12,control,0,1,,0,0,256,0,,ON_TIME,22800000,22950274,0,0,0,
+219,23000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150276,151542,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+220,23000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120184,-116426,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+221,23000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3275,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+222,24000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150288,153192,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+223,24000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120192,-124192,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+224,24000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1871,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+225,24000000,ARRIVAL,13,control,0,0,,0,0,256,1,,,24800000,24950298,0,0,0,periodic
+226,24000000,ARRIVAL,84,sensor,0,0,,0,0,512,2,,,25500000,25379796,0,0,0,periodic
+227,24000000,WIRED_TX,13,control,0,0,wired,24000000,24002548,256,1,,,24800000,24950298,0,0,0,Qbv-inspired gate; not standards-compatible
+228,24002548,WIRED_RX,13,control,0,0,wired,0,0,256,0,,SUCCESS,24800000,24950298,0,0,0,
+229,24050000,WIRED_TX,84,sensor,0,0,wired,24050000,24054596,512,0,,,25500000,25379796,0,0,0,Qbv-inspired gate; not standards-compatible
+230,24050000,WIRELESS_TX,13,control,0,1,wireless,24050000,24175000,256,0,GOOD,,24800000,24950298,0,0,0,packet/slot-level airtime model
+231,24054596,WIRED_RX,84,sensor,0,0,wired,0,0,512,0,,SUCCESS,25500000,25379796,0,0,0,
+232,24175000,WIRELESS_RX,13,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,24800000,24950298,0,0,0,
+233,24175000,DELIVER,13,control,0,1,,0,0,256,0,,ON_TIME,24800000,24950298,0,0,0,
+234,24200000,WIRELESS_TX,84,sensor,0,1,wireless,24200000,24400000,512,0,GOOD,,25500000,25379796,0,0,0,packet/slot-level airtime model
+235,24400000,WIRELESS_RX,84,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,25500000,25379796,0,0,0,
+236,24400000,DELIVER,84,sensor,0,1,,0,0,512,0,,ON_TIME,25500000,25379796,0,0,0,
+237,25000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150300,150122,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+238,25000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120200,-121714,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+239,25000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-354,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+240,25500000,ARRIVAL,131,background,0,0,,0,0,1000,1,,,29500000,29500000,0,0,0,periodic
+241,25600000,WIRED_TX,131,background,0,0,wired,25600000,25608500,1000,0,,,29500000,29500000,0,0,0,Qbv-inspired gate; not standards-compatible
+242,25608500,WIRED_RX,131,background,0,0,wired,0,0,1000,0,,SUCCESS,29500000,29500000,0,0,0,
+243,25650000,WIRELESS_TX,131,background,0,1,wireless,25650000,26025000,1000,0,GOOD,,29500000,29500000,0,0,0,packet/slot-level airtime model
+244,26000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150312,149993,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+245,26000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120208,-120963,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+246,26000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,3434,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+247,26000000,ARRIVAL,14,control,0,0,,0,0,256,1,,,26800000,26950322,0,0,0,periodic
+248,26000000,WIRED_TX,14,control,0,0,wired,26000000,26002548,256,0,,,26800000,26950322,0,0,0,Qbv-inspired gate; not standards-compatible
+249,26002548,WIRED_RX,14,control,0,0,wired,0,0,256,0,,SUCCESS,26800000,26950322,0,0,0,
+250,26025000,WIRELESS_RX,131,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,29500000,29500000,0,0,0,
+251,26025000,DELIVER,131,background,0,1,,0,0,1000,0,,ON_TIME,29500000,29500000,0,0,0,
+252,26050000,WIRELESS_TX,14,control,0,1,wireless,26050000,26175000,256,0,GOOD,,26800000,26950322,0,0,0,packet/slot-level airtime model
+253,26175000,WIRELESS_RX,14,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,26800000,26950322,0,0,0,
+254,26175000,DELIVER,14,control,0,1,,0,0,256,0,,ON_TIME,26800000,26950322,0,0,0,
+255,27000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150324,150718,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+256,27000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120216,-120475,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+257,27000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1610,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+258,27000000,ARRIVAL,85,sensor,0,0,,0,0,512,1,,,28500000,28379772,0,0,0,periodic
+259,27000000,WIRED_TX,85,sensor,0,0,wired,27000000,27004596,512,0,,,28500000,28379772,0,0,0,Qbv-inspired gate; not standards-compatible
+260,27004596,WIRED_RX,85,sensor,0,0,wired,0,0,512,0,,SUCCESS,28500000,28379772,0,0,0,
+261,27050000,WIRELESS_TX,85,sensor,0,1,wireless,27050000,27250000,512,0,GOOD,,28500000,28379772,0,0,0,packet/slot-level airtime model
+262,27250000,WIRELESS_RX,85,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,28500000,28379772,0,0,0,
+263,27250000,DELIVER,85,sensor,0,1,,0,0,512,0,,ON_TIME,28500000,28379772,0,0,0,
+264,28000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150336,151710,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+265,28000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120224,-120719,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+266,28000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1754,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+267,28000000,ARRIVAL,15,control,0,0,,0,0,256,1,,,28800000,28950346,0,0,0,periodic
+268,28000000,WIRED_TX,15,control,0,0,wired,28000000,28002548,256,0,,,28800000,28950346,0,0,0,Qbv-inspired gate; not standards-compatible
+269,28002548,WIRED_RX,15,control,0,0,wired,0,0,256,0,,SUCCESS,28800000,28950346,0,0,0,
+270,28050000,WIRELESS_TX,15,control,0,1,wireless,28050000,28175000,256,0,BAD,,28800000,28950346,0,0,0,packet/slot-level airtime model
+271,28175000,WIRELESS_RX,15,control,0,1,wireless,0,0,256,0,BAD,LOSS,28800000,28950346,0,0,0,
+272,28200000,WIRELESS_TX,15,control,0,2,wireless,28200000,28325000,256,0,GOOD,,28800000,28950346,0,0,0,packet/slot-level airtime model
+273,28325000,WIRELESS_RX,15,control,0,2,wireless,0,0,256,0,GOOD,SUCCESS,28800000,28950346,0,0,0,
+274,28325000,DELIVER,15,control,0,2,,0,0,256,0,,ON_TIME,28800000,28950346,0,0,0,
+275,29000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150348,150375,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+276,29000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120232,-121226,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+277,29000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1155,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+278,30000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150360,147890,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+279,30000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120240,-121828,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+280,30000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2137,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+281,30000000,ARRIVAL,16,control,0,0,,0,0,256,1,,,30800000,30950370,0,0,0,periodic
+282,30000000,ARRIVAL,86,sensor,0,0,,0,0,512,2,,,31500000,31379748,0,0,0,periodic
+283,30000000,WIRED_TX,16,control,0,0,wired,30000000,30002548,256,1,,,30800000,30950370,0,0,0,Qbv-inspired gate; not standards-compatible
+284,30002548,WIRED_RX,16,control,0,0,wired,0,0,256,0,,SUCCESS,30800000,30950370,0,0,0,
+285,30050000,WIRED_TX,86,sensor,0,0,wired,30050000,30054596,512,0,,,31500000,31379748,0,0,0,Qbv-inspired gate; not standards-compatible
+286,30050000,WIRELESS_TX,16,control,0,1,wireless,30050000,30175000,256,0,GOOD,,30800000,30950370,0,0,0,packet/slot-level airtime model
+287,30054596,WIRED_RX,86,sensor,0,0,wired,0,0,512,0,,SUCCESS,31500000,31379748,0,0,0,
+288,30175000,WIRELESS_RX,16,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,30800000,30950370,0,0,0,
+289,30175000,DELIVER,16,control,0,1,,0,0,256,0,,ON_TIME,30800000,30950370,0,0,0,
+290,30200000,WIRELESS_TX,86,sensor,0,1,wireless,30200000,30400000,512,0,GOOD,,31500000,31379748,0,0,0,packet/slot-level airtime model
+291,30400000,WIRELESS_RX,86,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,31500000,31379748,0,0,0,
+292,30400000,DELIVER,86,sensor,0,1,,0,0,512,0,,ON_TIME,31500000,31379748,0,0,0,
+293,30500000,ARRIVAL,132,background,0,0,,0,0,1000,1,,,34500000,34500000,0,0,0,periodic
+294,30600000,WIRED_TX,132,background,0,0,wired,30600000,30608500,1000,0,,,34500000,34500000,0,0,0,Qbv-inspired gate; not standards-compatible
+295,30608500,WIRED_RX,132,background,0,0,wired,0,0,1000,0,,SUCCESS,34500000,34500000,0,0,0,
+296,30650000,WIRELESS_TX,132,background,0,1,wireless,30650000,31025000,1000,0,GOOD,,34500000,34500000,0,0,0,packet/slot-level airtime model
+297,31000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150372,149962,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+298,31000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120248,-118653,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+299,31000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,540,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+300,31025000,WIRELESS_RX,132,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,34500000,34500000,0,0,0,
+301,31025000,DELIVER,132,background,0,1,,0,0,1000,0,,ON_TIME,34500000,34500000,0,0,0,
+302,32000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150384,150194,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+303,32000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120256,-121180,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+304,32000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,870,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+305,32000000,ARRIVAL,17,control,0,0,,0,0,256,1,,,32800000,32950394,0,0,0,periodic
+306,32000000,WIRED_TX,17,control,0,0,wired,32000000,32002548,256,0,,,32800000,32950394,0,0,0,Qbv-inspired gate; not standards-compatible
+307,32002548,WIRED_RX,17,control,0,0,wired,0,0,256,0,,SUCCESS,32800000,32950394,0,0,0,
+308,32050000,WIRELESS_TX,17,control,0,1,wireless,32050000,32175000,256,0,GOOD,,32800000,32950394,0,0,0,packet/slot-level airtime model
+309,32175000,WIRELESS_RX,17,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,32800000,32950394,0,0,0,
+310,32175000,DELIVER,17,control,0,1,,0,0,256,0,,ON_TIME,32800000,32950394,0,0,0,
+311,33000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150396,152247,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+312,33000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120264,-118143,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+313,33000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,63,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+314,33000000,ARRIVAL,87,sensor,0,0,,0,0,512,1,,,34500000,34379724,0,0,0,periodic
+315,33000000,WIRED_TX,87,sensor,0,0,wired,33000000,33004596,512,0,,,34500000,34379724,0,0,0,Qbv-inspired gate; not standards-compatible
+316,33004596,WIRED_RX,87,sensor,0,0,wired,0,0,512,0,,SUCCESS,34500000,34379724,0,0,0,
+317,33050000,WIRELESS_TX,87,sensor,0,1,wireless,33050000,33250000,512,0,GOOD,,34500000,34379724,0,0,0,packet/slot-level airtime model
+318,33250000,WIRELESS_RX,87,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,34500000,34379724,0,0,0,
+319,33250000,DELIVER,87,sensor,0,1,,0,0,512,0,,ON_TIME,34500000,34379724,0,0,0,
+320,34000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150408,148457,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+321,34000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120272,-119348,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+322,34000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2217,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+323,34000000,ARRIVAL,18,control,0,0,,0,0,256,1,,,34800000,34950418,0,0,0,periodic
+324,34000000,WIRED_TX,18,control,0,0,wired,34000000,34002548,256,0,,,34800000,34950418,0,0,0,Qbv-inspired gate; not standards-compatible
+325,34002548,WIRED_RX,18,control,0,0,wired,0,0,256,0,,SUCCESS,34800000,34950418,0,0,0,
+326,34050000,WIRELESS_TX,18,control,0,1,wireless,34050000,34175000,256,0,GOOD,,34800000,34950418,0,0,0,packet/slot-level airtime model
+327,34175000,WIRELESS_RX,18,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,34800000,34950418,0,0,0,
+328,34175000,DELIVER,18,control,0,1,,0,0,256,0,,ON_TIME,34800000,34950418,0,0,0,
+329,35000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150420,151446,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+330,35000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120280,-123267,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+331,35000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-325,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+332,35500000,ARRIVAL,133,background,0,0,,0,0,1000,1,,,39500000,39500000,0,0,0,periodic
+333,35600000,WIRED_TX,133,background,0,0,wired,35600000,35608500,1000,0,,,39500000,39500000,0,0,0,Qbv-inspired gate; not standards-compatible
+334,35608500,WIRED_RX,133,background,0,0,wired,0,0,1000,0,,SUCCESS,39500000,39500000,0,0,0,
+335,35650000,WIRELESS_TX,133,background,0,1,wireless,35650000,36025000,1000,0,GOOD,,39500000,39500000,0,0,0,packet/slot-level airtime model
+336,36000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150432,151549,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+337,36000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120288,-118143,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+338,36000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-36,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+339,36000000,ARRIVAL,19,control,0,0,,0,0,256,1,,,36800000,36950442,0,0,0,periodic
+340,36000000,ARRIVAL,88,sensor,0,0,,0,0,512,2,,,37500000,37379700,0,0,0,periodic
+341,36000000,WIRED_TX,19,control,0,0,wired,36000000,36002548,256,1,,,36800000,36950442,0,0,0,Qbv-inspired gate; not standards-compatible
+342,36002548,WIRED_RX,19,control,0,0,wired,0,0,256,0,,SUCCESS,36800000,36950442,0,0,0,
+343,36025000,WIRELESS_RX,133,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,39500000,39500000,0,0,0,
+344,36025000,DELIVER,133,background,0,1,,0,0,1000,0,,ON_TIME,39500000,39500000,0,0,0,
+345,36050000,WIRED_TX,88,sensor,0,0,wired,36050000,36054596,512,0,,,37500000,37379700,0,0,0,Qbv-inspired gate; not standards-compatible
+346,36050000,WIRELESS_TX,19,control,0,1,wireless,36050000,36175000,256,0,GOOD,,36800000,36950442,0,0,0,packet/slot-level airtime model
+347,36054596,WIRED_RX,88,sensor,0,0,wired,0,0,512,0,,SUCCESS,37500000,37379700,0,0,0,
+348,36175000,WIRELESS_RX,19,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,36800000,36950442,0,0,0,
+349,36175000,DELIVER,19,control,0,1,,0,0,256,0,,ON_TIME,36800000,36950442,0,0,0,
+350,36200000,WIRELESS_TX,88,sensor,0,1,wireless,36200000,36400000,512,0,GOOD,,37500000,37379700,0,0,0,packet/slot-level airtime model
+351,36400000,WIRELESS_RX,88,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,37500000,37379700,0,0,0,
+352,36400000,DELIVER,88,sensor,0,1,,0,0,512,0,,ON_TIME,37500000,37379700,0,0,0,
+353,37000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150444,151562,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+354,37000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120296,-117510,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+355,37000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-5390,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+356,38000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150456,150826,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+357,38000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120304,-121056,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+358,38000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-784,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+359,38000000,ARRIVAL,20,control,0,0,,0,0,256,1,,,38800000,38950466,0,0,0,periodic
+360,38000000,WIRED_TX,20,control,0,0,wired,38000000,38002548,256,0,,,38800000,38950466,0,0,0,Qbv-inspired gate; not standards-compatible
+361,38002548,WIRED_RX,20,control,0,0,wired,0,0,256,0,,SUCCESS,38800000,38950466,0,0,0,
+362,38050000,WIRELESS_TX,20,control,0,1,wireless,38050000,38175000,256,0,GOOD,,38800000,38950466,0,0,0,packet/slot-level airtime model
+363,38175000,WIRELESS_RX,20,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,38800000,38950466,0,0,0,
+364,38175000,DELIVER,20,control,0,1,,0,0,256,0,,ON_TIME,38800000,38950466,0,0,0,
+365,39000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150468,148313,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+366,39000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120312,-124457,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+367,39000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,331,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+368,39000000,ARRIVAL,89,sensor,0,0,,0,0,512,1,,,40500000,40379676,0,0,0,periodic
+369,39000000,WIRED_TX,89,sensor,0,0,wired,39000000,39004596,512,0,,,40500000,40379676,0,0,0,Qbv-inspired gate; not standards-compatible
+370,39004596,WIRED_RX,89,sensor,0,0,wired,0,0,512,0,,SUCCESS,40500000,40379676,0,0,0,
+371,39050000,WIRELESS_TX,89,sensor,0,1,wireless,39050000,39250000,512,0,GOOD,,40500000,40379676,0,0,0,packet/slot-level airtime model
+372,39250000,WIRELESS_RX,89,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,40500000,40379676,0,0,0,
+373,39250000,DELIVER,89,sensor,0,1,,0,0,512,0,,ON_TIME,40500000,40379676,0,0,0,
+374,40000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150480,151382,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+375,40000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120320,-117699,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+376,40000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,358,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+377,40000000,ARRIVAL,21,control,0,0,,0,0,256,1,,,40800000,40950490,0,0,0,periodic
+378,40000000,WIRED_TX,21,control,0,0,wired,40000000,40002548,256,0,,,40800000,40950490,0,0,0,Qbv-inspired gate; not standards-compatible
+379,40002548,WIRED_RX,21,control,0,0,wired,0,0,256,0,,SUCCESS,40800000,40950490,0,0,0,
+380,40050000,WIRELESS_TX,21,control,0,1,wireless,40050000,40175000,256,0,GOOD,,40800000,40950490,0,0,0,packet/slot-level airtime model
+381,40175000,WIRELESS_RX,21,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,40800000,40950490,0,0,0,
+382,40175000,DELIVER,21,control,0,1,,0,0,256,0,,ON_TIME,40800000,40950490,0,0,0,
+383,40500000,ARRIVAL,134,background,0,0,,0,0,1000,1,,,44500000,44500000,0,0,0,periodic
+384,40600000,WIRED_TX,134,background,0,0,wired,40600000,40608500,1000,0,,,44500000,44500000,0,0,0,Qbv-inspired gate; not standards-compatible
+385,40608500,WIRED_RX,134,background,0,0,wired,0,0,1000,0,,SUCCESS,44500000,44500000,0,0,0,
+386,40650000,WIRELESS_TX,134,background,0,1,wireless,40650000,41025000,1000,0,GOOD,,44500000,44500000,0,0,0,packet/slot-level airtime model
+387,41000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150492,151977,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+388,41000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120328,-119796,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+389,41000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-373,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+390,41025000,WIRELESS_RX,134,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,44500000,44500000,0,0,0,
+391,41025000,DELIVER,134,background,0,1,,0,0,1000,0,,ON_TIME,44500000,44500000,0,0,0,
+392,42000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150504,152129,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+393,42000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120336,-121801,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+394,42000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2176,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+395,42000000,ARRIVAL,22,control,0,0,,0,0,256,1,,,42800000,42950514,0,0,0,periodic
+396,42000000,ARRIVAL,90,sensor,0,0,,0,0,512,2,,,43500000,43379652,0,0,0,periodic
+397,42000000,WIRED_TX,22,control,0,0,wired,42000000,42002548,256,1,,,42800000,42950514,0,0,0,Qbv-inspired gate; not standards-compatible
+398,42002548,WIRED_RX,22,control,0,0,wired,0,0,256,0,,SUCCESS,42800000,42950514,0,0,0,
+399,42050000,WIRED_TX,90,sensor,0,0,wired,42050000,42054596,512,0,,,43500000,43379652,0,0,0,Qbv-inspired gate; not standards-compatible
+400,42050000,WIRELESS_TX,22,control,0,1,wireless,42050000,42175000,256,0,GOOD,,42800000,42950514,0,0,0,packet/slot-level airtime model
+401,42054596,WIRED_RX,90,sensor,0,0,wired,0,0,512,0,,SUCCESS,43500000,43379652,0,0,0,
+402,42175000,WIRELESS_RX,22,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,42800000,42950514,0,0,0,
+403,42175000,DELIVER,22,control,0,1,,0,0,256,0,,ON_TIME,42800000,42950514,0,0,0,
+404,42200000,WIRELESS_TX,90,sensor,0,1,wireless,42200000,42400000,512,0,GOOD,,43500000,43379652,0,0,0,packet/slot-level airtime model
+405,42400000,WIRELESS_RX,90,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,43500000,43379652,0,0,0,
+406,42400000,DELIVER,90,sensor,0,1,,0,0,512,0,,ON_TIME,43500000,43379652,0,0,0,
+407,43000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150516,148336,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+408,43000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120344,-120682,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+409,43000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1108,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+410,44000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150528,151340,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+411,44000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120352,-121322,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+412,44000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,3434,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+413,44000000,ARRIVAL,23,control,0,0,,0,0,256,1,,,44800000,44950538,0,0,0,periodic
+414,44000000,WIRED_TX,23,control,0,0,wired,44000000,44002548,256,0,,,44800000,44950538,0,0,0,Qbv-inspired gate; not standards-compatible
+415,44002548,WIRED_RX,23,control,0,0,wired,0,0,256,0,,SUCCESS,44800000,44950538,0,0,0,
+416,44050000,WIRELESS_TX,23,control,0,1,wireless,44050000,44175000,256,0,GOOD,,44800000,44950538,0,0,0,packet/slot-level airtime model
+417,44175000,WIRELESS_RX,23,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,44800000,44950538,0,0,0,
+418,44175000,DELIVER,23,control,0,1,,0,0,256,0,,ON_TIME,44800000,44950538,0,0,0,
+419,45000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150540,151780,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+420,45000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120360,-118828,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+421,45000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,220,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+422,45000000,ARRIVAL,91,sensor,0,0,,0,0,512,1,,,46500000,46379628,0,0,0,periodic
+423,45000000,WIRED_TX,91,sensor,0,0,wired,45000000,45004596,512,0,,,46500000,46379628,0,0,0,Qbv-inspired gate; not standards-compatible
+424,45004596,WIRED_RX,91,sensor,0,0,wired,0,0,512,0,,SUCCESS,46500000,46379628,0,0,0,
+425,45050000,WIRELESS_TX,91,sensor,0,1,wireless,45050000,45250000,512,0,GOOD,,46500000,46379628,0,0,0,packet/slot-level airtime model
+426,45250000,WIRELESS_RX,91,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,46500000,46379628,0,0,0,
+427,45250000,DELIVER,91,sensor,0,1,,0,0,512,0,,ON_TIME,46500000,46379628,0,0,0,
+428,45500000,ARRIVAL,135,background,0,0,,0,0,1000,1,,,49500000,49500000,0,0,0,periodic
+429,45600000,WIRED_TX,135,background,0,0,wired,45600000,45608500,1000,0,,,49500000,49500000,0,0,0,Qbv-inspired gate; not standards-compatible
+430,45608500,WIRED_RX,135,background,0,0,wired,0,0,1000,0,,SUCCESS,49500000,49500000,0,0,0,
+431,45650000,WIRELESS_TX,135,background,0,1,wireless,45650000,46025000,1000,0,GOOD,,49500000,49500000,0,0,0,packet/slot-level airtime model
+432,46000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150552,155022,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+433,46000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120368,-121040,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+434,46000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-674,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+435,46000000,ARRIVAL,24,control,0,0,,0,0,256,1,,,46800000,46950562,0,0,0,periodic
+436,46000000,WIRED_TX,24,control,0,0,wired,46000000,46002548,256,0,,,46800000,46950562,0,0,0,Qbv-inspired gate; not standards-compatible
+437,46002548,WIRED_RX,24,control,0,0,wired,0,0,256,0,,SUCCESS,46800000,46950562,0,0,0,
+438,46025000,WIRELESS_RX,135,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,49500000,49500000,0,0,0,
+439,46025000,DELIVER,135,background,0,1,,0,0,1000,0,,ON_TIME,49500000,49500000,0,0,0,
+440,46050000,WIRELESS_TX,24,control,0,1,wireless,46050000,46175000,256,0,GOOD,,46800000,46950562,0,0,0,packet/slot-level airtime model
+441,46175000,WIRELESS_RX,24,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,46800000,46950562,0,0,0,
+442,46175000,DELIVER,24,control,0,1,,0,0,256,0,,ON_TIME,46800000,46950562,0,0,0,
+443,47000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150564,148973,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+444,47000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120376,-123013,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+445,47000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2205,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+446,48000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150576,150273,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+447,48000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120384,-121633,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+448,48000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2184,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+449,48000000,ARRIVAL,25,control,0,0,,0,0,256,1,,,48800000,48950586,0,0,0,periodic
+450,48000000,ARRIVAL,92,sensor,0,0,,0,0,512,2,,,49500000,49379604,0,0,0,periodic
+451,48000000,WIRED_TX,25,control,0,0,wired,48000000,48002548,256,1,,,48800000,48950586,0,0,0,Qbv-inspired gate; not standards-compatible
+452,48002548,WIRED_RX,25,control,0,0,wired,0,0,256,0,,SUCCESS,48800000,48950586,0,0,0,
+453,48050000,WIRED_TX,92,sensor,0,0,wired,48050000,48054596,512,0,,,49500000,49379604,0,0,0,Qbv-inspired gate; not standards-compatible
+454,48050000,WIRELESS_TX,25,control,0,1,wireless,48050000,48175000,256,0,GOOD,,48800000,48950586,0,0,0,packet/slot-level airtime model
+455,48054596,WIRED_RX,92,sensor,0,0,wired,0,0,512,0,,SUCCESS,49500000,49379604,0,0,0,
+456,48175000,WIRELESS_RX,25,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,48800000,48950586,0,0,0,
+457,48175000,DELIVER,25,control,0,1,,0,0,256,0,,ON_TIME,48800000,48950586,0,0,0,
+458,48200000,WIRELESS_TX,92,sensor,0,1,wireless,48200000,48400000,512,0,GOOD,,49500000,49379604,0,0,0,packet/slot-level airtime model
+459,48400000,WIRELESS_RX,92,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,49500000,49379604,0,0,0,
+460,48400000,DELIVER,92,sensor,0,1,,0,0,512,0,,ON_TIME,49500000,49379604,0,0,0,
+461,49000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150588,150918,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+462,49000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120392,-122004,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+463,49000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2301,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+464,50000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150600,151070,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+465,50000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120400,-120311,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+466,50000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,696,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+467,50000000,ARRIVAL,26,control,0,0,,0,0,256,1,,,50800000,50950610,0,0,0,periodic
+468,50000000,WIRED_TX,26,control,0,0,wired,50000000,50002548,256,0,,,50800000,50950610,0,0,0,Qbv-inspired gate; not standards-compatible
+469,50002548,WIRED_RX,26,control,0,0,wired,0,0,256,0,,SUCCESS,50800000,50950610,0,0,0,
+470,50050000,WIRELESS_TX,26,control,0,1,wireless,50050000,50175000,256,0,GOOD,,50800000,50950610,0,0,0,packet/slot-level airtime model
+471,50175000,WIRELESS_RX,26,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,50800000,50950610,0,0,0,
+472,50175000,DELIVER,26,control,0,1,,0,0,256,0,,ON_TIME,50800000,50950610,0,0,0,
+473,50500000,ARRIVAL,136,background,0,0,,0,0,1000,1,,,54500000,54500000,0,0,0,periodic
+474,50600000,WIRED_TX,136,background,0,0,wired,50600000,50608500,1000,0,,,54500000,54500000,0,0,0,Qbv-inspired gate; not standards-compatible
+475,50608500,WIRED_RX,136,background,0,0,wired,0,0,1000,0,,SUCCESS,54500000,54500000,0,0,0,
+476,50650000,WIRELESS_TX,136,background,0,1,wireless,50650000,51025000,1000,0,GOOD,,54500000,54500000,0,0,0,packet/slot-level airtime model
+477,51000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150612,148126,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+478,51000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120408,-118619,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+479,51000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2439,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+480,51000000,ARRIVAL,93,sensor,0,0,,0,0,512,1,,,52500000,52379580,0,0,0,periodic
+481,51000000,WIRED_TX,93,sensor,0,0,wired,51000000,51004596,512,0,,,52500000,52379580,0,0,0,Qbv-inspired gate; not standards-compatible
+482,51004596,WIRED_RX,93,sensor,0,0,wired,0,0,512,0,,SUCCESS,52500000,52379580,0,0,0,
+483,51025000,WIRELESS_RX,136,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,54500000,54500000,0,0,0,
+484,51025000,DELIVER,136,background,0,1,,0,0,1000,0,,ON_TIME,54500000,54500000,0,0,0,
+485,51050000,WIRELESS_TX,93,sensor,0,1,wireless,51050000,51250000,512,0,GOOD,,52500000,52379580,0,0,0,packet/slot-level airtime model
+486,51250000,WIRELESS_RX,93,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,52500000,52379580,0,0,0,
+487,51250000,DELIVER,93,sensor,0,1,,0,0,512,0,,ON_TIME,52500000,52379580,0,0,0,
+488,52000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150624,148584,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+489,52000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120416,-118311,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+490,52000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,732,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+491,52000000,ARRIVAL,27,control,0,0,,0,0,256,1,,,52800000,52950634,0,0,0,periodic
+492,52000000,WIRED_TX,27,control,0,0,wired,52000000,52002548,256,0,,,52800000,52950634,0,0,0,Qbv-inspired gate; not standards-compatible
+493,52002548,WIRED_RX,27,control,0,0,wired,0,0,256,0,,SUCCESS,52800000,52950634,0,0,0,
+494,52050000,WIRELESS_TX,27,control,0,1,wireless,52050000,52175000,256,0,GOOD,,52800000,52950634,0,0,0,packet/slot-level airtime model
+495,52175000,WIRELESS_RX,27,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,52800000,52950634,0,0,0,
+496,52175000,DELIVER,27,control,0,1,,0,0,256,0,,ON_TIME,52800000,52950634,0,0,0,
+497,53000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150636,150575,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+498,53000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120424,-121345,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+499,53000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1666,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+500,54000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150648,147121,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+501,54000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120432,-119655,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+502,54000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3696,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+503,54000000,ARRIVAL,28,control,0,0,,0,0,256,1,,,54800000,54950658,0,0,0,periodic
+504,54000000,ARRIVAL,94,sensor,0,0,,0,0,512,2,,,55500000,55379556,0,0,0,periodic
+505,54000000,WIRED_TX,28,control,0,0,wired,54000000,54002548,256,1,,,54800000,54950658,0,0,0,Qbv-inspired gate; not standards-compatible
+506,54002548,WIRED_RX,28,control,0,0,wired,0,0,256,0,,SUCCESS,54800000,54950658,0,0,0,
+507,54050000,WIRED_TX,94,sensor,0,0,wired,54050000,54054596,512,0,,,55500000,55379556,0,0,0,Qbv-inspired gate; not standards-compatible
+508,54050000,WIRELESS_TX,28,control,0,1,wireless,54050000,54175000,256,0,GOOD,,54800000,54950658,0,0,0,packet/slot-level airtime model
+509,54054596,WIRED_RX,94,sensor,0,0,wired,0,0,512,0,,SUCCESS,55500000,55379556,0,0,0,
+510,54175000,WIRELESS_RX,28,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,54800000,54950658,0,0,0,
+511,54175000,DELIVER,28,control,0,1,,0,0,256,0,,ON_TIME,54800000,54950658,0,0,0,
+512,54200000,WIRELESS_TX,94,sensor,0,1,wireless,54200000,54400000,512,0,GOOD,,55500000,55379556,0,0,0,packet/slot-level airtime model
+513,54400000,WIRELESS_RX,94,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,55500000,55379556,0,0,0,
+514,54400000,DELIVER,94,sensor,0,1,,0,0,512,0,,ON_TIME,55500000,55379556,0,0,0,
+515,55000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150660,151663,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+516,55000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120440,-120467,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+517,55000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1288,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+518,55500000,ARRIVAL,137,background,0,0,,0,0,1000,1,,,59500000,59500000,0,0,0,periodic
+519,55600000,WIRED_TX,137,background,0,0,wired,55600000,55608500,1000,0,,,59500000,59500000,0,0,0,Qbv-inspired gate; not standards-compatible
+520,55608500,WIRED_RX,137,background,0,0,wired,0,0,1000,0,,SUCCESS,59500000,59500000,0,0,0,
+521,55650000,WIRELESS_TX,137,background,0,1,wireless,55650000,56025000,1000,0,GOOD,,59500000,59500000,0,0,0,packet/slot-level airtime model
+522,56000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150672,152447,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+523,56000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120448,-119472,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+524,56000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,398,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+525,56000000,ARRIVAL,29,control,0,0,,0,0,256,1,,,56800000,56950682,0,0,0,periodic
+526,56000000,WIRED_TX,29,control,0,0,wired,56000000,56002548,256,0,,,56800000,56950682,0,0,0,Qbv-inspired gate; not standards-compatible
+527,56002548,WIRED_RX,29,control,0,0,wired,0,0,256,0,,SUCCESS,56800000,56950682,0,0,0,
+528,56025000,WIRELESS_RX,137,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,59500000,59500000,0,0,0,
+529,56025000,DELIVER,137,background,0,1,,0,0,1000,0,,ON_TIME,59500000,59500000,0,0,0,
+530,56050000,WIRELESS_TX,29,control,0,1,wireless,56050000,56175000,256,0,GOOD,,56800000,56950682,0,0,0,packet/slot-level airtime model
+531,56175000,WIRELESS_RX,29,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,56800000,56950682,0,0,0,
+532,56175000,DELIVER,29,control,0,1,,0,0,256,0,,ON_TIME,56800000,56950682,0,0,0,
+533,57000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150684,150637,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+534,57000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120456,-122668,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+535,57000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,132,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+536,57000000,ARRIVAL,95,sensor,0,0,,0,0,512,1,,,58500000,58379532,0,0,0,periodic
+537,57000000,WIRED_TX,95,sensor,0,0,wired,57000000,57004596,512,0,,,58500000,58379532,0,0,0,Qbv-inspired gate; not standards-compatible
+538,57004596,WIRED_RX,95,sensor,0,0,wired,0,0,512,0,,SUCCESS,58500000,58379532,0,0,0,
+539,57050000,WIRELESS_TX,95,sensor,0,1,wireless,57050000,57250000,512,0,GOOD,,58500000,58379532,0,0,0,packet/slot-level airtime model
+540,57250000,WIRELESS_RX,95,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,58500000,58379532,0,0,0,
+541,57250000,DELIVER,95,sensor,0,1,,0,0,512,0,,ON_TIME,58500000,58379532,0,0,0,
+542,58000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150696,150243,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+543,58000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120464,-122727,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+544,58000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,374,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+545,58000000,ARRIVAL,30,control,0,0,,0,0,256,1,,,58800000,58950706,0,0,0,periodic
+546,58000000,WIRED_TX,30,control,0,0,wired,58000000,58002548,256,0,,,58800000,58950706,0,0,0,Qbv-inspired gate; not standards-compatible
+547,58002548,WIRED_RX,30,control,0,0,wired,0,0,256,0,,SUCCESS,58800000,58950706,0,0,0,
+548,58050000,WIRELESS_TX,30,control,0,1,wireless,58050000,58175000,256,0,GOOD,,58800000,58950706,0,0,0,packet/slot-level airtime model
+549,58175000,WIRELESS_RX,30,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,58800000,58950706,0,0,0,
+550,58175000,DELIVER,30,control,0,1,,0,0,256,0,,ON_TIME,58800000,58950706,0,0,0,
+551,59000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150708,147568,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+552,59000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120472,-118011,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+553,59000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-765,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+554,60000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150720,150090,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+555,60000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120480,-117740,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+556,60000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2378,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+557,60000000,ARRIVAL,31,control,0,0,,0,0,256,1,,,60800000,60950730,0,0,0,periodic
+558,60000000,ARRIVAL,96,sensor,0,0,,0,0,512,2,,,61500000,61379508,0,0,0,periodic
+559,60000000,WIRED_TX,31,control,0,0,wired,60000000,60002548,256,1,,,60800000,60950730,0,0,0,Qbv-inspired gate; not standards-compatible
+560,60002548,WIRED_RX,31,control,0,0,wired,0,0,256,0,,SUCCESS,60800000,60950730,0,0,0,
+561,60050000,WIRED_TX,96,sensor,0,0,wired,60050000,60054596,512,0,,,61500000,61379508,0,0,0,Qbv-inspired gate; not standards-compatible
+562,60050000,WIRELESS_TX,31,control,0,1,wireless,60050000,60175000,256,0,GOOD,,60800000,60950730,0,0,0,packet/slot-level airtime model
+563,60054596,WIRED_RX,96,sensor,0,0,wired,0,0,512,0,,SUCCESS,61500000,61379508,0,0,0,
+564,60175000,WIRELESS_RX,31,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,60800000,60950730,0,0,0,
+565,60175000,DELIVER,31,control,0,1,,0,0,256,0,,ON_TIME,60800000,60950730,0,0,0,
+566,60200000,WIRELESS_TX,96,sensor,0,1,wireless,60200000,60400000,512,0,GOOD,,61500000,61379508,0,0,0,packet/slot-level airtime model
+567,60400000,WIRELESS_RX,96,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,61500000,61379508,0,0,0,
+568,60400000,DELIVER,96,sensor,0,1,,0,0,512,0,,ON_TIME,61500000,61379508,0,0,0,
+569,60500000,ARRIVAL,138,background,0,0,,0,0,1000,1,,,64500000,64500000,0,0,0,periodic
+570,60600000,WIRED_TX,138,background,0,0,wired,60600000,60608500,1000,0,,,64500000,64500000,0,0,0,Qbv-inspired gate; not standards-compatible
+571,60608500,WIRED_RX,138,background,0,0,wired,0,0,1000,0,,SUCCESS,64500000,64500000,0,0,0,
+572,60650000,WIRELESS_TX,138,background,0,1,wireless,60650000,61025000,1000,0,GOOD,,64500000,64500000,0,0,0,packet/slot-level airtime model
+573,61000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150732,149105,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+574,61000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120488,-119193,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+575,61000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1334,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+576,61025000,WIRELESS_RX,138,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,64500000,64500000,0,0,0,
+577,61025000,DELIVER,138,background,0,1,,0,0,1000,0,,ON_TIME,64500000,64500000,0,0,0,
+578,62000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150744,151887,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+579,62000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120496,-121455,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+580,62000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1769,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+581,62000000,ARRIVAL,32,control,0,0,,0,0,256,1,,,62800000,62950754,0,0,0,periodic
+582,62000000,WIRED_TX,32,control,0,0,wired,62000000,62002548,256,0,,,62800000,62950754,0,0,0,Qbv-inspired gate; not standards-compatible
+583,62002548,WIRED_RX,32,control,0,0,wired,0,0,256,0,,SUCCESS,62800000,62950754,0,0,0,
+584,62050000,WIRELESS_TX,32,control,0,1,wireless,62050000,62175000,256,0,GOOD,,62800000,62950754,0,0,0,packet/slot-level airtime model
+585,62175000,WIRELESS_RX,32,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,62800000,62950754,0,0,0,
+586,62175000,DELIVER,32,control,0,1,,0,0,256,0,,ON_TIME,62800000,62950754,0,0,0,
+587,63000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150756,149016,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+588,63000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120504,-119617,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+589,63000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2122,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+590,63000000,ARRIVAL,97,sensor,0,0,,0,0,512,1,,,64500000,64379484,0,0,0,periodic
+591,63000000,WIRED_TX,97,sensor,0,0,wired,63000000,63004596,512,0,,,64500000,64379484,0,0,0,Qbv-inspired gate; not standards-compatible
+592,63004596,WIRED_RX,97,sensor,0,0,wired,0,0,512,0,,SUCCESS,64500000,64379484,0,0,0,
+593,63050000,WIRELESS_TX,97,sensor,0,1,wireless,63050000,63250000,512,0,GOOD,,64500000,64379484,0,0,0,packet/slot-level airtime model
+594,63250000,WIRELESS_RX,97,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,64500000,64379484,0,0,0,
+595,63250000,DELIVER,97,sensor,0,1,,0,0,512,0,,ON_TIME,64500000,64379484,0,0,0,
+596,64000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150768,147331,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+597,64000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120512,-122362,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+598,64000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-371,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+599,64000000,ARRIVAL,33,control,0,0,,0,0,256,1,,,64800000,64950778,0,0,0,periodic
+600,64000000,WIRED_TX,33,control,0,0,wired,64000000,64002548,256,0,,,64800000,64950778,0,0,0,Qbv-inspired gate; not standards-compatible
+601,64002548,WIRED_RX,33,control,0,0,wired,0,0,256,0,,SUCCESS,64800000,64950778,0,0,0,
+602,64050000,WIRELESS_TX,33,control,0,1,wireless,64050000,64175000,256,0,GOOD,,64800000,64950778,0,0,0,packet/slot-level airtime model
+603,64175000,WIRELESS_RX,33,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,64800000,64950778,0,0,0,
+604,64175000,DELIVER,33,control,0,1,,0,0,256,0,,ON_TIME,64800000,64950778,0,0,0,
+605,65000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150780,149061,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+606,65000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120520,-118419,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+607,65000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1846,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+608,65500000,ARRIVAL,139,background,0,0,,0,0,1000,1,,,69500000,69500000,0,0,0,periodic
+609,65600000,WIRED_TX,139,background,0,0,wired,65600000,65608500,1000,0,,,69500000,69500000,0,0,0,Qbv-inspired gate; not standards-compatible
+610,65608500,WIRED_RX,139,background,0,0,wired,0,0,1000,0,,SUCCESS,69500000,69500000,0,0,0,
+611,65650000,WIRELESS_TX,139,background,0,1,wireless,65650000,66025000,1000,0,GOOD,,69500000,69500000,0,0,0,packet/slot-level airtime model
+612,66000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150792,151906,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+613,66000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120528,-120965,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+614,66000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-169,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+615,66000000,ARRIVAL,34,control,0,0,,0,0,256,1,,,66800000,66950802,0,0,0,periodic
+616,66000000,ARRIVAL,98,sensor,0,0,,0,0,512,2,,,67500000,67379460,0,0,0,periodic
+617,66000000,WIRED_TX,34,control,0,0,wired,66000000,66002548,256,1,,,66800000,66950802,0,0,0,Qbv-inspired gate; not standards-compatible
+618,66002548,WIRED_RX,34,control,0,0,wired,0,0,256,0,,SUCCESS,66800000,66950802,0,0,0,
+619,66025000,WIRELESS_RX,139,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,69500000,69500000,0,0,0,
+620,66025000,DELIVER,139,background,0,1,,0,0,1000,0,,ON_TIME,69500000,69500000,0,0,0,
+621,66050000,WIRED_TX,98,sensor,0,0,wired,66050000,66054596,512,0,,,67500000,67379460,0,0,0,Qbv-inspired gate; not standards-compatible
+622,66050000,WIRELESS_TX,34,control,0,1,wireless,66050000,66175000,256,0,GOOD,,66800000,66950802,0,0,0,packet/slot-level airtime model
+623,66054596,WIRED_RX,98,sensor,0,0,wired,0,0,512,0,,SUCCESS,67500000,67379460,0,0,0,
+624,66175000,WIRELESS_RX,34,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,66800000,66950802,0,0,0,
+625,66175000,DELIVER,34,control,0,1,,0,0,256,0,,ON_TIME,66800000,66950802,0,0,0,
+626,66200000,WIRELESS_TX,98,sensor,0,1,wireless,66200000,66400000,512,0,GOOD,,67500000,67379460,0,0,0,packet/slot-level airtime model
+627,66400000,WIRELESS_RX,98,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,67500000,67379460,0,0,0,
+628,66400000,DELIVER,98,sensor,0,1,,0,0,512,0,,ON_TIME,67500000,67379460,0,0,0,
+629,67000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150804,150914,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+630,67000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120536,-119730,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+631,67000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1730,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+632,68000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150816,151228,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+633,68000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120544,-120586,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+634,68000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1116,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+635,68000000,ARRIVAL,35,control,0,0,,0,0,256,1,,,68800000,68950826,0,0,0,periodic
+636,68000000,WIRED_TX,35,control,0,0,wired,68000000,68002548,256,0,,,68800000,68950826,0,0,0,Qbv-inspired gate; not standards-compatible
+637,68002548,WIRED_RX,35,control,0,0,wired,0,0,256,0,,SUCCESS,68800000,68950826,0,0,0,
+638,68050000,WIRELESS_TX,35,control,0,1,wireless,68050000,68175000,256,0,GOOD,,68800000,68950826,0,0,0,packet/slot-level airtime model
+639,68175000,WIRELESS_RX,35,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,68800000,68950826,0,0,0,
+640,68175000,DELIVER,35,control,0,1,,0,0,256,0,,ON_TIME,68800000,68950826,0,0,0,
+641,69000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150828,149229,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+642,69000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120552,-119688,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+643,69000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1574,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+644,69000000,ARRIVAL,99,sensor,0,0,,0,0,512,1,,,70500000,70379436,0,0,0,periodic
+645,69000000,WIRED_TX,99,sensor,0,0,wired,69000000,69004596,512,0,,,70500000,70379436,0,0,0,Qbv-inspired gate; not standards-compatible
+646,69004596,WIRED_RX,99,sensor,0,0,wired,0,0,512,0,,SUCCESS,70500000,70379436,0,0,0,
+647,69050000,WIRELESS_TX,99,sensor,0,1,wireless,69050000,69250000,512,0,GOOD,,70500000,70379436,0,0,0,packet/slot-level airtime model
+648,69250000,WIRELESS_RX,99,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,70500000,70379436,0,0,0,
+649,69250000,DELIVER,99,sensor,0,1,,0,0,512,0,,ON_TIME,70500000,70379436,0,0,0,
+650,70000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150840,150798,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+651,70000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120560,-122265,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+652,70000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2329,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+653,70000000,ARRIVAL,36,control,0,0,,0,0,256,1,,,70800000,70950850,0,0,0,periodic
+654,70000000,WIRED_TX,36,control,0,0,wired,70000000,70002548,256,0,,,70800000,70950850,0,0,0,Qbv-inspired gate; not standards-compatible
+655,70002548,WIRED_RX,36,control,0,0,wired,0,0,256,0,,SUCCESS,70800000,70950850,0,0,0,
+656,70050000,WIRELESS_TX,36,control,0,1,wireless,70050000,70175000,256,0,GOOD,,70800000,70950850,0,0,0,packet/slot-level airtime model
+657,70175000,WIRELESS_RX,36,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,70800000,70950850,0,0,0,
+658,70175000,DELIVER,36,control,0,1,,0,0,256,0,,ON_TIME,70800000,70950850,0,0,0,
+659,70500000,ARRIVAL,140,background,0,0,,0,0,1000,1,,,74500000,74500000,0,0,0,periodic
+660,70600000,WIRED_TX,140,background,0,0,wired,70600000,70608500,1000,0,,,74500000,74500000,0,0,0,Qbv-inspired gate; not standards-compatible
+661,70608500,WIRED_RX,140,background,0,0,wired,0,0,1000,0,,SUCCESS,74500000,74500000,0,0,0,
+662,70650000,WIRELESS_TX,140,background,0,1,wireless,70650000,71025000,1000,0,GOOD,,74500000,74500000,0,0,0,packet/slot-level airtime model
+663,71000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150852,154188,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+664,71000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120568,-121587,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+665,71000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-201,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+666,71025000,WIRELESS_RX,140,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,74500000,74500000,0,0,0,
+667,71025000,DELIVER,140,background,0,1,,0,0,1000,0,,ON_TIME,74500000,74500000,0,0,0,
+668,72000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150864,151436,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+669,72000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120576,-120416,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+670,72000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-50,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+671,72000000,ARRIVAL,37,control,0,0,,0,0,256,1,,,72800000,72950874,0,0,0,periodic
+672,72000000,ARRIVAL,100,sensor,0,0,,0,0,512,2,,,73500000,73379412,0,0,0,periodic
+673,72000000,WIRED_TX,37,control,0,0,wired,72000000,72002548,256,1,,,72800000,72950874,0,0,0,Qbv-inspired gate; not standards-compatible
+674,72002548,WIRED_RX,37,control,0,0,wired,0,0,256,0,,SUCCESS,72800000,72950874,0,0,0,
+675,72050000,WIRED_TX,100,sensor,0,0,wired,72050000,72054596,512,0,,,73500000,73379412,0,0,0,Qbv-inspired gate; not standards-compatible
+676,72050000,WIRELESS_TX,37,control,0,1,wireless,72050000,72175000,256,0,GOOD,,72800000,72950874,0,0,0,packet/slot-level airtime model
+677,72054596,WIRED_RX,100,sensor,0,0,wired,0,0,512,0,,SUCCESS,73500000,73379412,0,0,0,
+678,72175000,WIRELESS_RX,37,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,72800000,72950874,0,0,0,
+679,72175000,DELIVER,37,control,0,1,,0,0,256,0,,ON_TIME,72800000,72950874,0,0,0,
+680,72200000,WIRELESS_TX,100,sensor,0,1,wireless,72200000,72400000,512,0,GOOD,,73500000,73379412,0,0,0,packet/slot-level airtime model
+681,72400000,WIRELESS_RX,100,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,73500000,73379412,0,0,0,
+682,72400000,DELIVER,100,sensor,0,1,,0,0,512,0,,ON_TIME,73500000,73379412,0,0,0,
+683,73000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150876,151636,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+684,73000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120584,-116298,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+685,73000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3863,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+686,74000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150888,151717,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+687,74000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120592,-121323,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+688,74000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1760,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+689,74000000,ARRIVAL,38,control,0,0,,0,0,256,1,,,74800000,74950898,0,0,0,periodic
+690,74000000,WIRED_TX,38,control,0,0,wired,74000000,74002548,256,0,,,74800000,74950898,0,0,0,Qbv-inspired gate; not standards-compatible
+691,74002548,WIRED_RX,38,control,0,0,wired,0,0,256,0,,SUCCESS,74800000,74950898,0,0,0,
+692,74050000,WIRELESS_TX,38,control,0,1,wireless,74050000,74175000,256,0,GOOD,,74800000,74950898,0,0,0,packet/slot-level airtime model
+693,74175000,WIRELESS_RX,38,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,74800000,74950898,0,0,0,
+694,74175000,DELIVER,38,control,0,1,,0,0,256,0,,ON_TIME,74800000,74950898,0,0,0,
+695,75000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150900,151660,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+696,75000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120600,-121160,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+697,75000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,359,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+698,75000000,ARRIVAL,101,sensor,0,0,,0,0,512,1,,,76500000,76379388,0,0,0,periodic
+699,75000000,WIRED_TX,101,sensor,0,0,wired,75000000,75004596,512,0,,,76500000,76379388,0,0,0,Qbv-inspired gate; not standards-compatible
+700,75004596,WIRED_RX,101,sensor,0,0,wired,0,0,512,0,,SUCCESS,76500000,76379388,0,0,0,
+701,75050000,WIRELESS_TX,101,sensor,0,1,wireless,75050000,75250000,512,0,GOOD,,76500000,76379388,0,0,0,packet/slot-level airtime model
+702,75250000,WIRELESS_RX,101,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,76500000,76379388,0,0,0,
+703,75250000,DELIVER,101,sensor,0,1,,0,0,512,0,,ON_TIME,76500000,76379388,0,0,0,
+704,75500000,ARRIVAL,141,background,0,0,,0,0,1000,1,,,79500000,79500000,0,0,0,periodic
+705,75600000,WIRED_TX,141,background,0,0,wired,75600000,75608500,1000,0,,,79500000,79500000,0,0,0,Qbv-inspired gate; not standards-compatible
+706,75608500,WIRED_RX,141,background,0,0,wired,0,0,1000,0,,SUCCESS,79500000,79500000,0,0,0,
+707,75650000,WIRELESS_TX,141,background,0,1,wireless,75650000,76025000,1000,0,GOOD,,79500000,79500000,0,0,0,packet/slot-level airtime model
+708,76000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150912,152965,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+709,76000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120608,-120775,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+710,76000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3370,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+711,76000000,ARRIVAL,39,control,0,0,,0,0,256,1,,,76800000,76950922,0,0,0,periodic
+712,76000000,WIRED_TX,39,control,0,0,wired,76000000,76002548,256,0,,,76800000,76950922,0,0,0,Qbv-inspired gate; not standards-compatible
+713,76002548,WIRED_RX,39,control,0,0,wired,0,0,256,0,,SUCCESS,76800000,76950922,0,0,0,
+714,76025000,WIRELESS_RX,141,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,79500000,79500000,0,0,0,
+715,76025000,DELIVER,141,background,0,1,,0,0,1000,0,,ON_TIME,79500000,79500000,0,0,0,
+716,76050000,WIRELESS_TX,39,control,0,1,wireless,76050000,76175000,256,0,GOOD,,76800000,76950922,0,0,0,packet/slot-level airtime model
+717,76175000,WIRELESS_RX,39,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,76800000,76950922,0,0,0,
+718,76175000,DELIVER,39,control,0,1,,0,0,256,0,,ON_TIME,76800000,76950922,0,0,0,
+719,77000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150924,151948,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+720,77000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120616,-121994,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+721,77000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1273,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+722,78000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150936,151413,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+723,78000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120624,-119033,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+724,78000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1307,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+725,78000000,ARRIVAL,40,control,0,0,,0,0,256,1,,,78800000,78950946,0,0,0,periodic
+726,78000000,ARRIVAL,102,sensor,0,0,,0,0,512,2,,,79500000,79379364,0,0,0,periodic
+727,78000000,WIRED_TX,40,control,0,0,wired,78000000,78002548,256,1,,,78800000,78950946,0,0,0,Qbv-inspired gate; not standards-compatible
+728,78002548,WIRED_RX,40,control,0,0,wired,0,0,256,0,,SUCCESS,78800000,78950946,0,0,0,
+729,78050000,WIRED_TX,102,sensor,0,0,wired,78050000,78054596,512,0,,,79500000,79379364,0,0,0,Qbv-inspired gate; not standards-compatible
+730,78050000,WIRELESS_TX,40,control,0,1,wireless,78050000,78175000,256,0,GOOD,,78800000,78950946,0,0,0,packet/slot-level airtime model
+731,78054596,WIRED_RX,102,sensor,0,0,wired,0,0,512,0,,SUCCESS,79500000,79379364,0,0,0,
+732,78175000,WIRELESS_RX,40,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,78800000,78950946,0,0,0,
+733,78175000,DELIVER,40,control,0,1,,0,0,256,0,,ON_TIME,78800000,78950946,0,0,0,
+734,78200000,WIRELESS_TX,102,sensor,0,1,wireless,78200000,78400000,512,0,GOOD,,79500000,79379364,0,0,0,packet/slot-level airtime model
+735,78400000,WIRELESS_RX,102,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,79500000,79379364,0,0,0,
+736,78400000,DELIVER,102,sensor,0,1,,0,0,512,0,,ON_TIME,79500000,79379364,0,0,0,
+737,79000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150948,151774,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+738,79000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120632,-122054,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+739,79000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1309,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+740,80000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150960,151753,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+741,80000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120640,-120917,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+742,80000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-615,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+743,80000000,ARRIVAL,41,control,0,0,,0,0,256,1,,,80800000,80950970,0,0,0,periodic
+744,80000000,WIRED_TX,41,control,0,0,wired,80000000,80002548,256,0,,,80800000,80950970,0,0,0,Qbv-inspired gate; not standards-compatible
+745,80002548,WIRED_RX,41,control,0,0,wired,0,0,256,0,,SUCCESS,80800000,80950970,0,0,0,
+746,80050000,WIRELESS_TX,41,control,0,1,wireless,80050000,80175000,256,0,GOOD,,80800000,80950970,0,0,0,packet/slot-level airtime model
+747,80175000,WIRELESS_RX,41,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,80800000,80950970,0,0,0,
+748,80175000,DELIVER,41,control,0,1,,0,0,256,0,,ON_TIME,80800000,80950970,0,0,0,
+749,80500000,ARRIVAL,142,background,0,0,,0,0,1000,1,,,84500000,84500000,0,0,0,periodic
+750,80600000,WIRED_TX,142,background,0,0,wired,80600000,80608500,1000,0,,,84500000,84500000,0,0,0,Qbv-inspired gate; not standards-compatible
+751,80608500,WIRED_RX,142,background,0,0,wired,0,0,1000,0,,SUCCESS,84500000,84500000,0,0,0,
+752,80650000,WIRELESS_TX,142,background,0,1,wireless,80650000,81025000,1000,0,GOOD,,84500000,84500000,0,0,0,packet/slot-level airtime model
+753,81000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150972,151025,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+754,81000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120648,-119284,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+755,81000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2558,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+756,81000000,ARRIVAL,103,sensor,0,0,,0,0,512,1,,,82500000,82379340,0,0,0,periodic
+757,81000000,WIRED_TX,103,sensor,0,0,wired,81000000,81004596,512,0,,,82500000,82379340,0,0,0,Qbv-inspired gate; not standards-compatible
+758,81004596,WIRED_RX,103,sensor,0,0,wired,0,0,512,0,,SUCCESS,82500000,82379340,0,0,0,
+759,81025000,WIRELESS_RX,142,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,84500000,84500000,0,0,0,
+760,81025000,DELIVER,142,background,0,1,,0,0,1000,0,,ON_TIME,84500000,84500000,0,0,0,
+761,81050000,WIRELESS_TX,103,sensor,0,1,wireless,81050000,81250000,512,0,GOOD,,82500000,82379340,0,0,0,packet/slot-level airtime model
+762,81250000,WIRELESS_RX,103,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,82500000,82379340,0,0,0,
+763,81250000,DELIVER,103,sensor,0,1,,0,0,512,0,,ON_TIME,82500000,82379340,0,0,0,
+764,82000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150984,152646,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+765,82000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120656,-120342,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+766,82000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2038,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+767,82000000,ARRIVAL,42,control,0,0,,0,0,256,1,,,82800000,82950994,0,0,0,periodic
+768,82000000,WIRED_TX,42,control,0,0,wired,82000000,82002548,256,0,,,82800000,82950994,0,0,0,Qbv-inspired gate; not standards-compatible
+769,82002548,WIRED_RX,42,control,0,0,wired,0,0,256,0,,SUCCESS,82800000,82950994,0,0,0,
+770,82050000,WIRELESS_TX,42,control,0,1,wireless,82050000,82175000,256,0,GOOD,,82800000,82950994,0,0,0,packet/slot-level airtime model
+771,82175000,WIRELESS_RX,42,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,82800000,82950994,0,0,0,
+772,82175000,DELIVER,42,control,0,1,,0,0,256,0,,ON_TIME,82800000,82950994,0,0,0,
+773,83000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,150996,153542,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+774,83000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120664,-120939,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+775,83000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2654,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+776,84000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151008,153659,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+777,84000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120672,-120623,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+778,84000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,413,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+779,84000000,ARRIVAL,43,control,0,0,,0,0,256,1,,,84800000,84951018,0,0,0,periodic
+780,84000000,ARRIVAL,104,sensor,0,0,,0,0,512,2,,,85500000,85379316,0,0,0,periodic
+781,84000000,WIRED_TX,43,control,0,0,wired,84000000,84002548,256,1,,,84800000,84951018,0,0,0,Qbv-inspired gate; not standards-compatible
+782,84002548,WIRED_RX,43,control,0,0,wired,0,0,256,0,,SUCCESS,84800000,84951018,0,0,0,
+783,84050000,WIRED_TX,104,sensor,0,0,wired,84050000,84054596,512,0,,,85500000,85379316,0,0,0,Qbv-inspired gate; not standards-compatible
+784,84050000,WIRELESS_TX,43,control,0,1,wireless,84050000,84175000,256,0,GOOD,,84800000,84951018,0,0,0,packet/slot-level airtime model
+785,84054596,WIRED_RX,104,sensor,0,0,wired,0,0,512,0,,SUCCESS,85500000,85379316,0,0,0,
+786,84175000,WIRELESS_RX,43,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,84800000,84951018,0,0,0,
+787,84175000,DELIVER,43,control,0,1,,0,0,256,0,,ON_TIME,84800000,84951018,0,0,0,
+788,84200000,WIRELESS_TX,104,sensor,0,1,wireless,84200000,84400000,512,0,GOOD,,85500000,85379316,0,0,0,packet/slot-level airtime model
+789,84400000,WIRELESS_RX,104,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,85500000,85379316,0,0,0,
+790,84400000,DELIVER,104,sensor,0,1,,0,0,512,0,,ON_TIME,85500000,85379316,0,0,0,
+791,85000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151020,150352,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+792,85000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120680,-124566,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+793,85000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-721,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+794,85500000,ARRIVAL,143,background,0,0,,0,0,1000,1,,,89500000,89500000,0,0,0,periodic
+795,85600000,WIRED_TX,143,background,0,0,wired,85600000,85608500,1000,0,,,89500000,89500000,0,0,0,Qbv-inspired gate; not standards-compatible
+796,85608500,WIRED_RX,143,background,0,0,wired,0,0,1000,0,,SUCCESS,89500000,89500000,0,0,0,
+797,85650000,WIRELESS_TX,143,background,0,1,wireless,85650000,86025000,1000,0,GOOD,,89500000,89500000,0,0,0,packet/slot-level airtime model
+798,86000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151032,151005,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+799,86000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120688,-119507,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+800,86000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-308,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+801,86000000,ARRIVAL,44,control,0,0,,0,0,256,1,,,86800000,86951042,0,0,0,periodic
+802,86000000,WIRED_TX,44,control,0,0,wired,86000000,86002548,256,0,,,86800000,86951042,0,0,0,Qbv-inspired gate; not standards-compatible
+803,86002548,WIRED_RX,44,control,0,0,wired,0,0,256,0,,SUCCESS,86800000,86951042,0,0,0,
+804,86025000,WIRELESS_RX,143,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,89500000,89500000,0,0,0,
+805,86025000,DELIVER,143,background,0,1,,0,0,1000,0,,ON_TIME,89500000,89500000,0,0,0,
+806,86050000,WIRELESS_TX,44,control,0,1,wireless,86050000,86175000,256,0,GOOD,,86800000,86951042,0,0,0,packet/slot-level airtime model
+807,86175000,WIRELESS_RX,44,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,86800000,86951042,0,0,0,
+808,86175000,DELIVER,44,control,0,1,,0,0,256,0,,ON_TIME,86800000,86951042,0,0,0,
+809,87000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151044,146383,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+810,87000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120696,-118354,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+811,87000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,4329,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+812,87000000,ARRIVAL,105,sensor,0,0,,0,0,512,1,,,88500000,88379292,0,0,0,periodic
+813,87000000,WIRED_TX,105,sensor,0,0,wired,87000000,87004596,512,0,,,88500000,88379292,0,0,0,Qbv-inspired gate; not standards-compatible
+814,87004596,WIRED_RX,105,sensor,0,0,wired,0,0,512,0,,SUCCESS,88500000,88379292,0,0,0,
+815,87050000,WIRELESS_TX,105,sensor,0,1,wireless,87050000,87250000,512,0,GOOD,,88500000,88379292,0,0,0,packet/slot-level airtime model
+816,87250000,WIRELESS_RX,105,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,88500000,88379292,0,0,0,
+817,87250000,DELIVER,105,sensor,0,1,,0,0,512,0,,ON_TIME,88500000,88379292,0,0,0,
+818,88000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151056,152813,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+819,88000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120704,-122920,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+820,88000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-828,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+821,88000000,ARRIVAL,45,control,0,0,,0,0,256,1,,,88800000,88951066,0,0,0,periodic
+822,88000000,WIRED_TX,45,control,0,0,wired,88000000,88002548,256,0,,,88800000,88951066,0,0,0,Qbv-inspired gate; not standards-compatible
+823,88002548,WIRED_RX,45,control,0,0,wired,0,0,256,0,,SUCCESS,88800000,88951066,0,0,0,
+824,88050000,WIRELESS_TX,45,control,0,1,wireless,88050000,88175000,256,0,GOOD,,88800000,88951066,0,0,0,packet/slot-level airtime model
+825,88175000,WIRELESS_RX,45,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,88800000,88951066,0,0,0,
+826,88175000,DELIVER,45,control,0,1,,0,0,256,0,,ON_TIME,88800000,88951066,0,0,0,
+827,89000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151068,152574,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+828,89000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120712,-120309,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+829,89000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-781,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+830,90000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151080,151075,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+831,90000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120720,-122414,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+832,90000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3795,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+833,90000000,ARRIVAL,46,control,0,0,,0,0,256,1,,,90800000,90951090,0,0,0,periodic
+834,90000000,ARRIVAL,106,sensor,0,0,,0,0,512,2,,,91500000,91379268,0,0,0,periodic
+835,90000000,WIRED_TX,46,control,0,0,wired,90000000,90002548,256,1,,,90800000,90951090,0,0,0,Qbv-inspired gate; not standards-compatible
+836,90002548,WIRED_RX,46,control,0,0,wired,0,0,256,0,,SUCCESS,90800000,90951090,0,0,0,
+837,90050000,WIRED_TX,106,sensor,0,0,wired,90050000,90054596,512,0,,,91500000,91379268,0,0,0,Qbv-inspired gate; not standards-compatible
+838,90050000,WIRELESS_TX,46,control,0,1,wireless,90050000,90175000,256,0,GOOD,,90800000,90951090,0,0,0,packet/slot-level airtime model
+839,90054596,WIRED_RX,106,sensor,0,0,wired,0,0,512,0,,SUCCESS,91500000,91379268,0,0,0,
+840,90175000,WIRELESS_RX,46,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,90800000,90951090,0,0,0,
+841,90175000,DELIVER,46,control,0,1,,0,0,256,0,,ON_TIME,90800000,90951090,0,0,0,
+842,90200000,WIRELESS_TX,106,sensor,0,1,wireless,90200000,90400000,512,0,GOOD,,91500000,91379268,0,0,0,packet/slot-level airtime model
+843,90400000,WIRELESS_RX,106,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,91500000,91379268,0,0,0,
+844,90400000,DELIVER,106,sensor,0,1,,0,0,512,0,,ON_TIME,91500000,91379268,0,0,0,
+845,90500000,ARRIVAL,144,background,0,0,,0,0,1000,1,,,94500000,94500000,0,0,0,periodic
+846,90600000,WIRED_TX,144,background,0,0,wired,90600000,90608500,1000,0,,,94500000,94500000,0,0,0,Qbv-inspired gate; not standards-compatible
+847,90608500,WIRED_RX,144,background,0,0,wired,0,0,1000,0,,SUCCESS,94500000,94500000,0,0,0,
+848,90650000,WIRELESS_TX,144,background,0,1,wireless,90650000,91025000,1000,0,GOOD,,94500000,94500000,0,0,0,packet/slot-level airtime model
+849,91000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151092,154184,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+850,91000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120728,-122702,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+851,91000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2293,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+852,91025000,WIRELESS_RX,144,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,94500000,94500000,0,0,0,
+853,91025000,DELIVER,144,background,0,1,,0,0,1000,0,,ON_TIME,94500000,94500000,0,0,0,
+854,92000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151104,153026,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+855,92000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120736,-121204,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+856,92000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,318,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+857,92000000,ARRIVAL,47,control,0,0,,0,0,256,1,,,92800000,92951114,0,0,0,periodic
+858,92000000,WIRED_TX,47,control,0,0,wired,92000000,92002548,256,0,,,92800000,92951114,0,0,0,Qbv-inspired gate; not standards-compatible
+859,92002548,WIRED_RX,47,control,0,0,wired,0,0,256,0,,SUCCESS,92800000,92951114,0,0,0,
+860,92050000,WIRELESS_TX,47,control,0,1,wireless,92050000,92175000,256,0,GOOD,,92800000,92951114,0,0,0,packet/slot-level airtime model
+861,92175000,WIRELESS_RX,47,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,92800000,92951114,0,0,0,
+862,92175000,DELIVER,47,control,0,1,,0,0,256,0,,ON_TIME,92800000,92951114,0,0,0,
+863,93000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151116,154029,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+864,93000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120744,-122392,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+865,93000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,3728,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+866,93000000,ARRIVAL,107,sensor,0,0,,0,0,512,1,,,94500000,94379244,0,0,0,periodic
+867,93000000,WIRED_TX,107,sensor,0,0,wired,93000000,93004596,512,0,,,94500000,94379244,0,0,0,Qbv-inspired gate; not standards-compatible
+868,93004596,WIRED_RX,107,sensor,0,0,wired,0,0,512,0,,SUCCESS,94500000,94379244,0,0,0,
+869,93050000,WIRELESS_TX,107,sensor,0,1,wireless,93050000,93250000,512,0,GOOD,,94500000,94379244,0,0,0,packet/slot-level airtime model
+870,93250000,WIRELESS_RX,107,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,94500000,94379244,0,0,0,
+871,93250000,DELIVER,107,sensor,0,1,,0,0,512,0,,ON_TIME,94500000,94379244,0,0,0,
+872,94000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151128,151456,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+873,94000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120752,-119893,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+874,94000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2164,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+875,94000000,ARRIVAL,48,control,0,0,,0,0,256,1,,,94800000,94951138,0,0,0,periodic
+876,94000000,WIRED_TX,48,control,0,0,wired,94000000,94002548,256,0,,,94800000,94951138,0,0,0,Qbv-inspired gate; not standards-compatible
+877,94002548,WIRED_RX,48,control,0,0,wired,0,0,256,0,,SUCCESS,94800000,94951138,0,0,0,
+878,94050000,WIRELESS_TX,48,control,0,1,wireless,94050000,94175000,256,0,GOOD,,94800000,94951138,0,0,0,packet/slot-level airtime model
+879,94175000,WIRELESS_RX,48,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,94800000,94951138,0,0,0,
+880,94175000,DELIVER,48,control,0,1,,0,0,256,0,,ON_TIME,94800000,94951138,0,0,0,
+881,95000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151140,152060,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+882,95000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120760,-117123,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+883,95000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2114,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+884,95500000,ARRIVAL,145,background,0,0,,0,0,1000,1,,,99500000,99500000,0,0,0,periodic
+885,95600000,WIRED_TX,145,background,0,0,wired,95600000,95608500,1000,0,,,99500000,99500000,0,0,0,Qbv-inspired gate; not standards-compatible
+886,95608500,WIRED_RX,145,background,0,0,wired,0,0,1000,0,,SUCCESS,99500000,99500000,0,0,0,
+887,95650000,WIRELESS_TX,145,background,0,1,wireless,95650000,96025000,1000,0,GOOD,,99500000,99500000,0,0,0,packet/slot-level airtime model
+888,96000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151152,152310,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+889,96000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120768,-119868,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+890,96000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,658,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+891,96000000,ARRIVAL,49,control,0,0,,0,0,256,1,,,96800000,96951162,0,0,0,periodic
+892,96000000,ARRIVAL,108,sensor,0,0,,0,0,512,2,,,97500000,97379220,0,0,0,periodic
+893,96000000,WIRED_TX,49,control,0,0,wired,96000000,96002548,256,1,,,96800000,96951162,0,0,0,Qbv-inspired gate; not standards-compatible
+894,96002548,WIRED_RX,49,control,0,0,wired,0,0,256,0,,SUCCESS,96800000,96951162,0,0,0,
+895,96025000,WIRELESS_RX,145,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,99500000,99500000,0,0,0,
+896,96025000,DELIVER,145,background,0,1,,0,0,1000,0,,ON_TIME,99500000,99500000,0,0,0,
+897,96050000,WIRED_TX,108,sensor,0,0,wired,96050000,96054596,512,0,,,97500000,97379220,0,0,0,Qbv-inspired gate; not standards-compatible
+898,96050000,WIRELESS_TX,49,control,0,1,wireless,96050000,96175000,256,0,GOOD,,96800000,96951162,0,0,0,packet/slot-level airtime model
+899,96054596,WIRED_RX,108,sensor,0,0,wired,0,0,512,0,,SUCCESS,97500000,97379220,0,0,0,
+900,96175000,WIRELESS_RX,49,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,96800000,96951162,0,0,0,
+901,96175000,DELIVER,49,control,0,1,,0,0,256,0,,ON_TIME,96800000,96951162,0,0,0,
+902,96200000,WIRELESS_TX,108,sensor,0,1,wireless,96200000,96400000,512,0,GOOD,,97500000,97379220,0,0,0,packet/slot-level airtime model
+903,96400000,WIRELESS_RX,108,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,97500000,97379220,0,0,0,
+904,96400000,DELIVER,108,sensor,0,1,,0,0,512,0,,ON_TIME,97500000,97379220,0,0,0,
+905,97000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151164,151300,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+906,97000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120776,-121092,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+907,97000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1984,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+908,98000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151176,151095,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+909,98000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120784,-120353,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+910,98000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1070,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+911,98000000,ARRIVAL,50,control,0,0,,0,0,256,1,,,98800000,98951186,0,0,0,periodic
+912,98000000,WIRED_TX,50,control,0,0,wired,98000000,98002548,256,0,,,98800000,98951186,0,0,0,Qbv-inspired gate; not standards-compatible
+913,98002548,WIRED_RX,50,control,0,0,wired,0,0,256,0,,SUCCESS,98800000,98951186,0,0,0,
+914,98050000,WIRELESS_TX,50,control,0,1,wireless,98050000,98175000,256,0,GOOD,,98800000,98951186,0,0,0,packet/slot-level airtime model
+915,98175000,WIRELESS_RX,50,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,98800000,98951186,0,0,0,
+916,98175000,DELIVER,50,control,0,1,,0,0,256,0,,ON_TIME,98800000,98951186,0,0,0,
+917,99000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151188,152629,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+918,99000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120792,-121406,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+919,99000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1117,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+920,99000000,ARRIVAL,109,sensor,0,0,,0,0,512,1,,,100500000,100379196,0,0,0,periodic
+921,99000000,WIRED_TX,109,sensor,0,0,wired,99000000,99004596,512,0,,,100500000,100379196,0,0,0,Qbv-inspired gate; not standards-compatible
+922,99004596,WIRED_RX,109,sensor,0,0,wired,0,0,512,0,,SUCCESS,100500000,100379196,0,0,0,
+923,99050000,WIRELESS_TX,109,sensor,0,1,wireless,99050000,99250000,512,0,GOOD,,100500000,100379196,0,0,0,packet/slot-level airtime model
+924,99250000,WIRELESS_RX,109,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,100500000,100379196,0,0,0,
+925,99250000,DELIVER,109,sensor,0,1,,0,0,512,0,,ON_TIME,100500000,100379196,0,0,0,
+926,100000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151200,148158,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+927,100000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120800,-126332,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+928,100000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2474,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+929,100000000,ARRIVAL,51,control,0,0,,0,0,256,1,,,100800000,100951210,0,0,0,periodic
+930,100000000,WIRED_TX,51,control,0,0,wired,100000000,100002548,256,0,,,100800000,100951210,0,0,0,Qbv-inspired gate; not standards-compatible
+931,100002548,WIRED_RX,51,control,0,0,wired,0,0,256,0,,SUCCESS,100800000,100951210,0,0,0,
+932,100050000,WIRELESS_TX,51,control,0,1,wireless,100050000,100175000,256,0,GOOD,,100800000,100951210,0,0,0,packet/slot-level airtime model
+933,100175000,WIRELESS_RX,51,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,100800000,100951210,0,0,0,
+934,100175000,DELIVER,51,control,0,1,,0,0,256,0,,ON_TIME,100800000,100951210,0,0,0,
+935,100500000,ARRIVAL,146,background,0,0,,0,0,1000,1,,,104500000,104500000,0,0,0,periodic
+936,100600000,WIRED_TX,146,background,0,0,wired,100600000,100608500,1000,0,,,104500000,104500000,0,0,0,Qbv-inspired gate; not standards-compatible
+937,100608500,WIRED_RX,146,background,0,0,wired,0,0,1000,0,,SUCCESS,104500000,104500000,0,0,0,
+938,100650000,WIRELESS_TX,146,background,0,1,wireless,100650000,101025000,1000,0,GOOD,,104500000,104500000,0,0,0,packet/slot-level airtime model
+939,101000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151212,151074,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+940,101000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120808,-120100,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+941,101000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1467,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+942,101025000,WIRELESS_RX,146,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,104500000,104500000,0,0,0,
+943,101025000,DELIVER,146,background,0,1,,0,0,1000,0,,ON_TIME,104500000,104500000,0,0,0,
+944,102000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151224,149394,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+945,102000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120816,-120137,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+946,102000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-99,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+947,102000000,ARRIVAL,52,control,0,0,,0,0,256,1,,,102800000,102951234,0,0,0,periodic
+948,102000000,ARRIVAL,110,sensor,0,0,,0,0,512,2,,,103500000,103379172,0,0,0,periodic
+949,102000000,WIRED_TX,52,control,0,0,wired,102000000,102002548,256,1,,,102800000,102951234,0,0,0,Qbv-inspired gate; not standards-compatible
+950,102002548,WIRED_RX,52,control,0,0,wired,0,0,256,0,,SUCCESS,102800000,102951234,0,0,0,
+951,102050000,WIRED_TX,110,sensor,0,0,wired,102050000,102054596,512,0,,,103500000,103379172,0,0,0,Qbv-inspired gate; not standards-compatible
+952,102050000,WIRELESS_TX,52,control,0,1,wireless,102050000,102175000,256,0,GOOD,,102800000,102951234,0,0,0,packet/slot-level airtime model
+953,102054596,WIRED_RX,110,sensor,0,0,wired,0,0,512,0,,SUCCESS,103500000,103379172,0,0,0,
+954,102175000,WIRELESS_RX,52,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,102800000,102951234,0,0,0,
+955,102175000,DELIVER,52,control,0,1,,0,0,256,0,,ON_TIME,102800000,102951234,0,0,0,
+956,102200000,WIRELESS_TX,110,sensor,0,1,wireless,102200000,102400000,512,0,GOOD,,103500000,103379172,0,0,0,packet/slot-level airtime model
+957,102400000,WIRELESS_RX,110,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,103500000,103379172,0,0,0,
+958,102400000,DELIVER,110,sensor,0,1,,0,0,512,0,,ON_TIME,103500000,103379172,0,0,0,
+959,103000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151236,153992,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+960,103000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120824,-122603,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+961,103000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-174,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+962,104000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151248,151187,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+963,104000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120832,-122038,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+964,104000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-565,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+965,104000000,ARRIVAL,53,control,0,0,,0,0,256,1,,,104800000,104951258,0,0,0,periodic
+966,104000000,WIRED_TX,53,control,0,0,wired,104000000,104002548,256,0,,,104800000,104951258,0,0,0,Qbv-inspired gate; not standards-compatible
+967,104002548,WIRED_RX,53,control,0,0,wired,0,0,256,0,,SUCCESS,104800000,104951258,0,0,0,
+968,104050000,WIRELESS_TX,53,control,0,1,wireless,104050000,104175000,256,0,GOOD,,104800000,104951258,0,0,0,packet/slot-level airtime model
+969,104175000,WIRELESS_RX,53,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,104800000,104951258,0,0,0,
+970,104175000,DELIVER,53,control,0,1,,0,0,256,0,,ON_TIME,104800000,104951258,0,0,0,
+971,105000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151260,151555,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+972,105000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120840,-122548,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+973,105000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,682,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+974,105000000,ARRIVAL,111,sensor,0,0,,0,0,512,1,,,106500000,106379148,0,0,0,periodic
+975,105000000,WIRED_TX,111,sensor,0,0,wired,105000000,105004596,512,0,,,106500000,106379148,0,0,0,Qbv-inspired gate; not standards-compatible
+976,105004596,WIRED_RX,111,sensor,0,0,wired,0,0,512,0,,SUCCESS,106500000,106379148,0,0,0,
+977,105050000,WIRELESS_TX,111,sensor,0,1,wireless,105050000,105250000,512,0,GOOD,,106500000,106379148,0,0,0,packet/slot-level airtime model
+978,105250000,WIRELESS_RX,111,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,106500000,106379148,0,0,0,
+979,105250000,DELIVER,111,sensor,0,1,,0,0,512,0,,ON_TIME,106500000,106379148,0,0,0,
+980,105500000,ARRIVAL,147,background,0,0,,0,0,1000,1,,,109500000,109500000,0,0,0,periodic
+981,105600000,WIRED_TX,147,background,0,0,wired,105600000,105608500,1000,0,,,109500000,109500000,0,0,0,Qbv-inspired gate; not standards-compatible
+982,105608500,WIRED_RX,147,background,0,0,wired,0,0,1000,0,,SUCCESS,109500000,109500000,0,0,0,
+983,105650000,WIRELESS_TX,147,background,0,1,wireless,105650000,106025000,1000,0,GOOD,,109500000,109500000,0,0,0,packet/slot-level airtime model
+984,106000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151272,151886,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+985,106000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120848,-120042,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+986,106000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1025,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+987,106000000,ARRIVAL,54,control,0,0,,0,0,256,1,,,106800000,106951282,0,0,0,periodic
+988,106000000,WIRED_TX,54,control,0,0,wired,106000000,106002548,256,0,,,106800000,106951282,0,0,0,Qbv-inspired gate; not standards-compatible
+989,106002548,WIRED_RX,54,control,0,0,wired,0,0,256,0,,SUCCESS,106800000,106951282,0,0,0,
+990,106025000,WIRELESS_RX,147,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,109500000,109500000,0,0,0,
+991,106025000,DELIVER,147,background,0,1,,0,0,1000,0,,ON_TIME,109500000,109500000,0,0,0,
+992,106050000,WIRELESS_TX,54,control,0,1,wireless,106050000,106175000,256,0,GOOD,,106800000,106951282,0,0,0,packet/slot-level airtime model
+993,106175000,WIRELESS_RX,54,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,106800000,106951282,0,0,0,
+994,106175000,DELIVER,54,control,0,1,,0,0,256,0,,ON_TIME,106800000,106951282,0,0,0,
+995,107000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151284,151334,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+996,107000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120856,-125674,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+997,107000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-525,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+998,108000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151296,151445,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+999,108000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120864,-121453,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1000,108000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3301,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1001,108000000,ARRIVAL,55,control,0,0,,0,0,256,1,,,108800000,108951306,0,0,0,periodic
+1002,108000000,ARRIVAL,112,sensor,0,0,,0,0,512,2,,,109500000,109379124,0,0,0,periodic
+1003,108000000,WIRED_TX,55,control,0,0,wired,108000000,108002548,256,1,,,108800000,108951306,0,0,0,Qbv-inspired gate; not standards-compatible
+1004,108002548,WIRED_RX,55,control,0,0,wired,0,0,256,0,,SUCCESS,108800000,108951306,0,0,0,
+1005,108050000,WIRED_TX,112,sensor,0,0,wired,108050000,108054596,512,0,,,109500000,109379124,0,0,0,Qbv-inspired gate; not standards-compatible
+1006,108050000,WIRELESS_TX,55,control,0,1,wireless,108050000,108175000,256,0,GOOD,,108800000,108951306,0,0,0,packet/slot-level airtime model
+1007,108054596,WIRED_RX,112,sensor,0,0,wired,0,0,512,0,,SUCCESS,109500000,109379124,0,0,0,
+1008,108175000,WIRELESS_RX,55,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,108800000,108951306,0,0,0,
+1009,108175000,DELIVER,55,control,0,1,,0,0,256,0,,ON_TIME,108800000,108951306,0,0,0,
+1010,108200000,WIRELESS_TX,112,sensor,0,1,wireless,108200000,108400000,512,0,GOOD,,109500000,109379124,0,0,0,packet/slot-level airtime model
+1011,108400000,WIRELESS_RX,112,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,109500000,109379124,0,0,0,
+1012,108400000,DELIVER,112,sensor,0,1,,0,0,512,0,,ON_TIME,109500000,109379124,0,0,0,
+1013,109000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151308,150836,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1014,109000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120872,-119839,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1015,109000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1638,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1016,110000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151320,152146,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1017,110000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120880,-120141,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1018,110000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-5314,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1019,110000000,ARRIVAL,56,control,0,0,,0,0,256,1,,,110800000,110951330,0,0,0,periodic
+1020,110000000,WIRED_TX,56,control,0,0,wired,110000000,110002548,256,0,,,110800000,110951330,0,0,0,Qbv-inspired gate; not standards-compatible
+1021,110002548,WIRED_RX,56,control,0,0,wired,0,0,256,0,,SUCCESS,110800000,110951330,0,0,0,
+1022,110050000,WIRELESS_TX,56,control,0,1,wireless,110050000,110175000,256,0,GOOD,,110800000,110951330,0,0,0,packet/slot-level airtime model
+1023,110175000,WIRELESS_RX,56,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,110800000,110951330,0,0,0,
+1024,110175000,DELIVER,56,control,0,1,,0,0,256,0,,ON_TIME,110800000,110951330,0,0,0,
+1025,110500000,ARRIVAL,148,background,0,0,,0,0,1000,1,,,114500000,114500000,0,0,0,periodic
+1026,110600000,WIRED_TX,148,background,0,0,wired,110600000,110608500,1000,0,,,114500000,114500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1027,110608500,WIRED_RX,148,background,0,0,wired,0,0,1000,0,,SUCCESS,114500000,114500000,0,0,0,
+1028,110650000,WIRELESS_TX,148,background,0,1,wireless,110650000,111025000,1000,0,GOOD,,114500000,114500000,0,0,0,packet/slot-level airtime model
+1029,111000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151332,149919,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1030,111000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120888,-120309,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1031,111000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1347,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1032,111000000,ARRIVAL,113,sensor,0,0,,0,0,512,1,,,112500000,112379100,0,0,0,periodic
+1033,111000000,WIRED_TX,113,sensor,0,0,wired,111000000,111004596,512,0,,,112500000,112379100,0,0,0,Qbv-inspired gate; not standards-compatible
+1034,111004596,WIRED_RX,113,sensor,0,0,wired,0,0,512,0,,SUCCESS,112500000,112379100,0,0,0,
+1035,111025000,WIRELESS_RX,148,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,114500000,114500000,0,0,0,
+1036,111025000,DELIVER,148,background,0,1,,0,0,1000,0,,ON_TIME,114500000,114500000,0,0,0,
+1037,111050000,WIRELESS_TX,113,sensor,0,1,wireless,111050000,111250000,512,0,GOOD,,112500000,112379100,0,0,0,packet/slot-level airtime model
+1038,111250000,WIRELESS_RX,113,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,112500000,112379100,0,0,0,
+1039,111250000,DELIVER,113,sensor,0,1,,0,0,512,0,,ON_TIME,112500000,112379100,0,0,0,
+1040,112000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151344,148331,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1041,112000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120896,-124617,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1042,112000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,1669,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1043,112000000,ARRIVAL,57,control,0,0,,0,0,256,1,,,112800000,112951354,0,0,0,periodic
+1044,112000000,WIRED_TX,57,control,0,0,wired,112000000,112002548,256,0,,,112800000,112951354,0,0,0,Qbv-inspired gate; not standards-compatible
+1045,112002548,WIRED_RX,57,control,0,0,wired,0,0,256,0,,SUCCESS,112800000,112951354,0,0,0,
+1046,112050000,WIRELESS_TX,57,control,0,1,wireless,112050000,112175000,256,0,GOOD,,112800000,112951354,0,0,0,packet/slot-level airtime model
+1047,112175000,WIRELESS_RX,57,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,112800000,112951354,0,0,0,
+1048,112175000,DELIVER,57,control,0,1,,0,0,256,0,,ON_TIME,112800000,112951354,0,0,0,
+1049,113000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151356,155857,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1050,113000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120904,-119576,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1051,113000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,402,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1052,114000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151368,149131,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1053,114000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120912,-122110,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1054,114000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-971,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1055,114000000,ARRIVAL,58,control,0,0,,0,0,256,1,,,114800000,114951378,0,0,0,periodic
+1056,114000000,ARRIVAL,114,sensor,0,0,,0,0,512,2,,,115500000,115379076,0,0,0,periodic
+1057,114000000,WIRED_TX,58,control,0,0,wired,114000000,114002548,256,1,,,114800000,114951378,0,0,0,Qbv-inspired gate; not standards-compatible
+1058,114002548,WIRED_RX,58,control,0,0,wired,0,0,256,0,,SUCCESS,114800000,114951378,0,0,0,
+1059,114050000,WIRED_TX,114,sensor,0,0,wired,114050000,114054596,512,0,,,115500000,115379076,0,0,0,Qbv-inspired gate; not standards-compatible
+1060,114050000,WIRELESS_TX,58,control,0,1,wireless,114050000,114175000,256,0,GOOD,,114800000,114951378,0,0,0,packet/slot-level airtime model
+1061,114054596,WIRED_RX,114,sensor,0,0,wired,0,0,512,0,,SUCCESS,115500000,115379076,0,0,0,
+1062,114175000,WIRELESS_RX,58,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,114800000,114951378,0,0,0,
+1063,114175000,DELIVER,58,control,0,1,,0,0,256,0,,ON_TIME,114800000,114951378,0,0,0,
+1064,114200000,WIRELESS_TX,114,sensor,0,1,wireless,114200000,114400000,512,0,GOOD,,115500000,115379076,0,0,0,packet/slot-level airtime model
+1065,114400000,WIRELESS_RX,114,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,115500000,115379076,0,0,0,
+1066,114400000,DELIVER,114,sensor,0,1,,0,0,512,0,,ON_TIME,115500000,115379076,0,0,0,
+1067,115000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151380,150764,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1068,115000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120920,-121493,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1069,115000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3180,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1070,115500000,ARRIVAL,149,background,0,0,,0,0,1000,1,,,119500000,119500000,0,0,0,periodic
+1071,115600000,WIRED_TX,149,background,0,0,wired,115600000,115608500,1000,0,,,119500000,119500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1072,115608500,WIRED_RX,149,background,0,0,wired,0,0,1000,0,,SUCCESS,119500000,119500000,0,0,0,
+1073,115650000,WIRELESS_TX,149,background,0,1,wireless,115650000,116025000,1000,0,GOOD,,119500000,119500000,0,0,0,packet/slot-level airtime model
+1074,116000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151392,151811,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1075,116000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120928,-118618,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1076,116000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,519,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1077,116000000,ARRIVAL,59,control,0,0,,0,0,256,1,,,116800000,116951402,0,0,0,periodic
+1078,116000000,WIRED_TX,59,control,0,0,wired,116000000,116002548,256,0,,,116800000,116951402,0,0,0,Qbv-inspired gate; not standards-compatible
+1079,116002548,WIRED_RX,59,control,0,0,wired,0,0,256,0,,SUCCESS,116800000,116951402,0,0,0,
+1080,116025000,WIRELESS_RX,149,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,119500000,119500000,0,0,0,
+1081,116025000,DELIVER,149,background,0,1,,0,0,1000,0,,ON_TIME,119500000,119500000,0,0,0,
+1082,116050000,WIRELESS_TX,59,control,0,1,wireless,116050000,116175000,256,0,GOOD,,116800000,116951402,0,0,0,packet/slot-level airtime model
+1083,116175000,WIRELESS_RX,59,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,116800000,116951402,0,0,0,
+1084,116175000,DELIVER,59,control,0,1,,0,0,256,0,,ON_TIME,116800000,116951402,0,0,0,
+1085,117000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151404,153016,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1086,117000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120936,-124920,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1087,117000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1562,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1088,117000000,ARRIVAL,115,sensor,0,0,,0,0,512,1,,,118500000,118379052,0,0,0,periodic
+1089,117000000,WIRED_TX,115,sensor,0,0,wired,117000000,117004596,512,0,,,118500000,118379052,0,0,0,Qbv-inspired gate; not standards-compatible
+1090,117004596,WIRED_RX,115,sensor,0,0,wired,0,0,512,0,,SUCCESS,118500000,118379052,0,0,0,
+1091,117050000,WIRELESS_TX,115,sensor,0,1,wireless,117050000,117250000,512,0,GOOD,,118500000,118379052,0,0,0,packet/slot-level airtime model
+1092,117250000,WIRELESS_RX,115,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,118500000,118379052,0,0,0,
+1093,117250000,DELIVER,115,sensor,0,1,,0,0,512,0,,ON_TIME,118500000,118379052,0,0,0,
+1094,118000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151416,150742,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1095,118000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120944,-121267,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1096,118000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,3694,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1097,118000000,ARRIVAL,60,control,0,0,,0,0,256,1,,,118800000,118951426,0,0,0,periodic
+1098,118000000,WIRED_TX,60,control,0,0,wired,118000000,118002548,256,0,,,118800000,118951426,0,0,0,Qbv-inspired gate; not standards-compatible
+1099,118002548,WIRED_RX,60,control,0,0,wired,0,0,256,0,,SUCCESS,118800000,118951426,0,0,0,
+1100,118050000,WIRELESS_TX,60,control,0,1,wireless,118050000,118175000,256,0,GOOD,,118800000,118951426,0,0,0,packet/slot-level airtime model
+1101,118175000,WIRELESS_RX,60,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,118800000,118951426,0,0,0,
+1102,118175000,DELIVER,60,control,0,1,,0,0,256,0,,ON_TIME,118800000,118951426,0,0,0,
+1103,119000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151428,153087,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1104,119000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120952,-118069,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1105,119000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-699,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1106,120000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151440,153564,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1107,120000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120960,-122398,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1108,120000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,3472,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1109,120000000,ARRIVAL,61,control,0,0,,0,0,256,1,,,120800000,120951450,0,0,0,periodic
+1110,120000000,ARRIVAL,116,sensor,0,0,,0,0,512,2,,,121500000,121379028,0,0,0,periodic
+1111,120000000,WIRED_TX,61,control,0,0,wired,120000000,120002548,256,1,,,120800000,120951450,0,0,0,Qbv-inspired gate; not standards-compatible
+1112,120002548,WIRED_RX,61,control,0,0,wired,0,0,256,0,,SUCCESS,120800000,120951450,0,0,0,
+1113,120050000,WIRED_TX,116,sensor,0,0,wired,120050000,120054596,512,0,,,121500000,121379028,0,0,0,Qbv-inspired gate; not standards-compatible
+1114,120050000,WIRELESS_TX,61,control,0,1,wireless,120050000,120175000,256,0,GOOD,,120800000,120951450,0,0,0,packet/slot-level airtime model
+1115,120054596,WIRED_RX,116,sensor,0,0,wired,0,0,512,0,,SUCCESS,121500000,121379028,0,0,0,
+1116,120175000,WIRELESS_RX,61,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,120800000,120951450,0,0,0,
+1117,120175000,DELIVER,61,control,0,1,,0,0,256,0,,ON_TIME,120800000,120951450,0,0,0,
+1118,120200000,WIRELESS_TX,116,sensor,0,1,wireless,120200000,120400000,512,0,GOOD,,121500000,121379028,0,0,0,packet/slot-level airtime model
+1119,120400000,WIRELESS_RX,116,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,121500000,121379028,0,0,0,
+1120,120400000,DELIVER,116,sensor,0,1,,0,0,512,0,,ON_TIME,121500000,121379028,0,0,0,
+1121,120500000,ARRIVAL,150,background,0,0,,0,0,1000,1,,,124500000,124500000,0,0,0,periodic
+1122,120600000,WIRED_TX,150,background,0,0,wired,120600000,120608500,1000,0,,,124500000,124500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1123,120608500,WIRED_RX,150,background,0,0,wired,0,0,1000,0,,SUCCESS,124500000,124500000,0,0,0,
+1124,120650000,WIRELESS_TX,150,background,0,1,wireless,120650000,121025000,1000,0,GOOD,,124500000,124500000,0,0,0,packet/slot-level airtime model
+1125,121000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151452,151813,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1126,121000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120968,-123931,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1127,121000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1563,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1128,121025000,WIRELESS_RX,150,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,124500000,124500000,0,0,0,
+1129,121025000,DELIVER,150,background,0,1,,0,0,1000,0,,ON_TIME,124500000,124500000,0,0,0,
+1130,122000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151464,149020,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1131,122000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120976,-122099,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1132,122000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-666,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1133,122000000,ARRIVAL,62,control,0,0,,0,0,256,1,,,122800000,122951474,0,0,0,periodic
+1134,122000000,WIRED_TX,62,control,0,0,wired,122000000,122002548,256,0,,,122800000,122951474,0,0,0,Qbv-inspired gate; not standards-compatible
+1135,122002548,WIRED_RX,62,control,0,0,wired,0,0,256,0,,SUCCESS,122800000,122951474,0,0,0,
+1136,122050000,WIRELESS_TX,62,control,0,1,wireless,122050000,122175000,256,0,GOOD,,122800000,122951474,0,0,0,packet/slot-level airtime model
+1137,122175000,WIRELESS_RX,62,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,122800000,122951474,0,0,0,
+1138,122175000,DELIVER,62,control,0,1,,0,0,256,0,,ON_TIME,122800000,122951474,0,0,0,
+1139,123000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151476,151036,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1140,123000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120984,-115910,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1141,123000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,630,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1142,123000000,ARRIVAL,117,sensor,0,0,,0,0,512,1,,,124500000,124379004,0,0,0,periodic
+1143,123000000,WIRED_TX,117,sensor,0,0,wired,123000000,123004596,512,0,,,124500000,124379004,0,0,0,Qbv-inspired gate; not standards-compatible
+1144,123004596,WIRED_RX,117,sensor,0,0,wired,0,0,512,0,,SUCCESS,124500000,124379004,0,0,0,
+1145,123050000,WIRELESS_TX,117,sensor,0,1,wireless,123050000,123250000,512,0,GOOD,,124500000,124379004,0,0,0,packet/slot-level airtime model
+1146,123250000,WIRELESS_RX,117,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,124500000,124379004,0,0,0,
+1147,123250000,DELIVER,117,sensor,0,1,,0,0,512,0,,ON_TIME,124500000,124379004,0,0,0,
+1148,124000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151488,152933,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1149,124000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-120992,-119510,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1150,124000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,132,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1151,124000000,ARRIVAL,63,control,0,0,,0,0,256,1,,,124800000,124951498,0,0,0,periodic
+1152,124000000,WIRED_TX,63,control,0,0,wired,124000000,124002548,256,0,,,124800000,124951498,0,0,0,Qbv-inspired gate; not standards-compatible
+1153,124002548,WIRED_RX,63,control,0,0,wired,0,0,256,0,,SUCCESS,124800000,124951498,0,0,0,
+1154,124050000,WIRELESS_TX,63,control,0,1,wireless,124050000,124175000,256,0,GOOD,,124800000,124951498,0,0,0,packet/slot-level airtime model
+1155,124175000,WIRELESS_RX,63,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,124800000,124951498,0,0,0,
+1156,124175000,DELIVER,63,control,0,1,,0,0,256,0,,ON_TIME,124800000,124951498,0,0,0,
+1157,125000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151500,149852,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1158,125000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121000,-121121,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1159,125000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2406,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1160,125500000,ARRIVAL,151,background,0,0,,0,0,1000,1,,,129500000,129500000,0,0,0,periodic
+1161,125600000,WIRED_TX,151,background,0,0,wired,125600000,125608500,1000,0,,,129500000,129500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1162,125608500,WIRED_RX,151,background,0,0,wired,0,0,1000,0,,SUCCESS,129500000,129500000,0,0,0,
+1163,125650000,WIRELESS_TX,151,background,0,1,wireless,125650000,126025000,1000,0,GOOD,,129500000,129500000,0,0,0,packet/slot-level airtime model
+1164,126000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151512,152777,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1165,126000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121008,-122770,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1166,126000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1932,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1167,126000000,ARRIVAL,64,control,0,0,,0,0,256,1,,,126800000,126951522,0,0,0,periodic
+1168,126000000,ARRIVAL,118,sensor,0,0,,0,0,512,2,,,127500000,127378980,0,0,0,periodic
+1169,126000000,WIRED_TX,64,control,0,0,wired,126000000,126002548,256,1,,,126800000,126951522,0,0,0,Qbv-inspired gate; not standards-compatible
+1170,126002548,WIRED_RX,64,control,0,0,wired,0,0,256,0,,SUCCESS,126800000,126951522,0,0,0,
+1171,126025000,WIRELESS_RX,151,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,129500000,129500000,0,0,0,
+1172,126025000,DELIVER,151,background,0,1,,0,0,1000,0,,ON_TIME,129500000,129500000,0,0,0,
+1173,126050000,WIRED_TX,118,sensor,0,0,wired,126050000,126054596,512,0,,,127500000,127378980,0,0,0,Qbv-inspired gate; not standards-compatible
+1174,126050000,WIRELESS_TX,64,control,0,1,wireless,126050000,126175000,256,0,GOOD,,126800000,126951522,0,0,0,packet/slot-level airtime model
+1175,126054596,WIRED_RX,118,sensor,0,0,wired,0,0,512,0,,SUCCESS,127500000,127378980,0,0,0,
+1176,126175000,WIRELESS_RX,64,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,126800000,126951522,0,0,0,
+1177,126175000,DELIVER,64,control,0,1,,0,0,256,0,,ON_TIME,126800000,126951522,0,0,0,
+1178,126200000,WIRELESS_TX,118,sensor,0,1,wireless,126200000,126400000,512,0,GOOD,,127500000,127378980,0,0,0,packet/slot-level airtime model
+1179,126400000,WIRELESS_RX,118,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,127500000,127378980,0,0,0,
+1180,126400000,DELIVER,118,sensor,0,1,,0,0,512,0,,ON_TIME,127500000,127378980,0,0,0,
+1181,127000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151524,153343,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1182,127000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121016,-122284,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1183,127000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,196,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1184,128000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151536,155651,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1185,128000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121024,-124094,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1186,128000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2961,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1187,128000000,ARRIVAL,65,control,0,0,,0,0,256,1,,,128800000,128951546,0,0,0,periodic
+1188,128000000,WIRED_TX,65,control,0,0,wired,128000000,128002548,256,0,,,128800000,128951546,0,0,0,Qbv-inspired gate; not standards-compatible
+1189,128002548,WIRED_RX,65,control,0,0,wired,0,0,256,0,,SUCCESS,128800000,128951546,0,0,0,
+1190,128050000,WIRELESS_TX,65,control,0,1,wireless,128050000,128175000,256,0,GOOD,,128800000,128951546,0,0,0,packet/slot-level airtime model
+1191,128175000,WIRELESS_RX,65,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,128800000,128951546,0,0,0,
+1192,128175000,DELIVER,65,control,0,1,,0,0,256,0,,ON_TIME,128800000,128951546,0,0,0,
+1193,129000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151548,152452,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1194,129000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121032,-120135,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1195,129000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1863,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1196,129000000,ARRIVAL,119,sensor,0,0,,0,0,512,1,,,130500000,130378956,0,0,0,periodic
+1197,129000000,WIRED_TX,119,sensor,0,0,wired,129000000,129004596,512,0,,,130500000,130378956,0,0,0,Qbv-inspired gate; not standards-compatible
+1198,129004596,WIRED_RX,119,sensor,0,0,wired,0,0,512,0,,SUCCESS,130500000,130378956,0,0,0,
+1199,129050000,WIRELESS_TX,119,sensor,0,1,wireless,129050000,129250000,512,0,GOOD,,130500000,130378956,0,0,0,packet/slot-level airtime model
+1200,129250000,WIRELESS_RX,119,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,130500000,130378956,0,0,0,
+1201,129250000,DELIVER,119,sensor,0,1,,0,0,512,0,,ON_TIME,130500000,130378956,0,0,0,
+1202,130000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151560,152107,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1203,130000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121040,-121543,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1204,130000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1928,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1205,130000000,ARRIVAL,66,control,0,0,,0,0,256,1,,,130800000,130951570,0,0,0,periodic
+1206,130000000,WIRED_TX,66,control,0,0,wired,130000000,130002548,256,0,,,130800000,130951570,0,0,0,Qbv-inspired gate; not standards-compatible
+1207,130002548,WIRED_RX,66,control,0,0,wired,0,0,256,0,,SUCCESS,130800000,130951570,0,0,0,
+1208,130050000,WIRELESS_TX,66,control,0,1,wireless,130050000,130175000,256,0,GOOD,,130800000,130951570,0,0,0,packet/slot-level airtime model
+1209,130175000,WIRELESS_RX,66,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,130800000,130951570,0,0,0,
+1210,130175000,DELIVER,66,control,0,1,,0,0,256,0,,ON_TIME,130800000,130951570,0,0,0,
+1211,130500000,ARRIVAL,152,background,0,0,,0,0,1000,1,,,134500000,134500000,0,0,0,periodic
+1212,130600000,WIRED_TX,152,background,0,0,wired,130600000,130608500,1000,0,,,134500000,134500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1213,130608500,WIRED_RX,152,background,0,0,wired,0,0,1000,0,,SUCCESS,134500000,134500000,0,0,0,
+1214,130650000,WIRELESS_TX,152,background,0,1,wireless,130650000,131025000,1000,0,GOOD,,134500000,134500000,0,0,0,packet/slot-level airtime model
+1215,131000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151572,155378,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1216,131000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121048,-120961,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1217,131000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,869,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1218,131025000,WIRELESS_RX,152,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,134500000,134500000,0,0,0,
+1219,131025000,DELIVER,152,background,0,1,,0,0,1000,0,,ON_TIME,134500000,134500000,0,0,0,
+1220,132000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151584,148741,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1221,132000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121056,-123584,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1222,132000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1071,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1223,132000000,ARRIVAL,67,control,0,0,,0,0,256,1,,,132800000,132951594,0,0,0,periodic
+1224,132000000,ARRIVAL,120,sensor,0,0,,0,0,512,2,,,133500000,133378932,0,0,0,periodic
+1225,132000000,WIRED_TX,67,control,0,0,wired,132000000,132002548,256,1,,,132800000,132951594,0,0,0,Qbv-inspired gate; not standards-compatible
+1226,132002548,WIRED_RX,67,control,0,0,wired,0,0,256,0,,SUCCESS,132800000,132951594,0,0,0,
+1227,132050000,WIRED_TX,120,sensor,0,0,wired,132050000,132054596,512,0,,,133500000,133378932,0,0,0,Qbv-inspired gate; not standards-compatible
+1228,132050000,WIRELESS_TX,67,control,0,1,wireless,132050000,132175000,256,0,GOOD,,132800000,132951594,0,0,0,packet/slot-level airtime model
+1229,132054596,WIRED_RX,120,sensor,0,0,wired,0,0,512,0,,SUCCESS,133500000,133378932,0,0,0,
+1230,132175000,WIRELESS_RX,67,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,132800000,132951594,0,0,0,
+1231,132175000,DELIVER,67,control,0,1,,0,0,256,0,,ON_TIME,132800000,132951594,0,0,0,
+1232,132200000,WIRELESS_TX,120,sensor,0,1,wireless,132200000,132400000,512,0,GOOD,,133500000,133378932,0,0,0,packet/slot-level airtime model
+1233,132400000,WIRELESS_RX,120,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,133500000,133378932,0,0,0,
+1234,132400000,DELIVER,120,sensor,0,1,,0,0,512,0,,ON_TIME,133500000,133378932,0,0,0,
+1235,133000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151596,149664,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1236,133000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121064,-119973,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1237,133000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,549,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1238,134000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151608,154133,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1239,134000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121072,-126447,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1240,134000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-811,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1241,134000000,ARRIVAL,68,control,0,0,,0,0,256,1,,,134800000,134951618,0,0,0,periodic
+1242,134000000,WIRED_TX,68,control,0,0,wired,134000000,134002548,256,0,,,134800000,134951618,0,0,0,Qbv-inspired gate; not standards-compatible
+1243,134002548,WIRED_RX,68,control,0,0,wired,0,0,256,0,,SUCCESS,134800000,134951618,0,0,0,
+1244,134050000,WIRELESS_TX,68,control,0,1,wireless,134050000,134175000,256,0,GOOD,,134800000,134951618,0,0,0,packet/slot-level airtime model
+1245,134175000,WIRELESS_RX,68,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,134800000,134951618,0,0,0,
+1246,134175000,DELIVER,68,control,0,1,,0,0,256,0,,ON_TIME,134800000,134951618,0,0,0,
+1247,135000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151620,153662,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1248,135000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121080,-119009,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1249,135000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2290,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1250,135000000,ARRIVAL,121,sensor,0,0,,0,0,512,1,,,136500000,136378908,0,0,0,periodic
+1251,135000000,WIRED_TX,121,sensor,0,0,wired,135000000,135004596,512,0,,,136500000,136378908,0,0,0,Qbv-inspired gate; not standards-compatible
+1252,135004596,WIRED_RX,121,sensor,0,0,wired,0,0,512,0,,SUCCESS,136500000,136378908,0,0,0,
+1253,135050000,WIRELESS_TX,121,sensor,0,1,wireless,135050000,135250000,512,0,GOOD,,136500000,136378908,0,0,0,packet/slot-level airtime model
+1254,135250000,WIRELESS_RX,121,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,136500000,136378908,0,0,0,
+1255,135250000,DELIVER,121,sensor,0,1,,0,0,512,0,,ON_TIME,136500000,136378908,0,0,0,
+1256,135500000,ARRIVAL,153,background,0,0,,0,0,1000,1,,,139500000,139500000,0,0,0,periodic
+1257,135600000,WIRED_TX,153,background,0,0,wired,135600000,135608500,1000,0,,,139500000,139500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1258,135608500,WIRED_RX,153,background,0,0,wired,0,0,1000,0,,SUCCESS,139500000,139500000,0,0,0,
+1259,135650000,WIRELESS_TX,153,background,0,1,wireless,135650000,136025000,1000,0,GOOD,,139500000,139500000,0,0,0,packet/slot-level airtime model
+1260,136000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151632,150002,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1261,136000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121088,-119193,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1262,136000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,2721,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1263,136000000,ARRIVAL,69,control,0,0,,0,0,256,1,,,136800000,136951642,0,0,0,periodic
+1264,136000000,WIRED_TX,69,control,0,0,wired,136000000,136002548,256,0,,,136800000,136951642,0,0,0,Qbv-inspired gate; not standards-compatible
+1265,136002548,WIRED_RX,69,control,0,0,wired,0,0,256,0,,SUCCESS,136800000,136951642,0,0,0,
+1266,136025000,WIRELESS_RX,153,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,139500000,139500000,0,0,0,
+1267,136025000,DELIVER,153,background,0,1,,0,0,1000,0,,ON_TIME,139500000,139500000,0,0,0,
+1268,136050000,WIRELESS_TX,69,control,0,1,wireless,136050000,136175000,256,0,GOOD,,136800000,136951642,0,0,0,packet/slot-level airtime model
+1269,136175000,WIRELESS_RX,69,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,136800000,136951642,0,0,0,
+1270,136175000,DELIVER,69,control,0,1,,0,0,256,0,,ON_TIME,136800000,136951642,0,0,0,
+1271,137000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151644,147730,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1272,137000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121096,-121483,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1273,137000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-338,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1274,138000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151656,153223,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1275,138000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121104,-122545,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1276,138000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-3584,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1277,138000000,ARRIVAL,70,control,0,0,,0,0,256,1,,,138800000,138951666,0,0,0,periodic
+1278,138000000,ARRIVAL,122,sensor,0,0,,0,0,512,2,,,139500000,139378884,0,0,0,periodic
+1279,138000000,WIRED_TX,70,control,0,0,wired,138000000,138002548,256,1,,,138800000,138951666,0,0,0,Qbv-inspired gate; not standards-compatible
+1280,138002548,WIRED_RX,70,control,0,0,wired,0,0,256,0,,SUCCESS,138800000,138951666,0,0,0,
+1281,138050000,WIRED_TX,122,sensor,0,0,wired,138050000,138054596,512,0,,,139500000,139378884,0,0,0,Qbv-inspired gate; not standards-compatible
+1282,138050000,WIRELESS_TX,70,control,0,1,wireless,138050000,138175000,256,0,GOOD,,138800000,138951666,0,0,0,packet/slot-level airtime model
+1283,138054596,WIRED_RX,122,sensor,0,0,wired,0,0,512,0,,SUCCESS,139500000,139378884,0,0,0,
+1284,138175000,WIRELESS_RX,70,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,138800000,138951666,0,0,0,
+1285,138175000,DELIVER,70,control,0,1,,0,0,256,0,,ON_TIME,138800000,138951666,0,0,0,
+1286,138200000,WIRELESS_TX,122,sensor,0,1,wireless,138200000,138400000,512,0,GOOD,,139500000,139378884,0,0,0,packet/slot-level airtime model
+1287,138400000,WIRELESS_RX,122,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,139500000,139378884,0,0,0,
+1288,138400000,DELIVER,122,sensor,0,1,,0,0,512,0,,ON_TIME,139500000,139378884,0,0,0,
+1289,139000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151668,152567,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1290,139000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121112,-121776,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1291,139000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-684,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1292,140000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151680,152518,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1293,140000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121120,-120526,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1294,140000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,229,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1295,140000000,ARRIVAL,71,control,0,0,,0,0,256,1,,,140800000,140951690,0,0,0,periodic
+1296,140000000,WIRED_TX,71,control,0,0,wired,140000000,140002548,256,0,,,140800000,140951690,0,0,0,Qbv-inspired gate; not standards-compatible
+1297,140002548,WIRED_RX,71,control,0,0,wired,0,0,256,0,,SUCCESS,140800000,140951690,0,0,0,
+1298,140050000,WIRELESS_TX,71,control,0,1,wireless,140050000,140175000,256,0,GOOD,,140800000,140951690,0,0,0,packet/slot-level airtime model
+1299,140175000,WIRELESS_RX,71,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,140800000,140951690,0,0,0,
+1300,140175000,DELIVER,71,control,0,1,,0,0,256,0,,ON_TIME,140800000,140951690,0,0,0,
+1301,140500000,ARRIVAL,154,background,0,0,,0,0,1000,1,,,144500000,144500000,0,0,0,periodic
+1302,140600000,WIRED_TX,154,background,0,0,wired,140600000,140608500,1000,0,,,144500000,144500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1303,140608500,WIRED_RX,154,background,0,0,wired,0,0,1000,0,,SUCCESS,144500000,144500000,0,0,0,
+1304,140650000,WIRELESS_TX,154,background,0,1,wireless,140650000,141025000,1000,0,GOOD,,144500000,144500000,0,0,0,packet/slot-level airtime model
+1305,141000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151692,151186,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1306,141000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121128,-121287,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1307,141000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2042,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1308,141000000,ARRIVAL,123,sensor,0,0,,0,0,512,1,,,142500000,142378860,0,0,0,periodic
+1309,141000000,WIRED_TX,123,sensor,0,0,wired,141000000,141004596,512,0,,,142500000,142378860,0,0,0,Qbv-inspired gate; not standards-compatible
+1310,141004596,WIRED_RX,123,sensor,0,0,wired,0,0,512,0,,SUCCESS,142500000,142378860,0,0,0,
+1311,141025000,WIRELESS_RX,154,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,144500000,144500000,0,0,0,
+1312,141025000,DELIVER,154,background,0,1,,0,0,1000,0,,ON_TIME,144500000,144500000,0,0,0,
+1313,141050000,WIRELESS_TX,123,sensor,0,1,wireless,141050000,141250000,512,0,GOOD,,142500000,142378860,0,0,0,packet/slot-level airtime model
+1314,141250000,WIRELESS_RX,123,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,142500000,142378860,0,0,0,
+1315,141250000,DELIVER,123,sensor,0,1,,0,0,512,0,,ON_TIME,142500000,142378860,0,0,0,
+1316,142000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151704,151363,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1317,142000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121136,-127138,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1318,142000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,303,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1319,142000000,ARRIVAL,72,control,0,0,,0,0,256,1,,,142800000,142951714,0,0,0,periodic
+1320,142000000,WIRED_TX,72,control,0,0,wired,142000000,142002548,256,0,,,142800000,142951714,0,0,0,Qbv-inspired gate; not standards-compatible
+1321,142002548,WIRED_RX,72,control,0,0,wired,0,0,256,0,,SUCCESS,142800000,142951714,0,0,0,
+1322,142050000,WIRELESS_TX,72,control,0,1,wireless,142050000,142175000,256,0,GOOD,,142800000,142951714,0,0,0,packet/slot-level airtime model
+1323,142175000,WIRELESS_RX,72,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,142800000,142951714,0,0,0,
+1324,142175000,DELIVER,72,control,0,1,,0,0,256,0,,ON_TIME,142800000,142951714,0,0,0,
+1325,143000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151716,152780,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1326,143000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121144,-124493,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1327,143000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2608,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1328,144000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151728,149750,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1329,144000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121152,-123486,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1330,144000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1603,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1331,144000000,ARRIVAL,73,control,0,0,,0,0,256,1,,,144800000,144951738,0,0,0,periodic
+1332,144000000,ARRIVAL,124,sensor,0,0,,0,0,512,2,,,145500000,145378836,0,0,0,periodic
+1333,144000000,WIRED_TX,73,control,0,0,wired,144000000,144002548,256,1,,,144800000,144951738,0,0,0,Qbv-inspired gate; not standards-compatible
+1334,144002548,WIRED_RX,73,control,0,0,wired,0,0,256,0,,SUCCESS,144800000,144951738,0,0,0,
+1335,144050000,WIRED_TX,124,sensor,0,0,wired,144050000,144054596,512,0,,,145500000,145378836,0,0,0,Qbv-inspired gate; not standards-compatible
+1336,144050000,WIRELESS_TX,73,control,0,1,wireless,144050000,144175000,256,0,GOOD,,144800000,144951738,0,0,0,packet/slot-level airtime model
+1337,144054596,WIRED_RX,124,sensor,0,0,wired,0,0,512,0,,SUCCESS,145500000,145378836,0,0,0,
+1338,144175000,WIRELESS_RX,73,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,144800000,144951738,0,0,0,
+1339,144175000,DELIVER,73,control,0,1,,0,0,256,0,,ON_TIME,144800000,144951738,0,0,0,
+1340,144200000,WIRELESS_TX,124,sensor,0,1,wireless,144200000,144400000,512,0,GOOD,,145500000,145378836,0,0,0,packet/slot-level airtime model
+1341,144400000,WIRELESS_RX,124,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,145500000,145378836,0,0,0,
+1342,144400000,DELIVER,124,sensor,0,1,,0,0,512,0,,ON_TIME,145500000,145378836,0,0,0,
+1343,145000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151740,151066,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1344,145000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121160,-121838,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1345,145000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,81,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1346,145500000,ARRIVAL,155,background,0,0,,0,0,1000,1,,,149500000,149500000,0,0,0,periodic
+1347,145600000,WIRED_TX,155,background,0,0,wired,145600000,145608500,1000,0,,,149500000,149500000,0,0,0,Qbv-inspired gate; not standards-compatible
+1348,145608500,WIRED_RX,155,background,0,0,wired,0,0,1000,0,,SUCCESS,149500000,149500000,0,0,0,
+1349,145650000,WIRELESS_TX,155,background,0,1,wireless,145650000,146025000,1000,0,GOOD,,149500000,149500000,0,0,0,packet/slot-level airtime model
+1350,146000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151752,151868,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1351,146000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121168,-124754,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1352,146000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-266,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1353,146000000,ARRIVAL,74,control,0,0,,0,0,256,1,,,146800000,146951762,0,0,0,periodic
+1354,146000000,WIRED_TX,74,control,0,0,wired,146000000,146002548,256,0,,,146800000,146951762,0,0,0,Qbv-inspired gate; not standards-compatible
+1355,146002548,WIRED_RX,74,control,0,0,wired,0,0,256,0,,SUCCESS,146800000,146951762,0,0,0,
+1356,146025000,WIRELESS_RX,155,background,0,1,wireless,0,0,1000,0,GOOD,SUCCESS,149500000,149500000,0,0,0,
+1357,146025000,DELIVER,155,background,0,1,,0,0,1000,0,,ON_TIME,149500000,149500000,0,0,0,
+1358,146050000,WIRELESS_TX,74,control,0,1,wireless,146050000,146175000,256,0,GOOD,,146800000,146951762,0,0,0,packet/slot-level airtime model
+1359,146175000,WIRELESS_RX,74,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,146800000,146951762,0,0,0,
+1360,146175000,DELIVER,74,control,0,1,,0,0,256,0,,ON_TIME,146800000,146951762,0,0,0,
+1361,147000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151764,148224,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1362,147000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121176,-121285,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1363,147000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1108,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1364,147000000,ARRIVAL,125,sensor,0,0,,0,0,512,1,,,148500000,148378812,0,0,0,periodic
+1365,147000000,WIRED_TX,125,sensor,0,0,wired,147000000,147004596,512,0,,,148500000,148378812,0,0,0,Qbv-inspired gate; not standards-compatible
+1366,147004596,WIRED_RX,125,sensor,0,0,wired,0,0,512,0,,SUCCESS,148500000,148378812,0,0,0,
+1367,147050000,WIRELESS_TX,125,sensor,0,1,wireless,147050000,147250000,512,0,GOOD,,148500000,148378812,0,0,0,packet/slot-level airtime model
+1368,147250000,WIRELESS_RX,125,sensor,0,1,wireless,0,0,512,0,GOOD,SUCCESS,148500000,148378812,0,0,0,
+1369,147250000,DELIVER,125,sensor,0,1,,0,0,512,0,,ON_TIME,148500000,148378812,0,0,0,
+1370,148000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151776,151565,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1371,148000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121184,-116738,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1372,148000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2358,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1373,148000000,ARRIVAL,75,control,0,0,,0,0,256,1,,,148800000,148951786,0,0,0,periodic
+1374,148000000,WIRED_TX,75,control,0,0,wired,148000000,148002548,256,0,,,148800000,148951786,0,0,0,Qbv-inspired gate; not standards-compatible
+1375,148002548,WIRED_RX,75,control,0,0,wired,0,0,256,0,,SUCCESS,148800000,148951786,0,0,0,
+1376,148050000,WIRELESS_TX,75,control,0,1,wireless,148050000,148175000,256,0,GOOD,,148800000,148951786,0,0,0,packet/slot-level airtime model
+1377,148175000,WIRELESS_RX,75,control,0,1,wireless,0,0,256,0,GOOD,SUCCESS,148800000,148951786,0,0,0,
+1378,148175000,DELIVER,75,control,0,1,,0,0,256,0,,ON_TIME,148800000,148951786,0,0,0,
+1379,149000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151788,154799,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1380,149000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121192,-119922,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1381,149000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-2174,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1382,150000000,SYNC_OBSERVE,0,control,0,0,,0,0,0,0,,UPDATED,0,0,151800,151829,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1383,150000000,SYNC_OBSERVE,0,sensor,0,0,,0,0,0,0,,UPDATED,0,0,-121200,-121741,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance
+1384,150000000,SYNC_OBSERVE,0,background,0,0,,0,0,0,0,,UPDATED,0,0,0,-1638,6000,two-way-like synthetic observation; not IEEE 802.1AS conformance

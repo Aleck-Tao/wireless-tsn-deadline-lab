@@ -1,0 +1,19 @@
+{
+  "duration_ns": 150000000,
+  "dropped_packets": 6,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "control", "priority": 10},
+    {"copies_total": 1, "id": "telemetry", "priority": 8},
+    {"copies_total": 1, "id": "burst", "priority": 3}
+  ],
+  "generated_packets": 390,
+  "delivered_packets": 384,
+  "max_retries": 2,
+  "model_scope": "packet/slot-level software simulation; no PHY, hardware, openwifi, or standards-conformance claim",
+  "replication_priority_min": 8,
+  "scenario_id": "bursty-channel",
+  "scheduler": "STRICT_PRIORITY",
+  "seed": 71,
+  "schema_version": "1.0"
+}

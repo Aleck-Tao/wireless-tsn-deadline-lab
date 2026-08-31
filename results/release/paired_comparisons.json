@@ -1,0 +1,401 @@
+{
+  "comparisons": [
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.187692307693,
+        0.273846153846
+      ],
+      "on_time_ratio_delta_mean": 0.233846153846,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "bursty-channel",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.139487179487,
+        0.257179487179
+      ],
+      "on_time_ratio_delta_mean": 0.200256410256,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "bursty-channel",
+      "scheduler": "EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.331025641026,
+        0.406666666667
+      ],
+      "on_time_ratio_delta_mean": 0.365897435897,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "bursty-channel",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        -0.001694915254,
+        -0.001694915254
+      ],
+      "on_time_ratio_delta_mean": -0.001694915254,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "deadline-contention",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        -0.001694915254,
+        -0.001694915254
+      ],
+      "on_time_ratio_delta_mean": -0.001694915254,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "deadline-contention",
+      "scheduler": "EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.077288135593,
+        0.082542372881
+      ],
+      "on_time_ratio_delta_mean": 0.079830508474,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "deadline-contention",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "on_time_ratio_delta_mean": 0.0,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "low-load",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "on_time_ratio_delta_mean": 0.0,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "low-load",
+      "scheduler": "EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "on_time_ratio_delta_mean": 0.0,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "low-load",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "on_time_ratio_delta_mean": 0.0,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "overload-negative",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "on_time_ratio_delta_mean": 0.0,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "overload-negative",
+      "scheduler": "EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "on_time_ratio_delta_mean": 0.0,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "overload-negative",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.280821917808,
+        0.297808219178
+      ],
+      "on_time_ratio_delta_mean": 0.289589041096,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "retry-replication",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.238082191781,
+        0.257808219178
+      ],
+      "on_time_ratio_delta_mean": 0.247671232877,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "retry-replication",
+      "scheduler": "EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.295616438356,
+        0.308493150685
+      ],
+      "on_time_ratio_delta_mean": 0.302191780822,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "retry-replication",
+      "scheduler": "STRICT_PRIORITY"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        -0.030136986302,
+        -0.023483365949
+      ],
+      "on_time_ratio_delta_mean": -0.027005870842,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "sync-holdover",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        -0.02446183953,
+        -0.017612524461
+      ],
+      "on_time_ratio_delta_mean": -0.021135029354,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "sync-holdover",
+      "scheduler": "EDF"
+    },
+    {
+      "baseline": "FIFO",
+      "bootstrap_95_ci": [
+        0.105088062623,
+        0.134442270059
+      ],
+      "on_time_ratio_delta_mean": 0.120547945206,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "sync-holdover",
+      "scheduler": "STRICT_PRIORITY"
+    }
+  ],
+  "schema_version": "1.0"
+}

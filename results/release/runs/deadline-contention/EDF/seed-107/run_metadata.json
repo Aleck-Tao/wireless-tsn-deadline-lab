@@ -1,0 +1,19 @@
+{
+  "duration_ns": 150000000,
+  "dropped_packets": 317,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "urgent", "priority": 10},
+    {"copies_total": 1, "id": "medium", "priority": 8},
+    {"copies_total": 1, "id": "bulk", "priority": 2}
+  ],
+  "generated_packets": 590,
+  "delivered_packets": 273,
+  "max_retries": 1,
+  "model_scope": "packet/slot-level software simulation; no PHY, hardware, openwifi, or standards-conformance claim",
+  "replication_priority_min": 8,
+  "scenario_id": "deadline-contention",
+  "scheduler": "EDF",
+  "seed": 107,
+  "schema_version": "1.0"
+}

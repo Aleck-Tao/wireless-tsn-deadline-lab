@@ -1,0 +1,66 @@
+{
+  "availability_active_windows": 16,
+  "availability_window_ns": 10000000,
+  "deadline_miss_ratio": 0.147945205479,
+  "delivered_goodput_bps": 10413013.333333334,
+  "delivered_packets": 361,
+  "dropped_packets": 4,
+  "generated_packets": 365,
+  "jain_flow_goodput_fairness": 0.875727071062,
+  "jitter_ns": {
+    "count": 358,
+    "max": 3450000,
+    "p50": 300000,
+    "p95": 2100000,
+    "p99": 3100000
+  },
+  "latency_ns": {
+    "count": 361,
+    "max": 5025000,
+    "p50": 675000,
+    "p95": 3275000,
+    "p99": 4375000
+  },
+  "on_time_delivery_ratio": 0.852054794521,
+  "on_time_packets": 311,
+  "packet_delivery_ratio": 0.98904109589,
+  "replica_transmissions": 16,
+  "scenario_id": "retry-replication",
+  "scheduler": "EDF",
+  "schema_version": "1.0",
+  "seed": 71,
+  "service_availability": 0.0625,
+  "sync_absolute_error_ns": {
+    "count": 453,
+    "max": 8681,
+    "p50": 1988,
+    "p95": 5833,
+    "p99": 7657
+  },
+  "sync_observed_absolute_error_ns": {
+    "count": 453,
+    "max": 8681,
+    "p50": 1988,
+    "p95": 5833,
+    "p99": 7657
+  },
+  "sync_outage_holdover_absolute_error_ns": {
+    "count": 0,
+    "max": null,
+    "p50": null,
+    "p95": null,
+    "p99": null
+  },
+  "sync_outage_observations": 0,
+  "wired_utilization": 0.011723333333,
+  "wireless_loss_burst": {
+    "count": 31,
+    "max": 7,
+    "p50": 1,
+    "p95": 2,
+    "p99": 7
+  },
+  "wireless_retries": 22,
+  "wireless_transmissions": 402,
+  "wireless_utilization": 0.8
+}

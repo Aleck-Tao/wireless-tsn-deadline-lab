@@ -2,59 +2,13 @@
 
 [![CI](https://github.com/Aleck-Tao/wireless-tsn-deadline-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/Aleck-Tao/wireless-tsn-deadline-lab/actions/workflows/ci.yml)
 
-A small, inspectable C++20 discrete-event simulator for one research question: how do wireless loss bursts and imperfect clock synchronization change deadline-aware scheduling decisions at a wired-to-wireless boundary?
+Can correcting source-clock error improve packet deadline scheduling when wireless service is congested? This C++20 simulator compares FIFO, strict priority, EDF, and clock-aware EDF at a wired-to-wireless boundary.
 
-The repository is deliberately narrower than a network stack. It models packet/slot-level timing on ordinary CPUs and compares FIFO, strict priority, EDF, and clock-aware EDF under paired random seeds. The wired gate is **inspired by** IEEE 802.1Qbv terminology but is not an implementation, conformance test, or standards claim.
+Packets pass through a repeating wired gate and a serial wireless link. The model includes burst traffic, correlated losses, retries, replicas, and clock drift with synchronization outages. A Python evaluator reconstructs delivery outcomes from the event timestamps.
 
-## What is implemented
+## Findings
 
-- Integer-nanosecond event time and deterministic tie-breaking.
-- Periodic and burst sources with payload, priority, deadline, and local-clock parameters.
-- A finite observation cohort: a packet is generated only when `arrival_ns + relative_deadline_ns <= duration_ns`; equality is included, while later-deadline arrivals are right-censored rather than counted as drops.
-- One serial wired link with a repeating critical/background gate and serialization delay.
-- One serial wireless link with rate-derived airtime and slot alignment.
-- A two-state Gilbert–Elliott loss process sampled on fixed ticks.
-- Clock offset and drift, timestamp noise, synchronization measurement noise and outages, plus a two-observation drift estimator with holdover uncertainty.
-- FIFO, strict priority, local-clock EDF, and uncertainty-adjusted clock-aware EDF.
-- Bounded retry and optional high-priority replication.
-- Append-only-within-run, write-once CSV event records, independent Python validation, normalized metrics, paired-seed comparisons, and exact SHA-256 provenance. The simulator refuses to overwrite an existing run log.
-
-## Build and test
-
-```text
-cmake --preset release
-cmake --build --preset release
-ctest --preset release
-python -m unittest discover -s tests/python -v
-```
-
-Run the 16-case smoke matrix after building:
-
-```text
-python -m wtsn_eval run-plan --plan configs/smoke/plan.json --binary build/release/wtsn-sim --output artifacts/smoke --source-root .
-python -m wtsn_eval verify artifacts/smoke --source-root . --binary build/release/wtsn-sim
-```
-
-Paths are handled through `pathlib` and `std::filesystem`; no shell-specific runner is required. GitHub Actions is the normative clean-room build: GCC and Clang compile with warnings as errors, CTest runs the C++ cases, and a separate GCC job runs AddressSanitizer plus UndefinedBehaviorSanitizer.
-
-## Evidence chain
-
-```text
-config + seed + scheduler
-        -> C++ event simulation
-        -> events.csv + run_metadata.json
-        -> independent invariant checks and metrics.json
-        -> paired summaries
-        -> provenance.json (exact source/result file sets and hashes)
-```
-
-The evaluator does not trust the simulator's `DELIVER` outcome label. It recomputes deadline status from arrival, terminal, and ground-truth deadline timestamps. Its denominator contains only packets whose full relative-deadline window fits inside the configured run; this avoids treating unobservable post-horizon outcomes as failures. It also checks the exact CSV schema, run identity, complete experiment matrix, sequence monotonicity, transmission/reception matching, link non-overlap, retry/replica bounds, packet conservation, terminal uniqueness, and causal delivery after the same successful copy and attempt.
-
-The release plan contains six scenarios, four schedulers, and ten shared seeds (240 runs). CI uploads the resulting normalized artifact; checked-in findings should only be added after that artifact passes provenance verification. See [the experiment protocol](docs/EXPERIMENTS.md), [model definition](docs/MODEL.md), and [reproduction guide](docs/REPRODUCIBILITY.md).
-
-## CI-verified release findings
-
-The first 240-run matrix passed GCC and Clang release builds, CTest, 18 Python evaluator tests, ASan/UBSan, the 16-run smoke matrix, exact source/result hashing, and simulator-binary hash verification in [GitHub Actions run 33414022492](https://github.com/Aleck-Tao/wireless-tsn-deadline-lab/actions/runs/33414022492). The complete per-run evidence is retained in the [committed release report](results/release/REPORT.md).
+The [release report](results/release/REPORT.md) contains six scenarios, four schedulers, and ten paired seeds. Values below are mean on-time delivery ratios.
 
 | Scenario | FIFO | EDF | Clock-aware EDF | Strict priority |
 |---|---:|---:|---:|---:|
@@ -63,25 +17,41 @@ The first 240-run matrix passed GCC and Clang release builds, CTest, 18 Python e
 | Deadline contention | 0.0068 | 0.0051 | 0.0051 | 0.0866 |
 | Retry + replication | 0.618 | 0.866 | 0.908 | 0.920 |
 | Sync holdover | 0.060 | 0.039 | 0.033 | 0.181 |
-| Overload negative | 0.000 | 0.000 | 0.000 | 0.000 |
+| Overload | 0.000 | 0.000 | 0.000 | 0.000 |
 
-Values are mean on-time delivery ratios over ten paired seeds. In this configured model, clock-aware EDF improved on FIFO under bursty loss and retry/replication, but it was worse under the synchronization-outage holdover case. Strict priority was strongest in several stress cases. These retained negative results show that the implemented uncertainty adjustment is a heuristic to investigate, not a generally superior or certified scheduler. Bootstrap intervals and all per-seed values remain in the release artifact; the findings do not generalize beyond the declared simulator, configurations, and seed set.
+- Clock-aware EDF improves on raw-clock EDF in the bursty and retry/replication cases. Its gain over FIFO is 0.234 and 0.290 respectively; the paired bootstrap intervals are in the report.
+- Synchronization outages reverse that improvement. In the holdover case, clock-aware EDF reaches 0.033 against EDF's 0.039. A two-sample drift estimate can amplify measurement noise during extrapolation; [the analysis notes](docs/ANALYSIS.md) quantify that mechanism using the current parameters and a retained trace.
+- Strict priority has the highest on-time ratio in several stress cases, but that does not make it best on every latency measure. In the bursty case its mean run p99 delivered latency is 7.96 ms, compared with 5.37 ms for EDF. These quantiles concern each policy's delivered packets, so the delivered populations differ.
+- Every policy succeeds at low load and misses every deadline in the overload case. The scheduler changes service order; it cannot create airtime. The deadline-contention case is also severe enough that even the best on-time ratio remains below 0.09.
 
-## Boundaries
+The useful result is the change in scheduler ordering across conditions. [Analysis notes](docs/ANALYSIS.md), [per-run metrics and traces](results/release/runs), and [paired comparisons](results/release/REPORT.md#paired-comparisons-against-fifo) provide the reasoning and measurements behind these observations.
 
-This project contains no ns-3 model, PHY waveform, MAC implementation, FPGA/SDR bitstream, openwifi integration, hardware measurement, IEEE 802.1AS implementation, or IEEE 802.1Qbv conformance evidence. Results are synthetic evidence about the declared abstraction only. See [LIMITATIONS.md](docs/LIMITATIONS.md) before interpreting comparisons.
+## Build and run
 
-## Repository map
+Requires CMake 3.20+, a C++20 compiler, and Python 3.10+. Python analysis uses the standard library.
 
 ```text
-include/wtsn, src/        C++20 model and CLI
-configs/smoke             short CI experiment matrix
-configs/release           preregistered 240-run matrix
-tests/cpp                 analytic and controlled-negative model tests
-tests/python              evaluator, invariant, and provenance tests
-wtsn_eval                 standard-library-only analysis pipeline
-docs                      model, protocol, limitations, reproduction notes
-results                   only verified CI outputs belong here
+cmake --preset release
+cmake --build --preset release
+ctest --preset release
+python -m wtsn_eval run-plan --plan configs/smoke/plan.json --binary build/release/wtsn-sim --output artifacts/smoke --source-root .
+python -m wtsn_eval verify artifacts/smoke --source-root . --binary build/release/wtsn-sim
 ```
 
-Licensed under MIT. If reusing the software, cite the repository using `CITATION.cff`; simulation results still require the exact provenance manifest.
+For Visual Studio, build with `--config Release` and use `build/release/Release/wtsn-sim.exe`. Choose a fresh output directory for each run. The smoke plan runs 16 cases; [the reproduction guide](docs/REPRODUCIBILITY.md) gives the full release command and evaluator tests. CI builds with GCC and Clang and runs the C++ tests, Python checks, and address/undefined-behavior sanitizers before the full matrix.
+
+## Inspect the evidence
+
+Each run retains its config identity, seed, `events.csv`, `run_metadata.json`, and independently computed `metrics.json`. The evaluator checks timestamp causality, packet conservation, link overlap, retry/replica budgets, and the complete scenario/scheduler/seed matrix. Only packets whose deadlines fit inside the observation window enter the denominator.
+
+```text
+python -m wtsn_eval verify results/release --source-root .
+```
+
+This checks the committed source and result hashes. It reports `binary_verified=false` because the original CI executable is not included; fresh CI runs also verify that executable's hash. The [manifest](results/release/provenance.json) and [experiment protocol](docs/EXPERIMENTS.md) record the details.
+
+## Model scope
+
+The results describe a packet/slot simulation with a two-state loss channel, synthetic clock observations, and a Qbv-inspired gate. They support reasoning about this scheduling abstraction, not hardware performance or IEEE protocol conformance. [Model equations](docs/MODEL.md) and [limitations](docs/LIMITATIONS.md) describe the service, channel, and clock assumptions.
+
+MIT licensed. Citation metadata is in [CITATION.cff](CITATION.cff).

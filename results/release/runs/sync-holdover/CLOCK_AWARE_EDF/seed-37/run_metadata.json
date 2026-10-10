@@ -15,5 +15,10 @@
   "scenario_id": "sync-holdover",
   "scheduler": "CLOCK_AWARE_EDF",
   "seed": 37,
+  "sync_estimator": "two_point",
+  "sync_window": 16,
+  "sync_measurement_noise_ns": 5000,
+  "clock_margin_enabled": true,
+  "independent_clock_noise": false,
   "schema_version": "1.0"
 }

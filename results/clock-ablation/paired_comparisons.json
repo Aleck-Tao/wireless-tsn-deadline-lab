@@ -1,0 +1,181 @@
+{
+  "comparisons": [
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-noisy-two-point-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-noisy-two-point-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-noisy-window-ols-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-noisy-window-ols-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-zero-two-point-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-zero-two-point-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-zero-window-ols-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "baseline": "EDF",
+      "bootstrap_95_ci": [
+        -0.005870841488,
+        -0.005870841488
+      ],
+      "on_time_ratio_delta_mean": -0.005870841488,
+      "paired_seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ],
+      "scenario_id": "holdover-zero-window-ols-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    }
+  ],
+  "schema_version": "1.0"
+}

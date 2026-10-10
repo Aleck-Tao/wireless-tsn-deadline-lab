@@ -1,0 +1,24 @@
+{
+  "duration_ns": 150000000,
+  "dropped_packets": 23,
+  "extra_replicas": 0,
+  "flows": [
+    {"copies_total": 1, "id": "fast-clock", "priority": 9},
+    {"copies_total": 1, "id": "slow-clock", "priority": 9},
+    {"copies_total": 1, "id": "background", "priority": 2}
+  ],
+  "generated_packets": 511,
+  "delivered_packets": 488,
+  "max_retries": 1,
+  "model_scope": "packet/slot-level software simulation; no PHY, hardware, openwifi, or standards-conformance claim",
+  "replication_priority_min": 8,
+  "scenario_id": "holdover-noisy-two-point-margin",
+  "scheduler": "EDF",
+  "seed": 37,
+  "sync_estimator": "two_point",
+  "sync_window": 16,
+  "sync_measurement_noise_ns": 5000,
+  "clock_margin_enabled": true,
+  "independent_clock_noise": true,
+  "schema_version": "1.0"
+}

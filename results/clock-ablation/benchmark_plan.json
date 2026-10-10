@@ -1,0 +1,55 @@
+{
+  "analysis": "clock_ablation",
+  "baseline": "EDF",
+  "scenarios": [
+    {
+      "config": "configs/clock-ablation/holdover-zero-two-point-no-margin.cfg",
+      "id": "holdover-zero-two-point-no-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-zero-two-point-margin.cfg",
+      "id": "holdover-zero-two-point-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-zero-window-ols-no-margin.cfg",
+      "id": "holdover-zero-window-ols-no-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-zero-window-ols-margin.cfg",
+      "id": "holdover-zero-window-ols-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-noisy-two-point-no-margin.cfg",
+      "id": "holdover-noisy-two-point-no-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-noisy-two-point-margin.cfg",
+      "id": "holdover-noisy-two-point-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-noisy-window-ols-no-margin.cfg",
+      "id": "holdover-noisy-window-ols-no-margin"
+    },
+    {
+      "config": "configs/clock-ablation/holdover-noisy-window-ols-margin.cfg",
+      "id": "holdover-noisy-window-ols-margin"
+    }
+  ],
+  "schedulers": [
+    "EDF",
+    "CLOCK_AWARE_EDF"
+  ],
+  "schema_version": "1.0",
+  "seeds": [
+    11,
+    23,
+    37,
+    53,
+    71,
+    89,
+    107,
+    131,
+    163,
+    197
+  ]
+}

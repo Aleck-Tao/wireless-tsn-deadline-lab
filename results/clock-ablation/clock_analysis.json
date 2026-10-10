@@ -1,0 +1,326 @@
+{
+  "groups": [
+    {
+      "estimator": "two_point",
+      "heuristic_margin_coverage_mean": 1.0,
+      "margin_enabled": false,
+      "noise_ns": 0,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 0.0,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "two_point",
+      "heuristic_margin_coverage_mean": 1.0,
+      "margin_enabled": true,
+      "noise_ns": 0,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 0.0,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "window_ols",
+      "heuristic_margin_coverage_mean": 1.0,
+      "margin_enabled": false,
+      "noise_ns": 0,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 0.0,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "window_ols",
+      "heuristic_margin_coverage_mean": 1.0,
+      "margin_enabled": true,
+      "noise_ns": 0,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 0.0,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "two_point",
+      "heuristic_margin_coverage_mean": 0.11523809523819999,
+      "margin_enabled": false,
+      "noise_ns": 5000,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 656982.0,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "two_point",
+      "heuristic_margin_coverage_mean": 0.11523809523819999,
+      "margin_enabled": true,
+      "noise_ns": 5000,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 656982.0,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "window_ols",
+      "heuristic_margin_coverage_mean": 0.8133333333332,
+      "margin_enabled": false,
+      "noise_ns": 5000,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 31440.9,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    },
+    {
+      "estimator": "window_ols",
+      "heuristic_margin_coverage_mean": 0.8133333333332,
+      "margin_enabled": true,
+      "noise_ns": 5000,
+      "on_time_ratio_mean": 0.033268101761,
+      "outage_p99_error_ns_mean": 31440.9,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        107,
+        131,
+        163,
+        197
+      ]
+    }
+  ],
+  "paired_contrasts": [
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=0;margin=False;window_ols minus two_point",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=0;margin=True;window_ols minus two_point",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=0;estimator=two_point;margin_on minus margin_off",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=0;estimator=window_ols;margin_on minus margin_off",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=5000;margin=False;window_ols minus two_point",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=5000;margin=True;window_ols minus two_point",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=5000;estimator=two_point;margin_on minus margin_off",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    },
+    {
+      "bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "contrast": "noise=5000;estimator=window_ols;margin_on minus margin_off",
+      "mean_on_time_delta": 0.0,
+      "paired_seed_deltas": {
+        "11": 0.0,
+        "23": 0.0,
+        "37": 0.0,
+        "53": 0.0,
+        "71": 0.0,
+        "89": 0.0,
+        "107": 0.0,
+        "131": 0.0,
+        "163": 0.0,
+        "197": 0.0
+      }
+    }
+  ]
+}

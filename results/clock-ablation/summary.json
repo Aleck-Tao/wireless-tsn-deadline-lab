@@ -1,0 +1,149 @@
+{
+  "groups": [
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-two-point-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-two-point-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-two-point-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-two-point-no-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-window-ols-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-window-ols-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-window-ols-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-noisy-window-ols-no-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-zero-two-point-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-zero-two-point-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-zero-two-point-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-zero-two-point-no-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-zero-window-ols-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-zero-window-ols-margin",
+      "scheduler": "EDF"
+    },
+    {
+      "deadline_misses_total": 4940,
+      "latency_p99_ns_mean": 9125000.0,
+      "on_time_ratio_mean": 0.033268101761,
+      "on_time_ratio_min": 0.033268101761,
+      "runs": 10,
+      "scenario_id": "holdover-zero-window-ols-no-margin",
+      "scheduler": "CLOCK_AWARE_EDF"
+    },
+    {
+      "deadline_misses_total": 4910,
+      "latency_p99_ns_mean": 9050000.0,
+      "on_time_ratio_mean": 0.039138943249,
+      "on_time_ratio_min": 0.039138943249,
+      "runs": 10,
+      "scenario_id": "holdover-zero-window-ols-no-margin",
+      "scheduler": "EDF"
+    }
+  ],
+  "schema_version": "1.0"
+}

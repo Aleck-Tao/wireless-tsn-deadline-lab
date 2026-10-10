@@ -15,5 +15,10 @@
   "scenario_id": "retry-replication",
   "scheduler": "CLOCK_AWARE_EDF",
   "seed": 53,
+  "sync_estimator": "two_point",
+  "sync_window": 16,
+  "sync_measurement_noise_ns": 3000,
+  "clock_margin_enabled": true,
+  "independent_clock_noise": false,
   "schema_version": "1.0"
 }

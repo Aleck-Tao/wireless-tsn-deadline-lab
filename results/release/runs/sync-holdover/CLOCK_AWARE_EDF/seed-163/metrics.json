@@ -44,6 +44,7 @@
     "p95": 9891,
     "p99": 12542
   },
+  "sync_outage_heuristic_margin_coverage": 0.014285714286,
   "sync_outage_holdover_absolute_error_ns": {
     "count": 210,
     "max": 810051,

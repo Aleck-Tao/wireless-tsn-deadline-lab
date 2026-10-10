@@ -1,0 +1,17 @@
+scenario_id,scheduler,runs,on_time_ratio_mean,on_time_ratio_min,latency_p99_ns_mean,deadline_misses_total
+holdover-noisy-two-point-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-noisy-two-point-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-noisy-two-point-no-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-noisy-two-point-no-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-noisy-window-ols-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-noisy-window-ols-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-noisy-window-ols-no-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-noisy-window-ols-no-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-zero-two-point-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-zero-two-point-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-zero-two-point-no-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-zero-two-point-no-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-zero-window-ols-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-zero-window-ols-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910
+holdover-zero-window-ols-no-margin,CLOCK_AWARE_EDF,10,0.033268101761,0.033268101761,9125000.0,4940
+holdover-zero-window-ols-no-margin,EDF,10,0.039138943249,0.039138943249,9050000.0,4910

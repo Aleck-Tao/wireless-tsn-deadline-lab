@@ -1,0 +1,67 @@
+{
+  "availability_active_windows": 15,
+  "availability_window_ns": 10000000,
+  "deadline_miss_ratio": 0.966731898239,
+  "delivered_goodput_bps": 11696000.0,
+  "delivered_packets": 489,
+  "dropped_packets": 22,
+  "generated_packets": 511,
+  "jain_flow_goodput_fairness": 0.985590406023,
+  "jitter_ns": {
+    "count": 486,
+    "max": 2000000,
+    "p50": 250000,
+    "p95": 1250000,
+    "p99": 1500000
+  },
+  "latency_ns": {
+    "count": 489,
+    "max": 9500000,
+    "p50": 3925000,
+    "p95": 7500000,
+    "p99": 9000000
+  },
+  "on_time_delivery_ratio": 0.033268101761,
+  "on_time_packets": 17,
+  "packet_delivery_ratio": 0.956947162427,
+  "replica_transmissions": 0,
+  "scenario_id": "holdover-noisy-window-ols-margin",
+  "scheduler": "CLOCK_AWARE_EDF",
+  "schema_version": "1.0",
+  "seed": 23,
+  "service_availability": 0.0,
+  "sync_absolute_error_ns": {
+    "count": 453,
+    "max": 40251,
+    "p50": 3412,
+    "p95": 33788,
+    "p99": 38262
+  },
+  "sync_observed_absolute_error_ns": {
+    "count": 243,
+    "max": 10792,
+    "p50": 1987,
+    "p95": 5153,
+    "p99": 7823
+  },
+  "sync_outage_heuristic_margin_coverage": 0.547619047619,
+  "sync_outage_holdover_absolute_error_ns": {
+    "count": 210,
+    "max": 40251,
+    "p50": 13899,
+    "p95": 36620,
+    "p99": 39257
+  },
+  "sync_outage_observations": 210,
+  "wired_utilization": 0.013906,
+  "wireless_loss_burst": {
+    "count": 1,
+    "max": 1,
+    "p50": 1,
+    "p95": 1,
+    "p99": 1
+  },
+  "wireless_retries": 1,
+  "wireless_transmissions": 490,
+  "wireless_utilization": 0.933
+}

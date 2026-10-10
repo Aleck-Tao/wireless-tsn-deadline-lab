@@ -54,6 +54,12 @@ def compute_metrics(data: RunData, availability_window_ns: int = 10_000_000) -> 
         if event["event"] == "SYNC_OUTAGE"
     ]
     sync_errors = sync_observed_errors + sync_outage_errors
+    outage_events = [event for event in data.events if event["event"] == "SYNC_OUTAGE"]
+    outage_covered = sum(
+        abs(int(event["estimated_clock_error_ns"]) - int(event["true_clock_error_ns"]))
+        <= int(event["uncertainty_ns"])
+        for event in outage_events
+    )
     loss_bursts: list[int] = []
     current_burst = 0
     for event in data.events:
@@ -111,6 +117,7 @@ def compute_metrics(data: RunData, availability_window_ns: int = 10_000_000) -> 
         "sync_observed_absolute_error_ns": _distribution(sync_observed_errors),
         "sync_outage_holdover_absolute_error_ns": _distribution(sync_outage_errors),
         "sync_outage_observations": len(sync_outage_errors),
+        "sync_outage_heuristic_margin_coverage": _ratio(outage_covered, len(outage_events)),
         "wireless_loss_burst": _distribution(loss_bursts),
         "wireless_transmissions": sum(e["event"] == "WIRELESS_TX" for e in data.events),
         "wireless_retries": sum(e["event"] == "WIRELESS_TX" and int(e["attempt"]) > 1 for e in data.events),

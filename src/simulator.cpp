@@ -90,8 +90,9 @@ struct SyncEstimator {
     TimeNs last_time_ns{0};
     TimeNs last_offset_ns{0};
     double estimated_drift_ppm{0.0};
+    std::deque<std::pair<TimeNs, TimeNs>> observations;
 
-    void update(TimeNs time_ns, TimeNs measured_offset_ns) {
+    void update(TimeNs time_ns, TimeNs measured_offset_ns, const SimulationConfig& config) {
         if (valid) {
             previous_valid = true;
             previous_time_ns = last_time_ns;
@@ -106,6 +107,34 @@ struct SyncEstimator {
             estimated_drift_ppm = std::clamp(
                 static_cast<double>(delta_offset * 1'000'000.0L / delta_time),
                 -100'000.0, 100'000.0);
+        }
+        if (config.sync_estimator == "window_ols") {
+            observations.emplace_back(time_ns, measured_offset_ns);
+            while (observations.size() > config.sync_window) {
+                observations.pop_front();
+            }
+            if (observations.size() >= 2) {
+                // Center times at the latest observation to avoid large absolute-time products.
+                long double mean_time = 0.0L;
+                long double mean_offset = 0.0L;
+                for (const auto& [time, offset] : observations) {
+                    mean_time += static_cast<long double>(time - time_ns);
+                    mean_offset += static_cast<long double>(offset);
+                }
+                const auto count = static_cast<long double>(observations.size());
+                mean_time /= count;
+                mean_offset /= count;
+                long double covariance = 0.0L;
+                long double variance = 0.0L;
+                for (const auto& [time, offset] : observations) {
+                    const auto centered = static_cast<long double>(time - time_ns) - mean_time;
+                    covariance += centered * (static_cast<long double>(offset) - mean_offset);
+                    variance += centered * centered;
+                }
+                const auto slope = std::clamp(covariance / variance, -0.1L, 0.1L);
+                estimated_drift_ppm = static_cast<double>(slope * 1'000'000.0L);
+                last_offset_ns = static_cast<TimeNs>(std::llround(mean_offset - slope * mean_time));
+            }
         }
     }
 
@@ -232,6 +261,7 @@ public:
         : config_(std::move(config)),
           channel_rng_(config_.seed ^ 0x9E3779B97F4A7C15ULL),
           clock_rng_(config_.seed ^ 0xD1B54A32D192ED03ULL),
+          sync_rng_(config_.seed ^ 0x94D049BB133111EBULL),
           unit_distribution_(0.0, 1.0) {
         estimators_.resize(config_.flows.size());
     }
@@ -282,6 +312,7 @@ private:
     std::vector<SyncEstimator> estimators_;
     std::mt19937_64 channel_rng_;
     std::mt19937_64 clock_rng_;
+    std::mt19937_64 sync_rng_;
     std::uniform_real_distribution<double> unit_distribution_;
     bool channel_bad_{false};
     double channel_loss_draw_{0.0};
@@ -303,13 +334,14 @@ private:
         result_.events.push_back(std::move(event));
     }
 
-    TimeNs sample_normal(TimeNs standard_deviation_ns) {
+    TimeNs sample_normal(TimeNs standard_deviation_ns, bool synchronization = false) {
         if (standard_deviation_ns == 0) {
             return 0;
         }
         const auto deviation = static_cast<double>(standard_deviation_ns);
         std::normal_distribution<double> distribution(0.0, deviation);
-        const auto bounded = std::clamp(distribution(clock_rng_), -6.0 * deviation,
+        auto& generator = synchronization && config_.independent_clock_noise ? sync_rng_ : clock_rng_;
+        const auto bounded = std::clamp(distribution(generator), -6.0 * deviation,
                                         6.0 * deviation);
         return static_cast<TimeNs>(std::llround(bounded));
     }
@@ -369,8 +401,8 @@ private:
                             event.time_ns < config_.sync_outage_end_ns;
         auto& estimator = estimators_.at(event.flow_index);
         if (!outage) {
-            const auto measured = true_offset + sample_normal(config_.sync_measurement_noise_ns);
-            estimator.update(event.time_ns, measured);
+            const auto measured = true_offset + sample_normal(config_.sync_measurement_noise_ns, true);
+            estimator.update(event.time_ns, measured, config_);
         }
         LogEvent log;
         log.time_ns = event.time_ns;
@@ -438,6 +470,9 @@ private:
             return packet.local_deadline_ns;
         }
         const auto estimated_global = estimator.estimate_global_deadline(packet.local_deadline_ns);
+        if (!config_.clock_margin_enabled) {
+            return estimated_global;
+        }
         const auto prediction_horizon = std::max(time_ns, estimated_global);
         const auto uncertainty = estimator.uncertainty(prediction_horizon, config_);
         if (estimated_global < std::numeric_limits<TimeNs>::min() + uncertainty) {
@@ -834,6 +869,11 @@ void write_result(const SimulationResult& result,
              << "  \"scenario_id\": \"" << json_escape(result.scenario_id) << "\",\n"
              << "  \"scheduler\": \"" << to_string(result.scheduler) << "\",\n"
              << "  \"seed\": " << result.seed << ",\n"
+             << "  \"sync_estimator\": \"" << config.sync_estimator << "\",\n"
+             << "  \"sync_window\": " << config.sync_window << ",\n"
+             << "  \"sync_measurement_noise_ns\": " << config.sync_measurement_noise_ns << ",\n"
+             << "  \"clock_margin_enabled\": " << (config.clock_margin_enabled ? "true" : "false") << ",\n"
+             << "  \"independent_clock_noise\": " << (config.independent_clock_noise ? "true" : "false") << ",\n"
              << "  \"schema_version\": \"1.0\"\n"
              << "}\n";
 }

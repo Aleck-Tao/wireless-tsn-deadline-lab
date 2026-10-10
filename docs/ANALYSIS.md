@@ -34,7 +34,7 @@ Clock-aware EDF sorts by `estimated_global_deadline - uncertainty`, while ordina
 
 That adjustment protects against one kind of late service but may move work ahead of another packet with less actual slack. It neither checks feasibility nor adds wireless capacity. In the present matrix, the mean on-time ratio improves from 0.635 to 0.669 in the bursty case and from 0.866 to 0.908 with retry/replication, but falls from 0.039 to 0.033 in holdover.
 
-A useful next ablation would compare raw EDF, offset-corrected EDF without the margin, and the current policy under the same seeds. A separate multi-observation slope estimator would test the noise-amplification explanation. Neither ablation is part of the committed results.
+The [clock ablation](../results/clock-ablation/CLOCK_ANALYSIS.md) tests this explanation separately from the original release matrix. It crosses two-point versus 16-observation least-squares estimation, margin on/off, and synchronization noise of 0/5 microseconds, with raw EDF controls and the same ten seeds. Independent measurement and source-timestamp random streams prevent a noise change from also changing packet timestamps. The [paired contrast data](../results/clock-ablation/clock_analysis.json) retain positive and negative deltas. Reduced clock error is not assumed to improve deadline performance under the fixed congested traffic.
 
 ## Delivery probability competes with service time
 

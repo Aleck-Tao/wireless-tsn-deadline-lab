@@ -22,6 +22,7 @@ def aggregate(artifact_root: Path | str) -> tuple[list[dict[str, object]], dict[
     with plan_path.open(encoding="utf-8") as handle:
         plan = validate_plan(json.load(handle))
     expected = expected_run_identities(plan)
+    baseline_name = str(plan.get("baseline", "FIFO"))
     observed: dict[RunIdentity, Path] = {}
     metrics: list[dict[str, object]] = []
     for path in sorted((root / "runs").rglob("metrics.json")):
@@ -69,8 +70,8 @@ def aggregate(artifact_root: Path | str) -> tuple[list[dict[str, object]], dict[
     for row in metrics:
         by_scenario[str(row["scenario_id"])].append(row)
     for scenario, rows in sorted(by_scenario.items()):
-        baseline = {int(row["seed"]): row for row in rows if row["scheduler"] == "FIFO"}
-        schedulers = sorted({str(row["scheduler"]) for row in rows} - {"FIFO"})
+        baseline = {int(row["seed"]): row for row in rows if row["scheduler"] == baseline_name}
+        schedulers = sorted({str(row["scheduler"]) for row in rows} - {baseline_name})
         for scheduler in schedulers:
             candidate = {int(row["seed"]): row for row in rows if row["scheduler"] == scheduler}
             seeds = sorted(set(baseline) & set(candidate))
@@ -84,7 +85,7 @@ def aggregate(artifact_root: Path | str) -> tuple[list[dict[str, object]], dict[
                 {
                     "scenario_id": scenario,
                     "scheduler": scheduler,
-                    "baseline": "FIFO",
+                    "baseline": baseline_name,
                     "paired_seeds": seeds,
                     "on_time_ratio_delta_mean": round(statistics.fmean(deltas), 12),
                     "bootstrap_95_ci": [low, high],
@@ -94,7 +95,7 @@ def aggregate(artifact_root: Path | str) -> tuple[list[dict[str, object]], dict[
     write_json(root / "summary.json", {"schema_version": "1.0", "groups": summary})
     write_json(root / "paired_comparisons.json", {"schema_version": "1.0", "comparisons": comparisons})
     _write_csv(root / "summary.csv", summary)
-    _write_markdown(root / "REPORT.md", summary, comparisons)
+    _write_markdown(root / "REPORT.md", summary, comparisons, baseline_name)
     return summary, {"comparisons": comparisons}
 
 
@@ -129,7 +130,7 @@ def _write_csv(path: Path, rows: list[dict[str, object]]) -> None:
 
 
 def _write_markdown(
-    path: Path, summary: list[dict[str, object]], comparisons: list[dict[str, object]]
+    path: Path, summary: list[dict[str, object]], comparisons: list[dict[str, object]], baseline: str = "FIFO"
 ) -> None:
     lines = [
         "# Benchmark report",
@@ -148,7 +149,7 @@ def _write_markdown(
     lines.extend(
         [
             "",
-            "## Paired comparisons against FIFO",
+            f"## Paired comparisons against {baseline}",
             "",
             "Intervals are deterministic percentile bootstrap intervals over paired seed deltas; they are descriptive, not a claim of external validity.",
             "",

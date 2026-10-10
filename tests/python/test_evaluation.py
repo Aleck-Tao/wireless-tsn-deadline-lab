@@ -12,6 +12,7 @@ from wtsn_eval.plan import validate_plan
 from wtsn_eval.provenance import verify_manifest, write_manifest
 from wtsn_eval.reporting import aggregate
 from wtsn_eval.runner import _validate_run_identity
+from wtsn_eval.clock_analysis import paired_contrast
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -21,6 +22,24 @@ REPLICA_FIXTURE = ROOT / "tests" / "fixtures" / "replica-run"
 
 
 class EvaluationTests(unittest.TestCase):
+    def test_clock_contrast_requires_paired_seeds(self) -> None:
+        with self.assertRaisesRegex(ValueError, "matching"):
+            paired_contrast({1: 0.5}, {2: 0.6}, "invalid")
+        result = paired_contrast({1: 0.5, 2: 0.8}, {1: 0.6, 2: 0.6}, "known")
+        self.assertAlmostEqual(result["mean_on_time_delta"], -0.05)
+        self.assertAlmostEqual(result["paired_seed_deltas"][2], -0.2)
+
+    def test_outage_coverage_measures_error_against_logged_margin(self) -> None:
+        data = load_run(SYNC_FIXTURE)
+        events = [dict(event) for event in data.events]
+        outage = next(event for event in events if event["event"] == "SYNC_OUTAGE")
+        outage["uncertainty_ns"] = 39
+        self.assertEqual(compute_metrics(RunData(tuple(events), data.metadata))[
+            "sync_outage_heuristic_margin_coverage"], 0.0)
+        outage["uncertainty_ns"] = 40
+        self.assertEqual(compute_metrics(RunData(tuple(events), data.metadata))[
+            "sync_outage_heuristic_margin_coverage"], 1.0)
+
     def test_fixture_metrics_use_ground_truth_not_outcome_label(self) -> None:
         data = load_run(FIXTURE)
         metrics = compute_metrics(data)
@@ -129,8 +148,9 @@ class EvaluationTests(unittest.TestCase):
             "max_retries", "extra_replicas", "replication_priority_min",
             "timestamp_noise_ns", "sync_interval_ns", "sync_measurement_noise_ns",
             "sync_outage_start_ns", "sync_outage_end_ns", "drift_uncertainty_ppm", "flow",
+            "sync_estimator", "sync_window", "clock_margin_enabled", "independent_clock_noise",
         }
-        expected_runs = {"smoke": 16, "release": 240}
+        expected_runs = {"smoke": 16, "release": 240, "clock-ablation": 160}
         for plan_kind, run_count in expected_runs.items():
             plan_path = ROOT / "configs" / plan_kind / "plan.json"
             plan = json.loads(plan_path.read_text(encoding="utf-8"))

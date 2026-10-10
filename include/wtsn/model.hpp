@@ -57,6 +57,10 @@ struct SimulationConfig {
     TimeNs sync_outage_start_ns{-1};
     TimeNs sync_outage_end_ns{-1};
     double drift_uncertainty_ppm{20.0};
+    std::string sync_estimator{"two_point"};
+    std::uint32_t sync_window{16};
+    bool clock_margin_enabled{true};
+    bool independent_clock_noise{false};
 
     std::vector<FlowSpec> flows;
 };

@@ -4,6 +4,8 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: "23 1 * * 1"
 
 permissions:
   contents: read
@@ -84,10 +86,21 @@ jobs:
         run: python -m wtsn_eval run-plan --plan configs/release/plan.json --binary build/wtsn-sim --output artifacts/release --source-root .
       - name: Verify exact artifact and source hashes
         run: python -m wtsn_eval verify artifacts/release --source-root . --binary build/wtsn-sim
+      - name: Run paired clock estimator and margin ablation
+        run: python -m wtsn_eval run-plan --plan configs/clock-ablation/plan.json --binary build/wtsn-sim --output artifacts/clock-ablation --source-root .
+      - name: Verify clock ablation evidence
+        run: python -m wtsn_eval verify artifacts/clock-ablation --source-root . --binary build/wtsn-sim
       - name: Upload normalized benchmark artifact
         uses: actions/upload-artifact@v6
         with:
           name: wireless-tsn-release-${{ github.sha }}
           path: artifacts/release
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90
+      - name: Upload clock ablation
+        uses: actions/upload-artifact@v6
+        with:
+          name: wireless-tsn-clock-ablation-${{ github.sha }}
+          path: artifacts/clock-ablation
+          if-no-files-found: error
+          retention-days: 90

@@ -242,6 +242,19 @@ SimulationConfig load_config(const std::filesystem::path& path) {
             config.sync_outage_end_ns = parse_time(value, key);
         } else if (key == "drift_uncertainty_ppm") {
             config.drift_uncertainty_ppm = parse_double(value, key);
+        } else if (key == "sync_estimator") {
+            config.sync_estimator = value;
+        } else if (key == "sync_window") {
+            config.sync_window = parse_uint32(value, key);
+        } else if (key == "clock_margin_enabled" || key == "independent_clock_noise") {
+            if (value != "true" && value != "false") {
+                throw std::invalid_argument(key + " must be true or false");
+            }
+            if (key == "clock_margin_enabled") {
+                config.clock_margin_enabled = value == "true";
+            } else {
+                config.independent_clock_noise = value == "true";
+            }
         } else {
             throw std::invalid_argument("unknown config key on line " +
                                         std::to_string(line_number) + ": " + key);
@@ -264,6 +277,10 @@ std::optional<TimeNs> last_observable_arrival_ns(const SimulationConfig& config,
 }
 
 void validate_config(const SimulationConfig& config) {
+    if ((config.sync_estimator != "two_point" && config.sync_estimator != "window_ols") ||
+        config.sync_window < 2 || config.sync_window > 128) {
+        throw std::invalid_argument("sync estimator must be two_point/window_ols with window 2..128");
+    }
     constexpr auto safe_time_limit = std::numeric_limits<TimeNs>::max() / 8;
     constexpr std::uint64_t packet_budget = 1'000'000;
     constexpr std::uint64_t scheduled_event_budget = 5'000'000;

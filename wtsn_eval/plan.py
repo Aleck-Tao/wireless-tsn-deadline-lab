@@ -29,8 +29,9 @@ def validate_plan(plan: object) -> dict[str, object]:
         raise ValueError("plan contains an unsupported scheduler")
     if len(set(schedulers)) != len(schedulers):
         raise ValueError("plan schedulers must be unique")
-    if "FIFO" not in schedulers:
-        raise ValueError("plan requires FIFO as the paired comparison baseline")
+    baseline = plan.get("baseline", "FIFO")
+    if baseline not in schedulers:
+        raise ValueError("plan requires its paired comparison baseline among schedulers")
     if not isinstance(scenarios, list) or not scenarios:
         raise ValueError("plan scenarios must be non-empty")
     identifiers: list[str] = []

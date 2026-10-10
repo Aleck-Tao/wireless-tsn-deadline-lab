@@ -239,6 +239,65 @@ void test_observation_horizon_excludes_right_censored_arrivals() {
           "arrival whose deadline equals the horizon remains observable");
 }
 
+void test_window_estimator_and_noise_streams() {
+    auto config = base_config();
+    config.sync_estimator = "window_ols";
+    config.sync_window = 16;
+    config.sync_outage_start_ns = 2'000'000;
+    config.sync_outage_end_ns = 4'000'000;
+    const auto noiseless = wtsn::Simulator(config).run();
+    std::size_t outage_count = 0;
+    for (const auto& event : noiseless.events) {
+        if (event.event == "SYNC_OUTAGE") {
+            ++outage_count;
+            check(event.estimated_clock_error_ns == event.true_clock_error_ns,
+                  "OLS preserves exact linear drift throughout noise-free holdover");
+        }
+    }
+    check(outage_count == 20, "OLS test exercises the entire outage interval");
+    config.independent_clock_noise = true;
+    config.timestamp_noise_ns = 800;
+    config.sync_measurement_noise_ns = 500;
+    config.sync_window = 2;
+    const auto two_window = wtsn::Simulator(config).run();
+    config.sync_estimator = "two_point";
+    const auto two_point = wtsn::Simulator(config).run();
+    std::vector<wtsn::TimeNs> two_window_offsets;
+    std::vector<wtsn::TimeNs> two_point_offsets;
+    for (const auto& event : two_window.events) {
+        if (event.event == "SYNC_OBSERVE" || event.event == "SYNC_OUTAGE") {
+            two_window_offsets.push_back(event.estimated_clock_error_ns);
+        }
+    }
+    for (const auto& event : two_point.events) {
+        if (event.event == "SYNC_OBSERVE" || event.event == "SYNC_OUTAGE") {
+            two_point_offsets.push_back(event.estimated_clock_error_ns);
+        }
+    }
+    check(two_window_offsets == two_point_offsets,
+          "two-observation OLS equals the existing difference estimator");
+    config.sync_measurement_noise_ns = 0;
+    const auto zero_sync_noise = wtsn::Simulator(config).run();
+    const auto arrival_timestamps = [](const wtsn::SimulationResult& result) {
+        std::vector<wtsn::TimeNs> timestamps;
+        for (const auto& event : result.events) {
+            if (event.event == "ARRIVAL") {
+                timestamps.push_back(event.local_deadline_ns);
+            }
+        }
+        return timestamps;
+    };
+    check(arrival_timestamps(two_point) == arrival_timestamps(zero_sync_noise),
+          "changing synchronization noise leaves source timestamp noise unchanged");
+    const auto root = std::filesystem::path(WTSN_SOURCE_DIR);
+    const auto parsed = wtsn::load_config(root / "configs/clock-ablation/holdover-noisy-window-ols-no-margin.cfg");
+    check(parsed.sync_estimator == "window_ols" && parsed.sync_window == 16 &&
+          !parsed.clock_margin_enabled && parsed.independent_clock_noise,
+          "ablation estimator and margin settings survive config parsing");
+    config.sync_window = 1;
+    check_throws([&]() { wtsn::validate_config(config); }, "one-sample regression is rejected");
+}
+
 void test_packet_budget_uses_the_observation_horizon() {
     auto config = base_config();
     config.scenario_id = "observable-budget";
@@ -269,6 +328,7 @@ int main() {
     test_config_fixture_and_validation();
     test_duplicate_terminal_is_rejected();
     test_clock_aware_edf_corrects_local_deadline_order();
+    test_window_estimator_and_noise_streams();
     test_observation_horizon_excludes_right_censored_arrivals();
     test_packet_budget_uses_the_observation_horizon();
     if (failures != 0) {

@@ -80,6 +80,9 @@ def run_plan(
                 write_json(run_directory / "metrics.json", compute_metrics(data))
                 run_count += 1
     aggregate(output)
+    if plan.get("analysis") == "clock_ablation":
+        from .clock_analysis import write_clock_analysis
+        write_clock_analysis(output)
     write_manifest(output, source, binary)
     return run_count
 

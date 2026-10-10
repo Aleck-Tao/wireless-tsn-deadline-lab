@@ -26,6 +26,8 @@ The [release report](results/release/REPORT.md) contains six scenarios, four sch
 
 The useful result is the change in scheduler ordering across conditions. [Analysis notes](docs/ANALYSIS.md), [per-run metrics and traces](results/release/runs), and [paired comparisons](results/release/REPORT.md#paired-comparisons-against-fifo) provide the reasoning and measurements behind these observations.
 
+The [clock-estimator ablation](results/clock-ablation/CLOCK_ANALYSIS.md) adds 160 paired runs isolating slope estimation, deadline margin, and synchronization noise. Its [plan](configs/clock-ablation/plan.json) retains the original holdover workload and ten seeds; the two-point baseline remains available.
+
 ## Build and run
 
 Requires CMake 3.20+, a C++20 compiler, and Python 3.10+. Python analysis uses the standard library.

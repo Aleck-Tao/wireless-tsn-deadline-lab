@@ -1,5 +1,7 @@
 # Reproducibility
 
+The clock-estimator experiment uses `configs/clock-ablation/plan.json` with the same `run-plan` command and a fresh output such as `artifacts/clock-ablation`. It produces 160 runs, the usual validated event/metric files, and `CLOCK_ANALYSIS.md` with paired estimator/margin contrasts. `python -m wtsn_eval verify results/clock-ablation --source-root .` verifies its committed evidence after downloading or cloning the repository. CI reruns both matrices every Monday at 01:23 UTC and on manual dispatch; uploaded artifacts are retained for 90 days. Committed results remain available independently of artifact expiry.
+
 ## Clean run
 
 Use CMake 3.20 or newer, a C++20 compiler, and Python 3.10 or newer. Python analysis uses only the standard library. The release artifact's normative execution environment is the workflow's Ubuntu 24.04 GCC/libstdc++ job.
